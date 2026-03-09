@@ -79,7 +79,7 @@ function LanguageSwitcher() {
 function MobileLangPicker() {
   const [active, setActive] = useState('nl')
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2 flex-wrap">
       {languages.map((lang) => (
         <button
           key={lang.code}
@@ -158,6 +158,7 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <button
           onClick={() => setOpen(!open)}
+          aria-label={open ? 'Menu sluiten' : 'Menu openen'}
           className="md:hidden p-2 rounded-lg text-[#8899B0] hover:text-[#E8EDF5] hover:bg-[#0F1623] transition-colors"
         >
           {open ? <X size={20} /> : <Menu size={20} />}
@@ -195,7 +196,6 @@ export default function Navbar() {
               >
                 Start een project
               </Link>
-              {/* Talen als rij op mobiel */}
               <div className="mt-3 pt-3 border-t border-[#1A2332]">
                 <p className="text-xs text-[#4A5E78] mb-2 px-1">Taal</p>
                 <MobileLangPicker />

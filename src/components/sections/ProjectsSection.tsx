@@ -41,7 +41,7 @@ function AutoPlayVideo({ src }: { src: string }) {
       muted
       loop
       playsInline
-      preload="auto"
+      preload="none"
       className="w-full h-full object-cover"
     />
   )

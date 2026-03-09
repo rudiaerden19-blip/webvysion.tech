@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { technologies } from '@/lib/data'
 
 export default function TechnologiePage() {
@@ -35,10 +36,11 @@ export default function TechnologiePage() {
               >
                 <div className="w-full h-16 rounded-xl overflow-hidden flex items-center justify-center bg-[#141D2B] group-hover:bg-[#1A2332] transition-colors shrink-0">
                   {techWithImage.image ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={techWithImage.image}
+                    <Image
+                      src={techWithImage.image as string}
                       alt={tech.name}
+                      width={64}
+                      height={64}
                       className="w-full h-full object-contain p-2"
                     />
                   ) : (
