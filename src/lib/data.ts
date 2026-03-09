@@ -16,7 +16,7 @@ export const projects = [
     tech: ['Mobile Apps', 'Geolocation', 'Cloud Backend', 'Device Management'],
     color: '#4F8EF7',
     emoji: '📡',
-    image: '/internet-buddy.png',
+    video: '/internet-buddy-demo.mp4',
     url: 'https://www.vysionapps.io/home',
   },
   {
