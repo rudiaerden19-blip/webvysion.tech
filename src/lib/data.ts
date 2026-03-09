@@ -50,6 +50,7 @@ export const projects = [
       'Realtime updates & notificaties',
     ],
     tech: ['Supabase Realtime', 'Web Applications', 'Cloud Backend', 'Messaging API'],
+    url: 'https://www.vysionhoreca.com',
     color: '#22D3A5',
     emoji: '📱',
   },
