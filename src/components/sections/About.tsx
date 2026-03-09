@@ -74,7 +74,7 @@ export default function About() {
               <div className="mt-8 pt-6 border-t border-[#1A2332] grid grid-cols-3 gap-4">
                 {[
                   { v: '13+', l: 'Jaar' },
-                  { v: '4+', l: 'Projecten' },
+                  { v: '124+', l: 'Projecten' },
                   { v: '🇧🇪', l: 'België' },
                 ].map((s) => (
                   <div key={s.l} className="text-center">

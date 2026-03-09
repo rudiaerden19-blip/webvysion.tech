@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Github, Linkedin, Mail } from 'lucide-react'
 
 export default function Footer() {
@@ -9,8 +10,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4F8EF7] to-[#7C6EF0] flex items-center justify-center text-white font-bold text-sm">
-                W
+              <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
+                <Image src="/logo.png" alt="WebVysion" width={32} height={32} className="w-full h-full object-contain" />
               </div>
               <span className="font-bold text-[#E8EDF5] text-lg">WebVysion</span>
             </div>
