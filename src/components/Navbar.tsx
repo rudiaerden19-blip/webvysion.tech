@@ -76,6 +76,28 @@ function LanguageSwitcher() {
   )
 }
 
+function MobileLangPicker() {
+  const [active, setActive] = useState('nl')
+  return (
+    <div className="flex gap-2">
+      {languages.map((lang) => (
+        <button
+          key={lang.code}
+          onClick={() => setActive(lang.code)}
+          className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium border transition-all ${
+            active === lang.code
+              ? 'bg-[#1A2332] border-[#4F8EF7] text-[#E8EDF5]'
+              : 'bg-[#0F1623] border-[#1A2332] text-[#8899B0]'
+          }`}
+        >
+          <span>{lang.flag}</span>
+          <span>{lang.label}</span>
+        </button>
+      ))}
+    </div>
+  )
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
@@ -173,8 +195,10 @@ export default function Navbar() {
               >
                 Start een project
               </Link>
-              <div className="mt-2">
-                <LanguageSwitcher />
+              {/* Talen als rij op mobiel */}
+              <div className="mt-3 pt-3 border-t border-[#1A2332]">
+                <p className="text-xs text-[#4A5E78] mb-2 px-1">Taal</p>
+                <MobileLangPicker />
               </div>
             </div>
           </motion.div>
