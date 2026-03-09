@@ -1,0 +1,119 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Menu, X } from 'lucide-react'
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/projecten', label: 'Projecten' },
+  { href: '/technologie', label: 'Technologie' },
+  { href: '/diensten', label: 'Diensten' },
+  { href: '/contact', label: 'Contact' },
+]
+
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false)
+  const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return (
+    <motion.header
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-[#080C14]/90 backdrop-blur-xl border-b border-[#1A2332]' : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4F8EF7] to-[#7C6EF0] flex items-center justify-center text-white font-bold text-sm shadow-lg shadow-blue-500/20">
+            W
+          </div>
+          <span className="font-bold text-[#E8EDF5] text-lg tracking-tight">WebVysion</span>
+        </Link>
+
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-1">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                pathname === link.href
+                  ? 'text-[#E8EDF5] bg-[#1A2332]'
+                  : 'text-[#8899B0] hover:text-[#E8EDF5] hover:bg-[#0F1623]'
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* CTA */}
+        <div className="hidden md:flex items-center gap-3">
+          <Link
+            href="/contact"
+            className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#4F8EF7] to-[#7C6EF0] text-white text-sm font-semibold hover:opacity-90 transition-opacity shadow-lg shadow-blue-500/20"
+          >
+            Start een project
+          </Link>
+        </div>
+
+        {/* Mobile menu button */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden p-2 rounded-lg text-[#8899B0] hover:text-[#E8EDF5] hover:bg-[#0F1623] transition-colors"
+        >
+          {open ? <X size={20} /> : <Menu size={20} />}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-[#0D1117] border-b border-[#1A2332] overflow-hidden"
+          >
+            <div className="px-6 py-4 flex flex-col gap-1">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                    pathname === link.href
+                      ? 'text-[#E8EDF5] bg-[#1A2332]'
+                      : 'text-[#8899B0] hover:text-[#E8EDF5]'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href="/contact"
+                onClick={() => setOpen(false)}
+                className="mt-2 px-4 py-3 rounded-lg bg-gradient-to-r from-[#4F8EF7] to-[#7C6EF0] text-white text-sm font-semibold text-center"
+              >
+                Start een project
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.header>
+  )
+}

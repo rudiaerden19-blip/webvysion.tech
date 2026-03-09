@@ -1,0 +1,127 @@
+export const projects = [
+  {
+    id: 'internet-buddy',
+    name: 'Internet Buddy',
+    tagline: 'Smart Internet Control for Schools & Parents',
+    description:
+      'Internet Buddy is een applicatie ontwikkeld in opdracht van een Belgische overkoepelende schoolgemeenschap. Het systeem geeft ouders en scholen volledige controle over het internetgebruik van leerlingen via geofence-technologie en agenda-planning.',
+    features: [
+      'Internet op afstand aan/uitzetten',
+      'Agenda-planning voor internetgebruik',
+      'Geofence technologie',
+      'Automatisch uitschakelen nabij school',
+      'Remote beheer voor ouders & scholen',
+      'Centraal cloud dashboard',
+    ],
+    tech: ['Mobile Apps', 'Geolocation', 'Cloud Backend', 'Device Management'],
+    color: '#4F8EF7',
+    emoji: '📡',
+  },
+  {
+    id: 'restaurant-pos',
+    name: 'Restaurant POS System',
+    tagline: 'Complete Horeca Kassasysteem',
+    description:
+      'Een uitgebreid horeca kassasysteem met realtime bestellingen en uitgebreide rapportage. Ontwikkeld voor restaurants die een complete digitale oplossing nodig hebben voor hun dagelijkse werking.',
+    features: [
+      'Volledig kassasysteem',
+      'Keuken display systeem',
+      'Realtime bestellingen',
+      'Uitgebreide rapportage',
+      'Restaurant workflow beheer',
+    ],
+    tech: ['Realtime Database', 'Cloud Backend', 'Dashboard', 'Restaurant Software'],
+    color: '#7C6EF0',
+    emoji: '🍽️',
+  },
+  {
+    id: 'restaurant-ordering',
+    name: 'Online Restaurant Ordering',
+    tagline: 'Bestellen via WhatsApp & Web',
+    description:
+      'Een online bestelplatform voor restaurants waarbij klanten rechtstreeks kunnen bestellen via WhatsApp. Het platform biedt restaurants een eenvoudige manier om online bestellingen te beheren met realtime updates.',
+    features: [
+      'Bestellen via WhatsApp',
+      'Realtime order tracking',
+      'Keuken scherm integratie',
+      'Online betalingen',
+      'Realtime updates & notificaties',
+    ],
+    tech: ['Supabase Realtime', 'Web Applications', 'Cloud Backend', 'Messaging API'],
+    color: '#22D3A5',
+    emoji: '📱',
+  },
+  {
+    id: 'safelink',
+    name: 'SafeLink',
+    tagline: 'Veiligheidsapp voor noodsituaties',
+    description:
+      'SafeLink is een veiligheidsapp die mensen helpt snel hulp te vinden en noodsituaties te melden. De app biedt directe toegang tot hulpdiensten, live locatie delen en persoonlijke ondersteuning — volledig offline beschikbaar.',
+    features: [
+      'SOS noodknop',
+      'Live locatie delen',
+      'Directe toegang tot hulpdiensten',
+      'Hulpvragenlijsten',
+      'Forum voor ondersteuning',
+      'Persoonlijk dagboek',
+      '22 talen ondersteund',
+      'Offline-first architectuur',
+    ],
+    tech: ['React Native', 'Expo', 'Supabase', 'i18n', 'Offline Storage'],
+    color: '#F7804F',
+    emoji: '🛡️',
+  },
+]
+
+export const services = [
+  {
+    id: 'saas',
+    title: 'SaaS Development',
+    description: 'Ontwikkeling van complete SaaS platforms met realtime backend systemen, dashboards en gebruikersbeheer.',
+    icon: '☁️',
+    features: ['Realtime systemen', 'Multi-tenant architectuur', 'Subscription billing', 'Admin dashboards'],
+  },
+  {
+    id: 'web',
+    title: 'Web Applications',
+    description: 'Dashboards, bedrijfssoftware en interne tools op maat gebouwd voor jouw processen.',
+    icon: '🖥️',
+    features: ['React & Next.js', 'Database architectuur', 'REST & realtime API', 'Performance optimalisatie'],
+  },
+  {
+    id: 'mobile',
+    title: 'Mobile Applications',
+    description: 'Mobiele apps voor iOS en Android met native performance en moderne UI.',
+    icon: '📱',
+    features: ['React Native / Expo', 'iOS & Android', 'Offline-first', 'Push notificaties'],
+  },
+  {
+    id: 'websites',
+    title: 'Custom Websites',
+    description: 'Professionele maatwerk websites voor bedrijven, organisaties en startups.',
+    icon: '🌐',
+    features: ['Next.js & Tailwind', 'SEO geoptimaliseerd', 'CMS integratie', 'Snelle laadtijden'],
+  },
+  {
+    id: 'mvp',
+    title: 'Startup MVP Development',
+    description: 'Van idee naar werkend softwareproduct binnen enkele maanden — klaar voor eerste gebruikers.',
+    icon: '🚀',
+    features: ['Snelle oplevering', 'Schaalbare basis', 'Iteratieve aanpak', 'Van concept tot lancering'],
+  },
+]
+
+export const technologies = [
+  { name: 'Next.js', icon: '▲', category: 'Framework' },
+  { name: 'TypeScript', icon: 'TS', category: 'Language' },
+  { name: 'JavaScript', icon: 'JS', category: 'Language' },
+  { name: 'React Native', icon: '⚛', category: 'Mobile' },
+  { name: 'Tailwind CSS', icon: '🎨', category: 'Styling' },
+  { name: 'Supabase', icon: '⚡', category: 'Backend' },
+  { name: 'Firebase', icon: '🔥', category: 'Backend' },
+  { name: 'Vercel', icon: '▲', category: 'Deployment' },
+  { name: 'GitHub', icon: '🐙', category: 'Version Control' },
+  { name: 'Framer Motion', icon: '✦', category: 'Animation' },
+  { name: 'SaaS Architecture', icon: '☁️', category: 'Architecture' },
+  { name: 'Cursor AI', icon: '◎', category: 'Tools' },
+]
