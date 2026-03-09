@@ -35,7 +35,7 @@ export const projects = [
     tech: ['Realtime Database', 'Cloud Backend', 'Dashboard', 'Restaurant Software'],
     color: '#7C6EF0',
     emoji: '🍽️',
-    image: '/restaurant-pos.png',
+    video: '/restaurant-pos-demo.mp4',
     url: 'https://www.vysionhoreca.com/kassa',
     github: 'https://github.com/rudiaerden19-blip/vysionhoreca-website',
   },
