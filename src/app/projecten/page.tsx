@@ -45,11 +45,11 @@ export default function ProjectenPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-4">
                       <div
-                        className="w-20 h-20 rounded-2xl shrink-0 overflow-hidden"
+                        className="w-24 h-24 rounded-2xl shrink-0 overflow-hidden"
                         style={{ background: `${project.color}15`, border: `1px solid ${project.color}30` }}
                       >
                         {'image' in project && project.image ? (
-                          <Image src={project.image} alt={project.name} width={80} height={80} className="w-full h-full object-contain" />
+                          <Image src={project.image} alt={project.name} width={96} height={96} className="w-full h-full object-cover" />
                         ) : (
                           <span className="flex items-center justify-center w-full h-full text-3xl">{project.emoji}</span>
                         )}
