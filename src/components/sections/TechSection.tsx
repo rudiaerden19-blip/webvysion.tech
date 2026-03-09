@@ -35,14 +35,14 @@ export default function TechSection() {
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className="group flex flex-col items-center gap-3 p-5 rounded-2xl bg-[#0F1623] border border-[#1A2332] hover:border-[#243447] hover:bg-[#141D2B] transition-all duration-200 cursor-default"
             >
-              <div className="w-16 h-16 rounded-xl overflow-hidden flex items-center justify-center bg-[#141D2B] group-hover:bg-[#1A2332] transition-colors shrink-0">
+              <div className="w-20 h-20 rounded-xl overflow-hidden flex items-center justify-center bg-[#141D2B] group-hover:bg-[#1A2332] transition-colors shrink-0">
                 {'image' in tech && tech.image ? (
                   <Image
                     src={tech.image}
                     alt={tech.name}
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-contain p-1"
+                    width={80}
+                    height={80}
+                    className="w-full h-full object-contain p-1.5"
                   />
                 ) : (
                   <span className="text-2xl font-bold text-[#4F8EF7]">{tech.icon}</span>

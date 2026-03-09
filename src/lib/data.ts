@@ -107,6 +107,7 @@ export const services = [
     title: 'SaaS Development',
     description: 'Ontwikkeling van complete SaaS platforms met realtime backend systemen, dashboards en gebruikersbeheer.',
     icon: '☁️',
+    image: '/services/saas.png',
     features: ['Realtime systemen', 'Multi-tenant architectuur', 'Subscription billing', 'Admin dashboards'],
   },
   {
@@ -114,6 +115,7 @@ export const services = [
     title: 'Web Applications',
     description: 'Dashboards, bedrijfssoftware en interne tools op maat gebouwd voor jouw processen.',
     icon: '🖥️',
+    image: '/services/web.png',
     features: ['React & Next.js', 'Database architectuur', 'REST & realtime API', 'Performance optimalisatie'],
   },
   {
@@ -121,6 +123,7 @@ export const services = [
     title: 'Mobile Applications',
     description: 'Mobiele apps voor iOS en Android met native performance en moderne UI.',
     icon: '📱',
+    image: '/services/mobile.png',
     features: ['React Native / Expo', 'iOS & Android', 'Offline-first', 'Push notificaties'],
   },
   {
@@ -128,6 +131,7 @@ export const services = [
     title: 'Custom Websites',
     description: 'Professionele maatwerk websites voor bedrijven, organisaties en startups.',
     icon: '🌐',
+    image: '/services/websites.png',
     features: ['Next.js & Tailwind', 'SEO geoptimaliseerd', 'CMS integratie', 'Snelle laadtijden'],
   },
   {
@@ -135,6 +139,7 @@ export const services = [
     title: 'Startup MVP Development',
     description: 'Van idee naar werkend softwareproduct binnen enkele maanden — klaar voor eerste gebruikers.',
     icon: '🚀',
+    image: '/services/mvp.png',
     features: ['Snelle oplevering', 'Schaalbare basis', 'Iteratieve aanpak', 'Van concept tot lancering'],
   },
 ]

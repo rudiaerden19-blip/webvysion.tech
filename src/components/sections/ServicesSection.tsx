@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { services } from '@/lib/data'
@@ -36,31 +37,39 @@ export default function ServicesSection() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: i * 0.08, duration: 0.5 }}
               whileHover={{ y: -3, transition: { duration: 0.2 } }}
-              className="group relative bg-[#0F1623] rounded-2xl border border-[#1A2332] p-7 hover:border-[#243447] transition-all duration-300 overflow-hidden"
+              className="group relative bg-[#0F1623] rounded-2xl border border-[#1A2332] hover:border-[#243447] transition-all duration-300 overflow-hidden"
             >
               <div
                 className="absolute top-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{ background: `linear-gradient(90deg, transparent, ${colors[i % colors.length]}, transparent)` }}
               />
 
-              <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5"
-                style={{ background: `${colors[i % colors.length]}15`, border: `1px solid ${colors[i % colors.length]}30` }}
-              >
-                {service.icon}
+              {/* Preview afbeelding */}
+              {'image' in service && service.image && (
+                <div className="w-full h-48 overflow-hidden border-b border-[#1A2332]">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    width={600}
+                    height={192}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              )}
+
+              <div className="p-7">
+                <h3 className="text-base font-bold text-[#E8EDF5] mb-2">{service.title}</h3>
+                <p className="text-sm text-[#8899B0] leading-relaxed mb-5">{service.description}</p>
+
+                <ul className="space-y-1.5">
+                  {service.features.map((f) => (
+                    <li key={f} className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: colors[i % colors.length] }} />
+                      <span className="text-xs text-[#4A5E78]">{f}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-
-              <h3 className="text-base font-bold text-[#E8EDF5] mb-2">{service.title}</h3>
-              <p className="text-sm text-[#8899B0] leading-relaxed mb-5">{service.description}</p>
-
-              <ul className="space-y-1.5">
-                {service.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: colors[i % colors.length] }} />
-                    <span className="text-xs text-[#4A5E78]">{f}</span>
-                  </li>
-                ))}
-              </ul>
             </motion.div>
           ))}
 
@@ -69,7 +78,7 @@ export default function ServicesSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="relative bg-gradient-to-br from-[#4F8EF7]/10 to-[#7C6EF0]/10 rounded-2xl border border-[#4F8EF7]/20 p-7 flex flex-col justify-between"
+            className="relative bg-gradient-to-br from-[#4F8EF7]/10 to-[#7C6EF0]/10 rounded-2xl border border-[#4F8EF7]/20 p-7 flex flex-col justify-between min-h-[280px]"
           >
             <div>
               <p className="text-2xl mb-4">✦</p>
