@@ -13,20 +13,24 @@ function AutoPlayVideo({ src }: { src: string }) {
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
+
     video.muted = true
+    video.defaultMuted = true
 
     const tryPlay = () => {
       video.play().catch(() => {})
     }
 
-    if (video.readyState >= 3) {
-      tryPlay()
-    } else {
-      video.addEventListener('canplay', tryPlay, { once: true })
-    }
+    // Probeer direct, en bij elk laad-event opnieuw (iOS Safari vereist dit)
+    tryPlay()
+    video.addEventListener('loadedmetadata', tryPlay, { once: true })
+    video.addEventListener('canplay', tryPlay, { once: true })
+    video.addEventListener('canplaythrough', tryPlay, { once: true })
 
     return () => {
+      video.removeEventListener('loadedmetadata', tryPlay)
       video.removeEventListener('canplay', tryPlay)
+      video.removeEventListener('canplaythrough', tryPlay)
     }
   }, [])
 
