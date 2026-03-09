@@ -45,8 +45,19 @@ export default function ProjectsSection() {
                 style={{ background: `radial-gradient(ellipse at top left, ${project.color}10, transparent 70%)` }}
               />
 
-              {/* Preview afbeelding */}
-              {'image' in project && project.image ? (
+              {/* Preview media */}
+              {'video' in project && project.video ? (
+                <div className="relative w-full h-72 rounded-xl overflow-hidden mb-5 border border-[#1A2332] bg-[#0A0F1A]">
+                  <video
+                    src={project.video as string}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ) : 'image' in project && project.image ? (
                 <div className="relative w-full h-72 rounded-xl overflow-hidden mb-5 border border-[#1A2332] bg-[#0A0F1A]">
                   <Image src={project.image} alt={project.name} fill className="object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
                 </div>
