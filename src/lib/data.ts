@@ -97,7 +97,7 @@ export const projects = [
     tech: ['React Native', 'Expo', 'Supabase', 'i18n', 'Offline Storage'],
     color: '#F7804F',
     emoji: '🛡️',
-    image: '/safelink.png',
+    video: '/safelink-demo.mp4',
   },
 ]
 
