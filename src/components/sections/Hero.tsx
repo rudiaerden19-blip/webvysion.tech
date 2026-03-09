@@ -139,7 +139,7 @@ export default function Hero() {
         >
           {[
             { value: '13+', label: 'Jaar ervaring' },
-            { value: '4+', label: 'Projecten opgeleverd' },
+            { value: '124+', label: 'Projecten opgeleverd' },
             { value: '100%', label: 'Custom software' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
