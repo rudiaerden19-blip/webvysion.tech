@@ -5,9 +5,9 @@ export default function Footer() {
   return (
     <footer className="border-t border-[#1A2332] bg-[#0D1117]">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
           {/* Brand */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4F8EF7] to-[#7C6EF0] flex items-center justify-center text-white font-bold text-sm">
                 W
@@ -53,6 +53,27 @@ export default function Footer() {
                   <Link href="/diensten" className="text-sm text-[#8899B0] hover:text-[#E8EDF5] transition-colors">
                     {s}
                   </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Onze platforms */}
+          <div>
+            <p className="text-xs font-semibold text-[#4A5E78] uppercase tracking-widest mb-4">Onze platforms</p>
+            <ul className="space-y-2">
+              {[
+                { label: 'vysionhoreca.com', url: 'https://www.vysionhoreca.com' },
+                { label: 'webvysion.tech', url: 'https://www.webvysion.tech' },
+                { label: 'vysionapps.io', url: 'https://www.vysionapps.io' },
+                { label: 'voxapp.tech', url: 'https://www.voxapp.tech' },
+                { label: 'appvysion.com', url: 'https://www.appvysion.com' },
+              ].map((site) => (
+                <li key={site.label}>
+                  <a href={site.url} target="_blank" rel="noopener noreferrer"
+                    className="text-sm text-[#8899B0] hover:text-[#4F8EF7] transition-colors">
+                    {site.label}
+                  </a>
                 </li>
               ))}
             </ul>
