@@ -88,7 +88,7 @@ export default function ProjectsSection() {
                 </div>
               ) : 'image' in project && project.image ? (
                 <div className="relative w-full h-72 rounded-xl overflow-hidden mb-5 border border-[#1A2332] bg-[#0A0F1A]">
-                  <Image src={project.image} alt={project.name} fill className="object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={project.image as string} alt={project.name} fill className="object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
                 </div>
               ) : (
                 <div className="flex items-start justify-between mb-5">
