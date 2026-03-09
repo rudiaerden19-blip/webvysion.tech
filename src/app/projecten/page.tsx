@@ -51,7 +51,7 @@ export default function ProjectenPage() {
                         {'video' in project && project.video ? (
                           <span className="flex items-center justify-center w-full h-full text-3xl">{project.emoji}</span>
                         ) : 'image' in project && project.image ? (
-                          <Image src={project.image} alt={project.name} width={96} height={96} className="w-full h-full object-contain" />
+                          <Image src={project.image as string} alt={project.name} width={96} height={96} className="w-full h-full object-contain" />
                         ) : (
                           <span className="flex items-center justify-center w-full h-full text-3xl">{project.emoji}</span>
                         )}
