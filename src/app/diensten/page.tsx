@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { services } from '@/lib/data'
@@ -31,28 +32,35 @@ export default function DienstenPage() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="group relative bg-[#0F1623] rounded-2xl border border-[#1A2332] p-8 hover:border-[#243447] transition-all overflow-hidden"
+              className="group relative bg-[#0F1623] rounded-2xl border border-[#1A2332] hover:border-[#243447] transition-all overflow-hidden"
             >
               <div
                 className="absolute top-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 style={{ background: `linear-gradient(90deg, transparent, ${colors[i % colors.length]}, transparent)` }}
               />
-              <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl mb-6"
-                style={{ background: `${colors[i % colors.length]}15`, border: `1px solid ${colors[i % colors.length]}30` }}
-              >
-                {service.icon}
+              {'image' in service && service.image && (
+                <div className="w-full h-48 overflow-hidden border-b border-[#1A2332]">
+                  <Image
+                    src={service.image as string}
+                    alt={service.title}
+                    width={600}
+                    height={192}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              )}
+              <div className="p-8">
+                <h2 className="text-xl font-bold text-[#E8EDF5] mb-3">{service.title}</h2>
+                <p className="text-sm text-[#8899B0] leading-relaxed mb-6">{service.description}</p>
+                <ul className="grid grid-cols-2 gap-2">
+                  {service.features.map((f) => (
+                    <li key={f} className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: colors[i % colors.length] }} />
+                      <span className="text-sm text-[#4A5E78]">{f}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h2 className="text-xl font-bold text-[#E8EDF5] mb-3">{service.title}</h2>
-              <p className="text-sm text-[#8899B0] leading-relaxed mb-6">{service.description}</p>
-              <ul className="grid grid-cols-2 gap-2">
-                {service.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: colors[i % colors.length] }} />
-                    <span className="text-sm text-[#4A5E78]">{f}</span>
-                  </li>
-                ))}
-              </ul>
             </motion.div>
           ))}
         </div>
