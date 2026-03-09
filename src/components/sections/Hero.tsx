@@ -1,8 +1,33 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
+import { useRef, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight, ChevronDown } from 'lucide-react'
+
+function CountUp({ target, suffix = '', duration = 1500 }: { target: number; suffix?: string; duration?: number }) {
+  const [count, setCount] = useState(0)
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true })
+
+  useEffect(() => {
+    if (!inView) return
+    let start = 0
+    const step = target / (duration / 16)
+    const timer = setInterval(() => {
+      start += step
+      if (start >= target) {
+        setCount(target)
+        clearInterval(timer)
+      } else {
+        setCount(Math.floor(start))
+      }
+    }, 16)
+    return () => clearInterval(timer)
+  }, [inView, target, duration])
+
+  return <span ref={ref}>{count}{suffix}</span>
+}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -138,12 +163,14 @@ export default function Hero() {
           className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto"
         >
           {[
-            { value: '13+', label: 'Jaar ervaring' },
-            { value: '124+', label: 'Projecten opgeleverd' },
-            { value: '100%', label: 'Custom software' },
+            { target: 13, suffix: '+', label: 'Jaar ervaring' },
+            { target: 324, suffix: '+', label: 'Projecten opgeleverd' },
+            { target: 100, suffix: '%', label: 'Custom software' },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-2xl font-extrabold text-[#E8EDF5] mb-1">{stat.value}</div>
+              <div className="text-2xl font-extrabold text-[#E8EDF5] mb-1">
+                <CountUp target={stat.target} suffix={stat.suffix} duration={1200} />
+              </div>
               <div className="text-xs text-[#4A5E78]">{stat.label}</div>
             </div>
           ))}
