@@ -14,7 +14,20 @@ function AutoPlayVideo({ src }: { src: string }) {
     const video = videoRef.current
     if (!video) return
     video.muted = true
-    video.play().catch(() => {})
+
+    const tryPlay = () => {
+      video.play().catch(() => {})
+    }
+
+    if (video.readyState >= 3) {
+      tryPlay()
+    } else {
+      video.addEventListener('canplay', tryPlay, { once: true })
+    }
+
+    return () => {
+      video.removeEventListener('canplay', tryPlay)
+    }
   }, [])
 
   return (
