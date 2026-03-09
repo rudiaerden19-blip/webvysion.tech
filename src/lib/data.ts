@@ -35,6 +35,7 @@ export const projects = [
     color: '#7C6EF0',
     emoji: '🍽️',
     url: 'https://www.vysionhoreca.com/kassa',
+    github: 'https://github.com/rudiaerden19-blip/vysionhoreca-website',
   },
   {
     id: 'restaurant-ordering',
@@ -51,8 +52,28 @@ export const projects = [
     ],
     tech: ['Supabase Realtime', 'Web Applications', 'Cloud Backend', 'Messaging API'],
     url: 'https://www.vysionhoreca.com',
+    github: 'https://github.com/rudiaerden19-blip/vysionhoreca-website',
     color: '#22D3A5',
     emoji: '📱',
+  },
+  {
+    id: 'voxapp',
+    name: 'VoxApp',
+    tagline: 'AI Voice Agent Platform',
+    description:
+      'VoxApp is een AI-gestuurd voice agent platform gebouwd met Vapi, Deepgram en ElevenLabs. Het platform verwerkt inkomende gesprekken automatisch via een intelligente spraak-pipeline met enterprise-grade infrastructuur.',
+    features: [
+      'AI voice agents via Vapi',
+      'Spraakherkenning met Deepgram',
+      'Text-to-speech via ElevenLabs',
+      'Realtime gespreksverwerking',
+      'Enterprise logging & monitoring',
+      'Multi-tenant architectuur',
+    ],
+    tech: ['Vapi AI', 'Deepgram STT', 'ElevenLabs TTS', 'Supabase', 'Next.js'],
+    color: '#F7804F',
+    emoji: '🎙️',
+    github: 'https://github.com/rudiaerden19-blip/voxapp',
   },
   {
     id: 'safelink',
