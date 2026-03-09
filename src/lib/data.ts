@@ -73,7 +73,6 @@ export const projects = [
     tech: ['Vapi AI', 'Deepgram STT', 'ElevenLabs TTS', 'Supabase', 'Next.js'],
     color: '#F7804F',
     emoji: '🎙️',
-    github: 'https://github.com/rudiaerden19-blip/voxapp',
   },
   {
     id: 'safelink',
