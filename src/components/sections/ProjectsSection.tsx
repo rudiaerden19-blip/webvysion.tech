@@ -3,7 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ExternalLink } from 'lucide-react'
 import { projects } from '@/lib/data'
 
 export default function ProjectsSection() {
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
               </p>
 
               {/* Features preview */}
-              <div className="space-y-1.5">
+              <div className="space-y-1.5 mb-5">
                 {project.features.slice(0, 3).map((f) => (
                   <div key={f} className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: project.color }} />
@@ -84,6 +84,25 @@ export default function ProjectsSection() {
                   <span className="text-xs text-[#4A5E78] pl-3.5">+{project.features.length - 3} meer</span>
                 )}
               </div>
+
+              {/* Bezoek project knop */}
+              {'url' in project && project.url && (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-lg border transition-all"
+                  style={{
+                    color: project.color,
+                    borderColor: `${project.color}40`,
+                    background: `${project.color}0D`,
+                  }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <ExternalLink size={13} />
+                  Bezoek project
+                </a>
+              )}
             </motion.div>
           ))}
         </div>

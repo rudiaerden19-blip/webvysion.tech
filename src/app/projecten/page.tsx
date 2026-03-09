@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { ExternalLink } from 'lucide-react'
 import { projects } from '@/lib/data'
 
 export default function ProjectenPage() {
@@ -65,6 +66,24 @@ export default function ProjectenPage() {
                         </span>
                       ))}
                     </div>
+
+                    {/* Bezoek project knop */}
+                    {'url' in project && project.url && (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 mt-5 px-4 py-2.5 rounded-xl text-sm font-semibold border transition-all hover:opacity-80"
+                        style={{
+                          color: project.color,
+                          borderColor: `${project.color}40`,
+                          background: `${project.color}0D`,
+                        }}
+                      >
+                        <ExternalLink size={15} />
+                        Bezoek project
+                      </a>
+                    )}
                   </div>
 
                   {/* Right: features */}

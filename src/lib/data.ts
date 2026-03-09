@@ -16,6 +16,7 @@ export const projects = [
     tech: ['Mobile Apps', 'Geolocation', 'Cloud Backend', 'Device Management'],
     color: '#4F8EF7',
     emoji: '📡',
+    url: 'https://www.vysionapps.io/home',
   },
   {
     id: 'restaurant-pos',
