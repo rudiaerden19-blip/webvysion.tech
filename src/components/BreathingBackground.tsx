@@ -7,7 +7,7 @@ export default function BreathingBackground() {
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {/* Blob 1 — blauw linksboven */}
       <motion.div
-        className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full"
+        className="absolute -top-40 -left-40 w-[400px] h-[400px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] rounded-full"
         style={{
           background: 'radial-gradient(circle, rgba(79,142,247,0.12) 0%, transparent 70%)',
           filter: 'blur(60px)',
@@ -27,7 +27,7 @@ export default function BreathingBackground() {
 
       {/* Blob 2 — paars rechtsonder */}
       <motion.div
-        className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full"
+        className="absolute -bottom-40 -right-40 w-[350px] h-[350px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] rounded-full"
         style={{
           background: 'radial-gradient(circle, rgba(124,110,240,0.10) 0%, transparent 70%)',
           filter: 'blur(60px)',
