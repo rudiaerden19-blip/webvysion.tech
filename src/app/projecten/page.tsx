@@ -49,7 +49,7 @@ export default function ProjectenPage() {
                         style={{ background: `${project.color}15`, border: `1px solid ${project.color}30` }}
                       >
                         {'image' in project && project.image ? (
-                          <Image src={project.image} alt={project.name} width={80} height={80} className="w-full h-full object-cover" />
+                          <Image src={project.image} alt={project.name} width={80} height={80} className="w-full h-full object-contain" />
                         ) : (
                           <span className="flex items-center justify-center w-full h-full text-3xl">{project.emoji}</span>
                         )}
