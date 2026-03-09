@@ -34,6 +34,7 @@ export const projects = [
     tech: ['Realtime Database', 'Cloud Backend', 'Dashboard', 'Restaurant Software'],
     color: '#7C6EF0',
     emoji: '🍽️',
+    url: 'https://www.vysionhoreca.com/kassa',
   },
   {
     id: 'restaurant-ordering',
