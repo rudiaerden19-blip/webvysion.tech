@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import BreathingBackground from '@/components/BreathingBackground'
 
 export const metadata: Metadata = {
   title: 'WebVysion | Full-Stack SaaS Development',
@@ -29,9 +30,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="nl" className="scroll-smooth">
       <body className="bg-[#080C14] text-[#E8EDF5] antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <BreathingBackground />
+        <div className="relative z-10">
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   )
