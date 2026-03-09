@@ -71,7 +71,7 @@ export default function Footer() {
               ].map((site) => (
                 <li key={site.label}>
                   <a href={site.url} target="_blank" rel="noopener noreferrer"
-                    className="text-sm text-[#8899B0] hover:text-[#4F8EF7] transition-colors">
+                    className="text-sm font-medium bg-gradient-to-r from-[#4F8EF7] to-[#7C6EF0] bg-clip-text text-transparent hover:opacity-80 transition-opacity">
                     {site.label}
                   </a>
                 </li>
