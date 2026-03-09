@@ -79,10 +79,19 @@ export default function ContactSection() {
             </div>
 
             <div className="bg-gradient-to-br from-[#4F8EF7]/10 to-[#7C6EF0]/10 rounded-2xl border border-[#4F8EF7]/20 p-6">
-              <p className="text-sm font-semibold text-[#E8EDF5] mb-2">🇧🇪 Gevestigd in België</p>
-              <p className="text-xs text-[#8899B0] leading-relaxed">
+              <p className="text-sm font-semibold text-[#E8EDF5] mb-3">🇧🇪 Gevestigd in België</p>
+              <p className="text-xs text-[#8899B0] leading-relaxed mb-4">
                 Beschikbaar voor lokale en internationale freelance projecten.
               </p>
+              <div className="space-y-1.5 text-xs text-[#8899B0]">
+                <p className="text-[#E8EDF5] font-medium">Vysion IT</p>
+                <p>Siberiëstraat 24</p>
+                <p>3900 Pelt (industrieterrein Nolim)</p>
+                <a href="tel:+32492129383" className="flex items-center gap-1.5 hover:text-[#4F8EF7] transition-colors mt-2">
+                  <span>📞</span>
+                  <span>+32 492 12 93 83</span>
+                </a>
+              </div>
             </div>
           </motion.div>
 
