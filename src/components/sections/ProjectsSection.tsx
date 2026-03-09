@@ -45,25 +45,26 @@ export default function ProjectsSection() {
                 style={{ background: `radial-gradient(ellipse at top left, ${project.color}10, transparent 70%)` }}
               />
 
-              {/* Top */}
-              <div className="flex items-start justify-between mb-5">
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl overflow-hidden shrink-0"
-                  style={{ background: `${project.color}15`, border: `1px solid ${project.color}30` }}
-                >
-                  {'image' in project && project.image ? (
-                    <Image src={project.image} alt={project.name} width={48} height={48} className="w-full h-full object-cover rounded-xl" />
-                  ) : (
-                    project.emoji
-                  )}
+              {/* Preview afbeelding */}
+              {'image' in project && project.image ? (
+                <div className="w-full h-44 rounded-xl overflow-hidden mb-5 border border-[#1A2332]">
+                  <Image src={project.image} alt={project.name} width={600} height={176} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="flex flex-wrap gap-1.5 max-w-[55%] justify-end">
-                  {project.tech.slice(0, 2).map((t) => (
-                    <span key={t} className="px-2.5 py-1 rounded-full bg-[#141D2B] border border-[#1A2332] text-xs text-[#8899B0]">
-                      {t}
-                    </span>
-                  ))}
+              ) : (
+                <div className="flex items-start justify-between mb-5">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl" style={{ background: `${project.color}15`, border: `1px solid ${project.color}30` }}>
+                    {project.emoji}
+                  </div>
                 </div>
+              )}
+
+              {/* Tech tags */}
+              <div className="flex flex-wrap gap-1.5 mb-4">
+                {project.tech.slice(0, 2).map((t) => (
+                  <span key={t} className="px-2.5 py-1 rounded-full bg-[#141D2B] border border-[#1A2332] text-xs text-[#8899B0]">
+                    {t}
+                  </span>
+                ))}
               </div>
 
               {/* Content */}
