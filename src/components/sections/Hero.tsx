@@ -18,6 +18,61 @@ export default function Hero() {
         <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-gradient-radial from-[rgba(124,110,240,0.07)] to-transparent rounded-full blur-3xl" />
       </div>
 
+      {/* Floating card decorations */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Kaart linksboven */}
+        <motion.div
+          className="absolute top-[12%] left-[6%] w-48 h-24 rounded-2xl border border-[#1E3050] bg-[#0B1422]/60 backdrop-blur-sm shadow-lg shadow-blue-900/10"
+          animate={{ y: [0, -14, 0], x: [0, 6, 0], rotate: [0, 1, 0] }}
+          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <div className="p-4">
+            <div className="w-6 h-1.5 rounded-full bg-[#4F8EF7]/40 mb-2" />
+            <div className="w-16 h-1.5 rounded-full bg-[#1E3050] mb-1.5" />
+            <div className="w-10 h-1.5 rounded-full bg-[#1E3050]" />
+          </div>
+        </motion.div>
+
+        {/* Kaart rechtsonder */}
+        <motion.div
+          className="absolute bottom-[18%] right-[7%] w-44 h-20 rounded-2xl border border-[#221E4A] bg-[#0D0B1E]/60 backdrop-blur-sm shadow-lg shadow-purple-900/10"
+          animate={{ y: [0, 12, 0], x: [0, -8, 0], rotate: [0, -1, 0] }}
+          transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+        >
+          <div className="p-4">
+            <div className="w-6 h-1.5 rounded-full bg-[#7C6EF0]/40 mb-2" />
+            <div className="w-14 h-1.5 rounded-full bg-[#221E4A] mb-1.5" />
+            <div className="w-8 h-1.5 rounded-full bg-[#221E4A]" />
+          </div>
+        </motion.div>
+
+        {/* Klein badge rechtsboven */}
+        <motion.div
+          className="absolute top-[22%] right-[9%] w-32 h-10 rounded-xl border border-[#1E3050] bg-[#0B1422]/70 backdrop-blur-sm flex items-center gap-2 px-3"
+          animate={{ y: [0, -10, 0], x: [0, -4, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
+        >
+          <div className="w-2 h-2 rounded-full bg-[#4F8EF7]/60 shrink-0" />
+          <div className="flex flex-col gap-1">
+            <div className="w-14 h-1 rounded-full bg-[#1E3050]" />
+            <div className="w-10 h-1 rounded-full bg-[#1E3050]" />
+          </div>
+        </motion.div>
+
+        {/* Klein badge linksonder */}
+        <motion.div
+          className="absolute bottom-[28%] left-[8%] w-28 h-10 rounded-xl border border-[#221E4A] bg-[#0D0B1E]/70 backdrop-blur-sm flex items-center gap-2 px-3"
+          animate={{ y: [0, 8, 0], x: [0, 5, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 2.5 }}
+        >
+          <div className="w-2 h-2 rounded-full bg-[#7C6EF0]/60 shrink-0" />
+          <div className="flex flex-col gap-1">
+            <div className="w-12 h-1 rounded-full bg-[#221E4A]" />
+            <div className="w-8 h-1 rounded-full bg-[#221E4A]" />
+          </div>
+        </motion.div>
+      </div>
+
       {/* Grid pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: 'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
