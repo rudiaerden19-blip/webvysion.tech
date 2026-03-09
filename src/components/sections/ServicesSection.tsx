@@ -78,22 +78,35 @@ export default function ServicesSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="relative bg-gradient-to-br from-[#4F8EF7]/10 to-[#7C6EF0]/10 rounded-2xl border border-[#4F8EF7]/20 p-7 flex flex-col justify-between min-h-[280px]"
+            className="relative bg-gradient-to-br from-[#4F8EF7]/10 to-[#7C6EF0]/10 rounded-2xl border border-[#4F8EF7]/20 overflow-hidden flex flex-col justify-between"
           >
-            <div>
-              <p className="text-2xl mb-4">✦</p>
-              <h3 className="text-base font-bold text-[#E8EDF5] mb-2">Klaar om te starten?</h3>
-              <p className="text-sm text-[#8899B0] leading-relaxed">
-                Vertel ons over jouw project en wij maken een voorstel op maat.
-              </p>
+            {/* Afbeelding bovenaan */}
+            <div className="w-full h-48 overflow-hidden border-b border-[#4F8EF7]/20">
+              <Image
+                src="/services/cta.png"
+                alt="Start een project"
+                width={600}
+                height={192}
+                className="w-full h-full object-cover"
+              />
             </div>
-            <Link
-              href="/contact"
-              className="group mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#4F8EF7] to-[#7C6EF0] text-white text-sm font-semibold hover:opacity-90 transition-opacity"
-            >
-              Start een project
-              <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
-            </Link>
+
+            <div className="p-7 flex flex-col justify-between flex-1">
+              <div>
+                <p className="text-2xl mb-4">✦</p>
+                <h3 className="text-base font-bold text-[#E8EDF5] mb-2">Klaar om te starten?</h3>
+                <p className="text-sm text-[#8899B0] leading-relaxed">
+                  Vertel ons over jouw project en wij maken een voorstel op maat.
+                </p>
+              </div>
+              <Link
+                href="/contact"
+                className="group mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#4F8EF7] to-[#7C6EF0] text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+              >
+                Start een project
+                <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           </motion.div>
         </div>
       </div>
