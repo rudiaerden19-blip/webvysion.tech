@@ -76,6 +76,7 @@ export const projects = [
     tech: ['Vapi AI', 'Deepgram STT', 'ElevenLabs TTS', 'Supabase', 'Next.js'],
     color: '#F7804F',
     emoji: '🎙️',
+    image: '/voxapp.png',
   },
   {
     id: 'safelink',
