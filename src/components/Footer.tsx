@@ -18,13 +18,13 @@ export default function Footer() {
               Onafhankelijk development team uit België. Wij bouwen complete softwareproducten van idee tot werkend systeem.
             </p>
             <div className="flex items-center gap-3 mt-5">
-              <a href="mailto:hello@webvysion.tech" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all">
+              <a href="mailto:rudiaerden19@gmail.com" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all">
                 <Mail size={17} />
               </a>
-              <a href="https://github.com/webvysion" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all">
+              <a href="https://github.com/rudiaerden19-blip" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all">
                 <Github size={17} />
               </a>
-              <a href="https://linkedin.com/company/webvysion" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all">
+              <a href="https://www.linkedin.com/in/vysion-it-7a158b3b2/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all">
                 <Linkedin size={17} />
               </a>
             </div>

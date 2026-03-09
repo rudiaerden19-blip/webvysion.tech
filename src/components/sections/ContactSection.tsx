@@ -14,7 +14,7 @@ export default function ContactSection() {
     e.preventDefault()
     const subject = encodeURIComponent(`Project aanvraag van ${form.name}`)
     const body = encodeURIComponent(`Naam: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)
-    window.location.href = `mailto:hello@webvysion.tech?subject=${subject}&body=${body}`
+    window.location.href = `mailto:rudiaerden19@gmail.com?subject=${subject}&body=${body}`
     setSent(true)
   }
 
@@ -45,34 +45,34 @@ export default function ContactSection() {
             <div className="bg-[#0F1623] rounded-2xl border border-[#1A2332] p-6">
               <p className="text-sm font-semibold text-[#E8EDF5] mb-5">Direct contact</p>
               <div className="space-y-4">
-                <a href="mailto:hello@webvysion.tech"
+                <a href="mailto:rudiaerden19@gmail.com"
                   className="group flex items-center gap-3 text-[#8899B0] hover:text-[#E8EDF5] transition-colors">
                   <div className="w-9 h-9 rounded-lg bg-[#141D2B] flex items-center justify-center group-hover:bg-[#1A2332] transition-colors">
                     <Mail size={16} className="text-[#4F8EF7]" />
                   </div>
                   <div>
                     <p className="text-xs text-[#4A5E78]">Email</p>
-                    <p className="text-sm font-medium">hello@webvysion.tech</p>
+                    <p className="text-sm font-medium">rudiaerden19@gmail.com</p>
                   </div>
                 </a>
-                <a href="https://github.com/webvysion" target="_blank" rel="noopener noreferrer"
+                <a href="https://github.com/rudiaerden19-blip" target="_blank" rel="noopener noreferrer"
                   className="group flex items-center gap-3 text-[#8899B0] hover:text-[#E8EDF5] transition-colors">
                   <div className="w-9 h-9 rounded-lg bg-[#141D2B] flex items-center justify-center group-hover:bg-[#1A2332] transition-colors">
                     <Github size={16} className="text-[#4F8EF7]" />
                   </div>
                   <div>
                     <p className="text-xs text-[#4A5E78]">GitHub</p>
-                    <p className="text-sm font-medium">github.com/webvysion</p>
+                    <p className="text-sm font-medium">github.com/rudiaerden19-blip</p>
                   </div>
                 </a>
-                <a href="https://linkedin.com/company/webvysion" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/vysion-it-7a158b3b2/" target="_blank" rel="noopener noreferrer"
                   className="group flex items-center gap-3 text-[#8899B0] hover:text-[#E8EDF5] transition-colors">
                   <div className="w-9 h-9 rounded-lg bg-[#141D2B] flex items-center justify-center group-hover:bg-[#1A2332] transition-colors">
                     <Linkedin size={16} className="text-[#4F8EF7]" />
                   </div>
                   <div>
                     <p className="text-xs text-[#4A5E78]">LinkedIn</p>
-                    <p className="text-sm font-medium">linkedin.com/company/webvysion</p>
+                    <p className="text-sm font-medium">linkedin.com/in/vysion-it</p>
                   </div>
                 </a>
               </div>
