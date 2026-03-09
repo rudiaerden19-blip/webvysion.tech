@@ -2,7 +2,6 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import Image from 'next/image'
 import { technologies } from '@/lib/data'
 
 export default function TechSection() {
@@ -26,33 +25,36 @@ export default function TechSection() {
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {technologies.map((tech, i) => (
-            <motion.div
-              key={tech.name}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ delay: i * 0.05, duration: 0.4 }}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="group flex flex-col items-center gap-3 p-5 rounded-2xl bg-[#0F1623] border border-[#1A2332] hover:border-[#243447] hover:bg-[#141D2B] transition-all duration-200 cursor-default"
-            >
-              <div className="relative w-20 h-20 rounded-xl overflow-hidden flex items-center justify-center bg-[#141D2B] group-hover:bg-[#1A2332] transition-colors shrink-0">
-                {(tech as { image?: string }).image ? (
-                  <Image
-                    src={(tech as { image: string }).image}
-                    alt={tech.name}
-                    fill
-                    className="object-contain p-2"
-                  />
-                ) : (
-                  <span className="text-2xl font-bold text-[#4F8EF7]">{tech.icon}</span>
-                )}
-              </div>
-              <div className="text-center">
-                <p className="text-xs font-semibold text-[#E8EDF5] leading-tight">{tech.name}</p>
-                <p className="text-[10px] text-[#4A5E78] mt-0.5">{tech.category}</p>
-              </div>
-            </motion.div>
-          ))}
+          {technologies.map((tech, i) => {
+            const techWithImage = tech as typeof tech & { image?: string }
+            return (
+              <motion.div
+                key={tech.name}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ delay: i * 0.05, duration: 0.4 }}
+                whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                className="group flex flex-col items-center gap-3 p-5 rounded-2xl bg-[#0F1623] border border-[#1A2332] hover:border-[#243447] hover:bg-[#141D2B] transition-all duration-200 cursor-default"
+              >
+                <div className="w-full h-16 rounded-xl overflow-hidden flex items-center justify-center bg-[#141D2B] group-hover:bg-[#1A2332] transition-colors shrink-0">
+                  {techWithImage.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={techWithImage.image}
+                      alt={tech.name}
+                      className="w-full h-full object-contain p-2"
+                    />
+                  ) : (
+                    <span className="text-2xl">{tech.icon}</span>
+                  )}
+                </div>
+                <div className="text-center">
+                  <p className="text-xs font-semibold text-[#E8EDF5] leading-tight">{tech.name}</p>
+                  <p className="text-[10px] text-[#4A5E78] mt-0.5">{tech.category}</p>
+                </div>
+              </motion.div>
+            )
+          })}
         </div>
       </div>
     </section>
