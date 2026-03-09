@@ -1,11 +1,34 @@
 'use client'
 
 import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import { projects } from '@/lib/data'
+
+function AutoPlayVideo({ src }: { src: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    video.muted = true
+    video.play().catch(() => {})
+  }, [])
+
+  return (
+    <video
+      ref={videoRef}
+      src={src}
+      muted
+      loop
+      playsInline
+      preload="auto"
+      className="w-full h-full object-cover"
+    />
+  )
+}
 
 export default function ProjectsSection() {
   const ref = useRef(null)
@@ -48,14 +71,7 @@ export default function ProjectsSection() {
               {/* Preview media */}
               {'video' in project && project.video ? (
                 <div className="relative w-full h-72 rounded-xl overflow-hidden mb-5 border border-[#1A2332] bg-[#0A0F1A]">
-                  <video
-                    src={project.video as string}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="w-full h-full object-cover"
-                  />
+                  <AutoPlayVideo src={project.video as string} />
                 </div>
               ) : 'image' in project && project.image ? (
                 <div className="relative w-full h-72 rounded-xl overflow-hidden mb-5 border border-[#1A2332] bg-[#0A0F1A]">
