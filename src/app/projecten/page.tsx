@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { ExternalLink } from 'lucide-react'
 import { projects } from '@/lib/data'
 
@@ -44,10 +45,14 @@ export default function ProjectenPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-4">
                       <div
-                        className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shrink-0"
+                        className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl shrink-0 overflow-hidden"
                         style={{ background: `${project.color}15`, border: `1px solid ${project.color}30` }}
                       >
-                        {project.emoji}
+                        {'image' in project && project.image ? (
+                          <Image src={project.image} alt={project.name} width={56} height={56} className="w-full h-full object-cover rounded-2xl" />
+                        ) : (
+                          project.emoji
+                        )}
                       </div>
                       <div>
                         <h2 className="text-xl font-bold text-[#E8EDF5]">{project.name}</h2>

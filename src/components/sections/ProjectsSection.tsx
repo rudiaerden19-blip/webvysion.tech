@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import { projects } from '@/lib/data'
 
@@ -47,10 +48,14 @@ export default function ProjectsSection() {
               {/* Top */}
               <div className="flex items-start justify-between mb-5">
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl overflow-hidden shrink-0"
                   style={{ background: `${project.color}15`, border: `1px solid ${project.color}30` }}
                 >
-                  {project.emoji}
+                  {'image' in project && project.image ? (
+                    <Image src={project.image} alt={project.name} width={48} height={48} className="w-full h-full object-cover rounded-xl" />
+                  ) : (
+                    project.emoji
+                  )}
                 </div>
                 <div className="flex flex-wrap gap-1.5 max-w-[55%] justify-end">
                   {project.tech.slice(0, 2).map((t) => (
