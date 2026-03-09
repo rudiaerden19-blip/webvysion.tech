@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Facebook, Linkedin, Mail } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -22,8 +22,8 @@ export default function Footer() {
               <a href="mailto:rudiaerden19@gmail.com" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all">
                 <Mail size={17} />
               </a>
-              <a href="https://github.com/rudiaerden19-blip" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all">
-                <Github size={17} />
+              <a href="https://www.facebook.com/profile.php?id=61586754135685" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all">
+                <Facebook size={17} />
               </a>
               <a href="https://www.linkedin.com/in/vysion-it-7a158b3b2/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all">
                 <Linkedin size={17} />
