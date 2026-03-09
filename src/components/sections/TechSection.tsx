@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import Image from 'next/image'
 import { technologies } from '@/lib/data'
 
 export default function TechSection() {
@@ -24,18 +25,28 @@ export default function TechSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {technologies.map((tech, i) => (
             <motion.div
               key={tech.name}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: i * 0.05, duration: 0.4 }}
-              whileHover={{ y: -3, transition: { duration: 0.2 } }}
-              className="group flex flex-col items-center gap-3 p-4 rounded-2xl bg-[#0F1623] border border-[#1A2332] hover:border-[#243447] hover:bg-[#141D2B] transition-all duration-200 cursor-default"
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="group flex flex-col items-center gap-3 p-5 rounded-2xl bg-[#0F1623] border border-[#1A2332] hover:border-[#243447] hover:bg-[#141D2B] transition-all duration-200 cursor-default"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#141D2B] group-hover:bg-[#1A2332] flex items-center justify-center text-lg font-bold text-[#4F8EF7] transition-colors">
-                {tech.icon}
+              <div className="w-16 h-16 rounded-xl overflow-hidden flex items-center justify-center bg-[#141D2B] group-hover:bg-[#1A2332] transition-colors shrink-0">
+                {'image' in tech && tech.image ? (
+                  <Image
+                    src={tech.image}
+                    alt={tech.name}
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-contain p-1"
+                  />
+                ) : (
+                  <span className="text-2xl font-bold text-[#4F8EF7]">{tech.icon}</span>
+                )}
               </div>
               <div className="text-center">
                 <p className="text-xs font-semibold text-[#E8EDF5] leading-tight">{tech.name}</p>

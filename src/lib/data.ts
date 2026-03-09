@@ -140,16 +140,16 @@ export const services = [
 ]
 
 export const technologies = [
-  { name: 'Next.js', icon: '▲', category: 'Framework' },
-  { name: 'TypeScript', icon: 'TS', category: 'Language' },
-  { name: 'JavaScript', icon: 'JS', category: 'Language' },
-  { name: 'React Native', icon: '⚛', category: 'Mobile' },
-  { name: 'Tailwind CSS', icon: '🎨', category: 'Styling' },
-  { name: 'Supabase', icon: '⚡', category: 'Backend' },
-  { name: 'Firebase', icon: '🔥', category: 'Backend' },
-  { name: 'Vercel', icon: '▲', category: 'Deployment' },
-  { name: 'GitHub', icon: '🐙', category: 'Version Control' },
-  { name: 'Framer Motion', icon: '✦', category: 'Animation' },
-  { name: 'SaaS Architecture', icon: '☁️', category: 'Architecture' },
+  { name: 'Next.js', icon: '▲', image: '/tech/nextjs.png', category: 'Framework' },
+  { name: 'TypeScript', icon: 'TS', image: '/tech/typescript.png', category: 'Language' },
+  { name: 'JavaScript', icon: 'JS', image: '/tech/javascript.png', category: 'Language' },
+  { name: 'React Native', icon: '⚛', image: '/tech/reactnative.png', category: 'Mobile' },
+  { name: 'Tailwind CSS', icon: '🎨', image: '/tech/tailwind.png', category: 'Styling' },
+  { name: 'Supabase', icon: '⚡', image: '/tech/supabase.png', category: 'Backend' },
+  { name: 'Firebase', icon: '🔥', image: '/tech/firebase.png', category: 'Backend' },
+  { name: 'Vercel', icon: '▲', image: '/tech/vercel.png', category: 'Deployment' },
+  { name: 'GitHub', icon: '🐙', image: '/tech/github.png', category: 'Version Control' },
+  { name: 'Framer Motion', icon: '✦', image: '/tech/framer.png', category: 'Animation' },
+  { name: 'SaaS Architecture', icon: '☁️', image: '/tech/saas.png', category: 'Architecture' },
   { name: 'Cursor AI', icon: '◎', category: 'Tools' },
 ]
