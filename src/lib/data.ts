@@ -57,7 +57,7 @@ export const projects = [
     github: 'https://github.com/rudiaerden19-blip/vysionhoreca-website',
     color: '#22D3A5',
     emoji: '📱',
-    image: '/restaurant-ordering.png',
+    video: '/restaurant-ordering-demo.mp4',
   },
   {
     id: 'voxapp',
