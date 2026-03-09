@@ -47,8 +47,8 @@ export default function ProjectsSection() {
 
               {/* Preview afbeelding */}
               {'image' in project && project.image ? (
-                <div className="w-full h-56 rounded-xl overflow-hidden mb-5 border border-[#1A2332]">
-                  <Image src={project.image} alt={project.name} width={600} height={224} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="w-full h-56 rounded-xl overflow-hidden mb-5 border border-[#1A2332] bg-[#0F1623] flex items-center justify-center">
+                  <Image src={project.image} alt={project.name} width={600} height={224} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
                 </div>
               ) : (
                 <div className="flex items-start justify-between mb-5">

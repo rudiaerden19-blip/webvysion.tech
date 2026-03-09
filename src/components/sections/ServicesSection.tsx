@@ -46,13 +46,13 @@ export default function ServicesSection() {
 
               {/* Preview afbeelding */}
               {'image' in service && service.image && (
-                <div className="w-full h-48 overflow-hidden border-b border-[#1A2332]">
+                <div className="w-full h-48 overflow-hidden border-b border-[#1A2332] bg-[#0F1623] flex items-center justify-center">
                   <Image
                     src={service.image}
                     alt={service.title}
                     width={600}
                     height={192}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               )}
