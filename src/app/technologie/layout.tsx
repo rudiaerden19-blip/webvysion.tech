@@ -2,12 +2,21 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Technologie | WebVysion — Next.js, React Native, Supabase & meer',
-  description: 'WebVysion werkt met Next.js, TypeScript, React Native, Supabase, Firebase, Vercel en meer. Moderne, bewezen technologieën voor snelle en schaalbare software.',
+  description: 'WebVysion werkt met Next.js, TypeScript, React Native, Supabase, Firebase en Vercel. Moderne, bewezen technologieën voor snelle, schaalbare en onderhoudbare software.',
+  keywords: ['Next.js developer', 'TypeScript', 'React Native', 'Supabase', 'Firebase', 'Vercel', 'Tailwind CSS', 'tech stack België'],
   openGraph: {
-    title: 'Technologie Stack | WebVysion',
-    description: 'Onze technologie stack: Next.js, TypeScript, React Native, Tailwind CSS, Supabase en meer.',
+    title: 'Tech Stack | WebVysion — Next.js, React Native & meer',
+    description: 'Onze technologie stack: Next.js, TypeScript, React Native, Tailwind CSS, Supabase, Firebase en Vercel voor moderne, schaalbare software.',
     url: 'https://webvysion.tech/technologie',
+    images: [{ url: '/logo.png', width: 489, height: 494, alt: 'WebVysion Tech Stack' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tech Stack | WebVysion',
+    description: 'Next.js, TypeScript, React Native, Supabase en meer — de technologieën die WebVysion gebruikt.',
+    images: ['/logo.png'],
+  },
+  alternates: { canonical: 'https://webvysion.tech/technologie' },
 }
 
 export default function TechnologieLayout({ children }: { children: React.ReactNode }) {
