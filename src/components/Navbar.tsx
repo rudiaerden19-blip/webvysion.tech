@@ -10,7 +10,7 @@ import { useLang } from '@/context/LanguageContext'
 import t from '@/lib/translations'
 
 const languages = [
-  { code: 'nl' as const, label: 'Ned', flag: '🇳🇱' },
+  { code: 'nl' as const, label: 'Ned', flag: '🇧🇪' },
   { code: 'fr' as const, label: 'Frans', flag: '🇫🇷' },
   { code: 'de' as const, label: 'Duits', flag: '🇩🇪' },
   { code: 'en' as const, label: 'Engels', flag: '🇬🇧' },
