@@ -150,32 +150,32 @@ export const t = {
       {
         name: 'Internet Buddy',
         tagline: 'Contrôle internet intelligent pour écoles & parents',
-        description: 'Internet Buddy est une application développée pour une communauté scolaire belge. Le système donne aux parents et aux écoles un contrôle total sur l'utilisation d'internet des élèves via la technologie de géofencing et la planification de calendrier.',
-        features: ['Activer/désactiver internet à distance','Planification de l'utilisation internet','Technologie géofence','Désactivation automatique près de l'école','Gestion à distance pour parents & écoles','Tableau de bord cloud centralisé'],
+        description: "Internet Buddy est une application développée pour une communauté scolaire belge. Le système donne aux parents et aux écoles un contrôle total sur l'utilisation d'internet des élèves via la technologie de géofencing et la planification de calendrier.",
+        features: ["Activer/désactiver internet à distance","Planification de l'utilisation internet","Technologie géofence","Désactivation automatique près de l'école","Gestion à distance pour parents & écoles","Tableau de bord cloud centralisé"],
       },
       {
         name: 'Restaurant POS System',
         tagline: 'Système de caisse horeca complet',
-        description: 'Un système de caisse horeca complet avec commandes en temps réel et rapports détaillés. Développé pour les restaurants qui ont besoin d'une solution numérique complète pour leur fonctionnement quotidien.',
-        features: ['Système de caisse complet','Système d'affichage cuisine','Commandes en temps réel','Rapports détaillés','Gestion du flux restaurant'],
+        description: "Un système de caisse horeca complet avec commandes en temps réel et rapports détaillés. Développé pour les restaurants qui ont besoin d'une solution numérique complète pour leur fonctionnement quotidien.",
+        features: ["Système de caisse complet","Système d'affichage cuisine","Commandes en temps réel","Rapports détaillés","Gestion du flux restaurant"],
       },
       {
         name: 'Online Restaurant Ordering',
         tagline: 'Commander via WhatsApp & Web',
-        description: 'Une plateforme de commande en ligne pour restaurants permettant aux clients de commander directement via WhatsApp. La plateforme offre aux restaurants un moyen simple de gérer les commandes en ligne avec des mises à jour en temps réel.',
-        features: ['Commander via WhatsApp','Suivi des commandes en temps réel','Intégration écran cuisine','Paiements en ligne','Mises à jour & notifications en temps réel'],
+        description: "Une plateforme de commande en ligne pour restaurants permettant aux clients de commander directement via WhatsApp. La plateforme offre aux restaurants un moyen simple de gérer les commandes en ligne avec des mises à jour en temps réel.",
+        features: ["Commander via WhatsApp","Suivi des commandes en temps réel","Intégration écran cuisine","Paiements en ligne","Mises à jour & notifications en temps réel"],
       },
       {
         name: 'VoxApp',
-        tagline: 'Plateforme d'agents vocaux IA',
-        description: 'VoxApp est une plateforme d'agents vocaux pilotée par IA, construite avec Vapi, Deepgram et ElevenLabs. La plateforme traite automatiquement les appels entrants via un pipeline vocal intelligent avec une infrastructure de niveau entreprise.',
-        features: ['Agents vocaux IA via Vapi','Reconnaissance vocale avec Deepgram','Synthèse vocale via ElevenLabs','Traitement des conversations en temps réel','Journalisation & surveillance entreprise','Architecture multi-tenant'],
+        tagline: "Plateforme d'agents vocaux IA",
+        description: "VoxApp est une plateforme d'agents vocaux pilotée par IA, construite avec Vapi, Deepgram et ElevenLabs. La plateforme traite automatiquement les appels entrants via un pipeline vocal intelligent avec une infrastructure de niveau entreprise.",
+        features: ["Agents vocaux IA via Vapi","Reconnaissance vocale avec Deepgram","Synthèse vocale via ElevenLabs","Traitement des conversations en temps réel","Journalisation & surveillance entreprise","Architecture multi-tenant"],
       },
       {
         name: 'SafeLink',
-        tagline: 'Application de sécurité pour urgences',
-        description: 'SafeLink est une application de sécurité qui aide les personnes à trouver rapidement de l'aide et à signaler des urgences. L'application offre un accès direct aux services d'urgence, le partage de localisation en direct et un soutien personnel — entièrement disponible hors ligne.',
-        features: ['Bouton SOS d'urgence','Partage de localisation en direct','Accès direct aux services d'urgence','Questionnaires d'aide','Forum de soutien','Journal personnel','22 langues supportées','Architecture offline-first'],
+        tagline: "Application de sécurité pour urgences",
+        description: "SafeLink est une application de sécurité qui aide les personnes à trouver rapidement de l'aide et à signaler des urgences. L'application offre un accès direct aux services d'urgence, le partage de localisation en direct et un soutien personnel — entièrement disponible hors ligne.",
+        features: ["Bouton SOS d'urgence","Partage de localisation en direct","Accès direct aux services d'urgence","Questionnaires d'aide","Forum de soutien","Journal personnel","22 langues supportées","Architecture offline-first"],
       },
     ],
     projects: {
@@ -370,7 +370,7 @@ export const t = {
       {
         name: 'Internet Buddy',
         tagline: 'Smart Internet Control for Schools & Parents',
-        description: 'Internet Buddy is an application developed for a Belgian school community. The system gives parents and schools full control over students' internet usage via geofencing technology and calendar planning.',
+        description: "Internet Buddy is an application developed for a Belgian school community. The system gives parents and schools full control over students' internet usage via geofencing technology and calendar planning.",
         features: ['Turn internet on/off remotely','Calendar planning for internet usage','Geofence technology','Automatic shutdown near school','Remote management for parents & schools','Central cloud dashboard'],
       },
       {
