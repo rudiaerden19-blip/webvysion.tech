@@ -74,6 +74,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'WebVysion', url: 'https://webvysion.tech' }],
   creator: 'WebVysion',
   publisher: 'WebVysion',
+  verification: {
+    google: 'Stdv7JKUyFOrU8jY6t4Q-IsMDG5vCBAvzosQlrAZV5I',
+  },
   robots: {
     index: true,
     follow: true,
