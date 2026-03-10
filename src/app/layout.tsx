@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import BreathingBackground from '@/components/BreathingBackground'
 import ScrollToTop from '@/components/ScrollToTop'
+import { LanguageProvider } from '@/context/LanguageContext'
 
 export const metadata: Metadata = {
   title: 'WebVysion | Full-Stack SaaS Development',
@@ -31,13 +32,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="nl">
       <body className="bg-[#080C14] text-[#E8EDF5] antialiased overflow-x-hidden">
-        <ScrollToTop />
-        <BreathingBackground />
-        <div className="relative z-10">
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <LanguageProvider>
+          <ScrollToTop />
+          <BreathingBackground />
+          <div className="relative z-10">
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   )
