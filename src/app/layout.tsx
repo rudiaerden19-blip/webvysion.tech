@@ -106,7 +106,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'WebVysion | Full-Stack SaaS & Web Development',
     description: 'Onafhankelijk development team uit België. SaaS, mobiele apps en maatwerk websites.',
-    images: ['/logo.png'],
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: 'https://webvysion.tech',

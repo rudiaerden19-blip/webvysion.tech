@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'WebVysion | Full-Stack SaaS & Web Development — België',
     description: 'Onafhankelijk development team uit België. 13+ jaar ervaring in SaaS, mobile apps en maatwerk software.',
     url: 'https://webvysion.tech',
-    images: [{ url: '/logo.png', width: 489, height: 494, alt: 'WebVysion Development Team' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'WebVysion Development Team' }],
   },
 }
 

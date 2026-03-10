@@ -8,13 +8,13 @@ export const metadata: Metadata = {
     title: 'Tech Stack | WebVysion — Next.js, React Native & meer',
     description: 'Onze technologie stack: Next.js, TypeScript, React Native, Tailwind CSS, Supabase, Firebase en Vercel voor moderne, schaalbare software.',
     url: 'https://webvysion.tech/technologie',
-    images: [{ url: '/logo.png', width: 489, height: 494, alt: 'WebVysion Tech Stack' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'WebVysion Tech Stack' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Tech Stack | WebVysion',
     description: 'Next.js, TypeScript, React Native, Supabase en meer — de technologieën die WebVysion gebruikt.',
-    images: ['/logo.png'],
+    images: ['/og-image.png'],
   },
   alternates: { canonical: 'https://webvysion.tech/technologie' },
 }

@@ -8,13 +8,13 @@ export const metadata: Metadata = {
     title: 'Projecten | WebVysion — Gerealiseerde Software',
     description: 'Bekijk onze gerealiseerde softwareprojecten — van mobiele apps tot SaaS platforms, gebouwd voor echte klanten.',
     url: 'https://webvysion.tech/projecten',
-    images: [{ url: '/logo.png', width: 489, height: 494, alt: 'WebVysion Projecten' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'WebVysion Projecten' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Projecten | WebVysion',
     description: 'SafeLink, VoxApp, Internet Buddy en meer — gerealiseerde software door WebVysion.',
-    images: ['/logo.png'],
+    images: ['/og-image.png'],
   },
   alternates: { canonical: 'https://webvysion.tech/projecten' },
 }
