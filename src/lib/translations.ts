@@ -35,6 +35,39 @@ export const t = {
         { title: 'Startup MVP Development', description: 'Van idee naar werkend softwareproduct binnen enkele maanden — klaar voor eerste gebruikers.', features: ['Snelle oplevering','Schaalbare basis','Iteratieve aanpak','Van concept tot lancering'] },
       ],
     },
+
+    projectData: [
+      {
+        name: 'Internet Buddy',
+        tagline: 'Slim internetbeheer voor scholen & ouders',
+        description: 'Internet Buddy is een applicatie ontwikkeld in opdracht van een Belgische overkoepelende schoolgemeenschap. Het systeem geeft ouders en scholen volledige controle over het internetgebruik van leerlingen via geofence-technologie en agenda-planning.',
+        features: ['Internet op afstand aan/uitzetten','Agenda-planning voor internetgebruik','Geofence technologie','Automatisch uitschakelen nabij school','Remote beheer voor ouders & scholen','Centraal cloud dashboard'],
+      },
+      {
+        name: 'Restaurant POS System',
+        tagline: 'Compleet horeca kassasysteem',
+        description: 'Een uitgebreid horeca kassasysteem met realtime bestellingen en uitgebreide rapportage. Ontwikkeld voor restaurants die een complete digitale oplossing nodig hebben voor hun dagelijkse werking.',
+        features: ['Volledig kassasysteem','Keuken display systeem','Realtime bestellingen','Uitgebreide rapportage','Restaurant workflow beheer'],
+      },
+      {
+        name: 'Online Restaurant Ordering',
+        tagline: 'Bestellen via WhatsApp & Web',
+        description: 'Een online bestelplatform voor restaurants waarbij klanten rechtstreeks kunnen bestellen via WhatsApp. Het platform biedt restaurants een eenvoudige manier om online bestellingen te beheren met realtime updates.',
+        features: ['Bestellen via WhatsApp','Realtime order tracking','Keuken scherm integratie','Online betalingen','Realtime updates & notificaties'],
+      },
+      {
+        name: 'VoxApp',
+        tagline: 'AI Voice Agent Platform',
+        description: 'VoxApp is een AI-gestuurd voice agent platform gebouwd met Vapi, Deepgram en ElevenLabs. Het platform verwerkt inkomende gesprekken automatisch via een intelligente spraak-pipeline met enterprise-grade infrastructuur.',
+        features: ['AI voice agents via Vapi','Spraakherkenning met Deepgram','Text-to-speech via ElevenLabs','Realtime gespreksverwerking','Enterprise logging & monitoring','Multi-tenant architectuur'],
+      },
+      {
+        name: 'SafeLink',
+        tagline: 'Veiligheidsapp voor noodsituaties',
+        description: 'SafeLink is een veiligheidsapp die mensen helpt snel hulp te vinden en noodsituaties te melden. De app biedt directe toegang tot hulpdiensten, live locatie delen en persoonlijke ondersteuning — volledig offline beschikbaar.',
+        features: ['SOS noodknop','Live locatie delen','Directe toegang tot hulpdiensten','Hulpvragenlijsten','Forum voor ondersteuning','Persoonlijk dagboek','22 talen ondersteund','Offline-first architectuur'],
+      },
+    ],
     projects: {
       label: 'Portfolio', title: 'Onze projecten',
       description: 'Echte softwareproducten gebouwd voor echte klanten — van mobile apps tot complete SaaS platforms.',
@@ -112,6 +145,39 @@ export const t = {
         { title: 'Développement MVP Startup', description: 'De l\'idée au produit logiciel fonctionnel en quelques mois — prêt pour les premiers utilisateurs.', features: ['Livraison rapide','Base évolutive','Approche itérative','Du concept au lancement'] },
       ],
     },
+
+    projectData: [
+      {
+        name: 'Internet Buddy',
+        tagline: 'Contrôle internet intelligent pour écoles & parents',
+        description: 'Internet Buddy est une application développée pour une communauté scolaire belge. Le système donne aux parents et aux écoles un contrôle total sur l'utilisation d'internet des élèves via la technologie de géofencing et la planification de calendrier.',
+        features: ['Activer/désactiver internet à distance','Planification de l'utilisation internet','Technologie géofence','Désactivation automatique près de l'école','Gestion à distance pour parents & écoles','Tableau de bord cloud centralisé'],
+      },
+      {
+        name: 'Restaurant POS System',
+        tagline: 'Système de caisse horeca complet',
+        description: 'Un système de caisse horeca complet avec commandes en temps réel et rapports détaillés. Développé pour les restaurants qui ont besoin d'une solution numérique complète pour leur fonctionnement quotidien.',
+        features: ['Système de caisse complet','Système d'affichage cuisine','Commandes en temps réel','Rapports détaillés','Gestion du flux restaurant'],
+      },
+      {
+        name: 'Online Restaurant Ordering',
+        tagline: 'Commander via WhatsApp & Web',
+        description: 'Une plateforme de commande en ligne pour restaurants permettant aux clients de commander directement via WhatsApp. La plateforme offre aux restaurants un moyen simple de gérer les commandes en ligne avec des mises à jour en temps réel.',
+        features: ['Commander via WhatsApp','Suivi des commandes en temps réel','Intégration écran cuisine','Paiements en ligne','Mises à jour & notifications en temps réel'],
+      },
+      {
+        name: 'VoxApp',
+        tagline: 'Plateforme d'agents vocaux IA',
+        description: 'VoxApp est une plateforme d'agents vocaux pilotée par IA, construite avec Vapi, Deepgram et ElevenLabs. La plateforme traite automatiquement les appels entrants via un pipeline vocal intelligent avec une infrastructure de niveau entreprise.',
+        features: ['Agents vocaux IA via Vapi','Reconnaissance vocale avec Deepgram','Synthèse vocale via ElevenLabs','Traitement des conversations en temps réel','Journalisation & surveillance entreprise','Architecture multi-tenant'],
+      },
+      {
+        name: 'SafeLink',
+        tagline: 'Application de sécurité pour urgences',
+        description: 'SafeLink est une application de sécurité qui aide les personnes à trouver rapidement de l'aide et à signaler des urgences. L'application offre un accès direct aux services d'urgence, le partage de localisation en direct et un soutien personnel — entièrement disponible hors ligne.',
+        features: ['Bouton SOS d'urgence','Partage de localisation en direct','Accès direct aux services d'urgence','Questionnaires d'aide','Forum de soutien','Journal personnel','22 langues supportées','Architecture offline-first'],
+      },
+    ],
     projects: {
       label: 'Portfolio', title: 'Nos projets',
       description: 'De vrais produits logiciels construits pour de vrais clients — des applications mobiles aux plateformes SaaS complètes.',
@@ -189,6 +255,39 @@ export const t = {
         { title: 'Startup MVP Entwicklung', description: 'Vom Konzept zum funktionierenden Softwareprodukt in wenigen Monaten — bereit für erste Nutzer.', features: ['Schnelle Lieferung','Skalierbare Basis','Iterativer Ansatz','Vom Konzept zum Launch'] },
       ],
     },
+
+    projectData: [
+      {
+        name: 'Internet Buddy',
+        tagline: 'Intelligente Internetsteuerung für Schulen & Eltern',
+        description: 'Internet Buddy ist eine Anwendung, die im Auftrag einer belgischen Schulgemeinschaft entwickelt wurde. Das System gibt Eltern und Schulen vollständige Kontrolle über die Internetnutzung der Schüler über Geofencing-Technologie und Kalenderplanung.',
+        features: ['Internet aus der Ferne ein/ausschalten','Kalenderplanung für Internetnutzung','Geofence-Technologie','Automatische Abschaltung in Schulnähe','Fernverwaltung für Eltern & Schulen','Zentrales Cloud-Dashboard'],
+      },
+      {
+        name: 'Restaurant POS System',
+        tagline: 'Vollständiges Gastronomie-Kassensystem',
+        description: 'Ein umfassendes Gastronomie-Kassensystem mit Echtzeit-Bestellungen und detaillierter Berichterstattung. Entwickelt für Restaurants, die eine vollständige digitale Lösung für ihren täglichen Betrieb benötigen.',
+        features: ['Vollständiges Kassensystem','Küchendisplaysystem','Echtzeit-Bestellungen','Detaillierte Berichte','Restaurant-Workflow-Management'],
+      },
+      {
+        name: 'Online Restaurant Ordering',
+        tagline: 'Bestellen via WhatsApp & Web',
+        description: 'Eine Online-Bestellplattform für Restaurants, bei der Kunden direkt über WhatsApp bestellen können. Die Plattform bietet Restaurants eine einfache Möglichkeit, Online-Bestellungen mit Echtzeit-Updates zu verwalten.',
+        features: ['Bestellen via WhatsApp','Echtzeit-Bestellverfolgung','Küchenbildschirm-Integration','Online-Zahlungen','Echtzeit-Updates & Benachrichtigungen'],
+      },
+      {
+        name: 'VoxApp',
+        tagline: 'KI-Sprachagenten-Plattform',
+        description: 'VoxApp ist eine KI-gesteuerte Sprachagenten-Plattform, die mit Vapi, Deepgram und ElevenLabs entwickelt wurde. Die Plattform verarbeitet eingehende Anrufe automatisch über eine intelligente Sprach-Pipeline mit Enterprise-Infrastruktur.',
+        features: ['KI-Sprachagenten via Vapi','Spracherkennung mit Deepgram','Text-to-Speech via ElevenLabs','Echtzeit-Gesprächsverarbeitung','Enterprise-Logging & Monitoring','Multi-Tenant-Architektur'],
+      },
+      {
+        name: 'SafeLink',
+        tagline: 'Sicherheits-App für Notfälle',
+        description: 'SafeLink ist eine Sicherheits-App, die Menschen hilft, schnell Hilfe zu finden und Notfälle zu melden. Die App bietet direkten Zugang zu Notfalldiensten, Live-Standortfreigabe und persönliche Unterstützung — vollständig offline verfügbar.',
+        features: ['SOS-Notfallknopf','Live-Standortfreigabe','Direkter Zugang zu Notfalldiensten','Hilfefragebögen','Forum für Unterstützung','Persönliches Tagebuch','22 Sprachen unterstützt','Offline-First-Architektur'],
+      },
+    ],
     projects: {
       label: 'Portfolio', title: 'Unsere Projekte',
       description: 'Echte Softwareprodukte für echte Kunden — von mobilen Apps bis zu vollständigen SaaS-Plattformen.',
@@ -266,6 +365,39 @@ export const t = {
         { title: 'Startup MVP Development', description: 'From idea to working software product in a few months — ready for first users.', features: ['Fast delivery','Scalable foundation','Iterative approach','From concept to launch'] },
       ],
     },
+
+    projectData: [
+      {
+        name: 'Internet Buddy',
+        tagline: 'Smart Internet Control for Schools & Parents',
+        description: 'Internet Buddy is an application developed for a Belgian school community. The system gives parents and schools full control over students' internet usage via geofencing technology and calendar planning.',
+        features: ['Turn internet on/off remotely','Calendar planning for internet usage','Geofence technology','Automatic shutdown near school','Remote management for parents & schools','Central cloud dashboard'],
+      },
+      {
+        name: 'Restaurant POS System',
+        tagline: 'Complete Hospitality POS System',
+        description: 'A comprehensive hospitality POS system with real-time orders and detailed reporting. Developed for restaurants that need a complete digital solution for their daily operations.',
+        features: ['Complete POS system','Kitchen display system','Real-time orders','Detailed reporting','Restaurant workflow management'],
+      },
+      {
+        name: 'Online Restaurant Ordering',
+        tagline: 'Order via WhatsApp & Web',
+        description: 'An online ordering platform for restaurants where customers can order directly via WhatsApp. The platform provides restaurants with a simple way to manage online orders with real-time updates.',
+        features: ['Order via WhatsApp','Real-time order tracking','Kitchen screen integration','Online payments','Real-time updates & notifications'],
+      },
+      {
+        name: 'VoxApp',
+        tagline: 'AI Voice Agent Platform',
+        description: 'VoxApp is an AI-driven voice agent platform built with Vapi, Deepgram and ElevenLabs. The platform automatically processes incoming calls via an intelligent voice pipeline with enterprise-grade infrastructure.',
+        features: ['AI voice agents via Vapi','Speech recognition with Deepgram','Text-to-speech via ElevenLabs','Real-time conversation processing','Enterprise logging & monitoring','Multi-tenant architecture'],
+      },
+      {
+        name: 'SafeLink',
+        tagline: 'Safety App for Emergencies',
+        description: 'SafeLink is a safety app that helps people quickly find help and report emergencies. The app provides direct access to emergency services, live location sharing and personal support — fully available offline.',
+        features: ['SOS emergency button','Live location sharing','Direct access to emergency services','Help questionnaires','Support forum','Personal diary','22 languages supported','Offline-first architecture'],
+      },
+    ],
     projects: {
       label: 'Portfolio', title: 'Our projects',
       description: 'Real software products built for real clients — from mobile apps to complete SaaS platforms.',

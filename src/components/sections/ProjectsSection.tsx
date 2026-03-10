@@ -46,7 +46,9 @@ export default function ProjectsSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project, i) => (
+          {projects.map((project, i) => {
+            const pd = t[lang].projectData[i]
+            return (
             <motion.div key={project.id} initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: i * 0.1, duration: 0.6, ease: "easeOut" }} whileHover={{ y: -4, transition: { duration: 0.2 } }} className="group relative bg-[#0F1623] rounded-2xl border border-[#1A2332] p-7 hover:border-[#243447] transition-all duration-300 cursor-pointer overflow-hidden">
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl" style={{ background: `radial-gradient(ellipse at top left, ${project.color}10, transparent 70%)` }} />
               {'video' in project && project.video ? (
@@ -55,7 +57,7 @@ export default function ProjectsSection() {
                 </div>
               ) : 'image' in project && project.image ? (
                 <div className="relative w-full h-72 rounded-xl overflow-hidden mb-5 border border-[#1A2332] bg-[#0A0F1A]">
-                  <Image src={project.image as string} alt={project.name} fill className="object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={project.image as string} alt={pd?.name ?? project.name} fill className="object-contain p-4 group-hover:scale-105 transition-transform duration-500" />
                 </div>
               ) : (
                 <div className="flex items-start justify-between mb-5">
@@ -67,17 +69,17 @@ export default function ProjectsSection() {
                   <span key={tech} className="px-2.5 py-1 rounded-full bg-[#141D2B] border border-[#1A2332] text-xs text-[#8899B0]">{tech}</span>
                 ))}
               </div>
-              <h3 className="text-lg font-bold text-[#E8EDF5] mb-1.5 group-hover:text-white transition-colors">{project.name}</h3>
-              <p className="text-xs font-medium mb-3" style={{ color: project.color }}>{project.tagline}</p>
-              <p className="text-sm text-[#8899B0] leading-relaxed line-clamp-3 mb-5">{project.description}</p>
+              <h3 className="text-lg font-bold text-[#E8EDF5] mb-1.5 group-hover:text-white transition-colors">{pd?.name ?? project.name}</h3>
+              <p className="text-xs font-medium mb-3" style={{ color: project.color }}>{pd?.tagline ?? project.tagline}</p>
+              <p className="text-sm text-[#8899B0] leading-relaxed line-clamp-3 mb-5">{pd?.description ?? project.description}</p>
               <div className="space-y-1.5 mb-5">
-                {project.features.slice(0, 3).map((f) => (
+                {(pd?.features ?? project.features).slice(0, 3).map((f) => (
                   <div key={f} className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: project.color }} />
                     <span className="text-xs text-[#4A5E78]">{f}</span>
                   </div>
                 ))}
-                {project.features.length > 3 && <span className="text-xs text-[#4A5E78] pl-3.5">+{project.features.length - 3} {tr.more}</span>}
+                {(pd?.features ?? project.features).length > 3 && <span className="text-xs text-[#4A5E78] pl-3.5">+{(pd?.features ?? project.features).length - 3} {tr.more}</span>}
               </div>
               <div className="flex flex-wrap gap-2">
                 {'url' in project && project.url && (
@@ -93,7 +95,8 @@ export default function ProjectsSection() {
                 )}
               </div>
             </motion.div>
-          ))}
+            )
+          })}
         </div>
 
         <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.5, duration: 0.5 }} className="text-center mt-10">

@@ -21,7 +21,9 @@ export default function ProjectenPage() {
         </motion.div>
 
         <div className="space-y-8">
-          {projects.map((project, i) => (
+          {projects.map((project, i) => {
+            const pd = t[lang].projectData[i]
+            return (
             <motion.div key={project.id} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1, duration: 0.6, ease: "easeOut" }} className="group relative bg-[#0F1623] rounded-2xl border border-[#1A2332] p-8 hover:border-[#243447] transition-all duration-300 overflow-hidden">
               <div className="absolute left-0 top-0 bottom-0 w-1 rounded-l-2xl opacity-60" style={{ backgroundColor: project.color }} />
               <div className="pl-6">
@@ -32,17 +34,17 @@ export default function ProjectenPage() {
                         {'video' in project && project.video ? (
                           <span className="flex items-center justify-center w-full h-full text-3xl">{project.emoji}</span>
                         ) : 'image' in project && project.image ? (
-                          <Image src={project.image as string} alt={project.name} width={96} height={96} className="w-full h-full object-contain" />
+                          <Image src={project.image as string} alt={pd?.name ?? project.name} width={96} height={96} className="w-full h-full object-contain" />
                         ) : (
                           <span className="flex items-center justify-center w-full h-full text-3xl">{project.emoji}</span>
                         )}
                       </div>
                       <div>
-                        <h2 className="text-xl font-bold text-[#E8EDF5]">{project.name}</h2>
-                        <p className="text-sm font-medium mt-0.5" style={{ color: project.color }}>{project.tagline}</p>
+                        <h2 className="text-xl font-bold text-[#E8EDF5]">{pd?.name ?? project.name}</h2>
+                        <p className="text-sm font-medium mt-0.5" style={{ color: project.color }}>{pd?.tagline ?? project.tagline}</p>
                       </div>
                     </div>
-                    <p className="text-sm text-[#8899B0] leading-relaxed">{project.description}</p>
+                    <p className="text-sm text-[#8899B0] leading-relaxed">{pd?.description ?? project.description}</p>
                     <div className="flex flex-wrap gap-2 mt-5">
                       {project.tech.map((tech) => (
                         <span key={tech} className="px-3 py-1.5 rounded-full bg-[#141D2B] border border-[#1A2332] text-xs text-[#8899B0]">{tech}</span>
@@ -65,7 +67,7 @@ export default function ProjectenPage() {
                   <div className="lg:w-64 shrink-0">
                     <p className="text-xs font-semibold text-[#4A5E78] uppercase tracking-wider mb-3">{tr.features}</p>
                     <ul className="space-y-2">
-                      {project.features.map((f) => (
+                      {(pd?.features ?? project.features).map((f) => (
                         <li key={f} className="flex items-start gap-2">
                           <div className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: project.color }} />
                           <span className="text-sm text-[#8899B0]">{f}</span>
@@ -76,7 +78,8 @@ export default function ProjectenPage() {
                 </div>
               </div>
             </motion.div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </div>
