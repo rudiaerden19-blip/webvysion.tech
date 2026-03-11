@@ -105,7 +105,7 @@ export default function ProjectsSection() {
           >
             <div>
               <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-6">
-                <span className="text-2xl">✦</span>
+                <Image src="/logo.png" alt="WebVysion" width={28} height={28} className="object-contain" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-6">{tr.ctaTitle}</h3>
               <ul className="space-y-4 mb-8">
