@@ -8,13 +8,12 @@ import { projects } from '@/lib/data'
 import { useLang } from '@/context/LanguageContext'
 import t from '@/lib/translations'
 
-function StackCard({ project, i, total, pd, tr, lang }: {
+function StackCard({ project, i, total, pd, tr }: {
   project: typeof projects[0]
   i: number
   total: number
   pd: { name: string; tagline: string; description: string; features: string[] } | undefined
   tr: { label: string; title: string; description: string; visit: string; code: string; features: string }
-  lang: string
 }) {
   const ref = useRef<HTMLDivElement>(null)
 
@@ -118,7 +117,6 @@ export default function ProjectenPage() {
                 total={projects.length}
                 pd={pd}
                 tr={tr}
-                lang={lang}
               />
             )
           })}

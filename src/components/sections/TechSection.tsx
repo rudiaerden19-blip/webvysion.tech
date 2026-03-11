@@ -24,8 +24,12 @@ export default function TechSection() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {technologies.map((tech, i) => {
             const techWithImage = tech as typeof tech & { image?: string }
+            const cols = 6
+            const row = Math.floor(i / cols)
+            const fromLeft = row % 2 === 0
+            const posInRow = i % cols
             return (
-              <motion.div key={tech.name} initial={{ opacity: 0, scale: 0.9 }} animate={inView ? { opacity: 1, scale: 1 } : {}} transition={{ delay: i * 0.05, duration: 0.4 }} whileHover={{ y: -4, transition: { duration: 0.2 } }} className="group flex flex-col items-center gap-3 p-5 rounded-2xl bg-white border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] hover:shadow-[0_24px_80px_rgba(0,0,0,0.40)] hover:border-slate-300 transition-all duration-200 cursor-default">
+              <motion.div key={tech.name} initial={{ opacity: 0, x: fromLeft ? -80 : 80 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: posInRow * 0.08, duration: 0.5, ease: 'easeOut' }} whileHover={{ y: -4, transition: { duration: 0.2 } }} className="group flex flex-col items-center gap-3 p-5 rounded-2xl bg-white border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] hover:shadow-[0_24px_80px_rgba(0,0,0,0.40)] hover:border-slate-300 transition-all duration-200 cursor-default">
                 <div className="w-full h-16 rounded-xl overflow-hidden flex items-center justify-center bg-slate-50 group-hover:bg-slate-100 transition-colors shrink-0">
                   {techWithImage.image ? (
                     <Image src={techWithImage.image as string} alt={tech.name} width={64} height={64} className="w-full h-full object-contain p-2" />
