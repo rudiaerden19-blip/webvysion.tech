@@ -26,7 +26,7 @@ export default function ServicesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => (
-            <motion.div key={service.id} initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: i * 0.08, duration: 0.5 }} whileHover={{ y: -3, transition: { duration: 0.2 } }} className="group bg-white rounded-2xl border border-slate-200 shadow-[0_8px_40px_-8px_rgba(0,0,0,0.14)] hover:shadow-[0_16px_48px_-8px_rgba(0,0,0,0.20)] hover:border-slate-300 transition-all duration-300 overflow-hidden">
+            <motion.div key={service.id} initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: i * 0.08, duration: 0.5 }} whileHover={{ y: -3, transition: { duration: 0.2 } }} className="group bg-white rounded-2xl border border-slate-200 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.28)] hover:shadow-[0_28px_70px_-10px_rgba(0,0,0,0.34)] hover:border-slate-300 transition-all duration-300 overflow-hidden">
               {'image' in service && service.image && (
                 <div className="w-full h-48 overflow-hidden border-b border-slate-100">
                   <Image src={service.image as string} alt={service.title} width={600} height={192} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />

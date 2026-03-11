@@ -25,7 +25,7 @@ export default function TechSection() {
           {technologies.map((tech, i) => {
             const techWithImage = tech as typeof tech & { image?: string }
             return (
-              <motion.div key={tech.name} initial={{ opacity: 0, scale: 0.9 }} animate={inView ? { opacity: 1, scale: 1 } : {}} transition={{ delay: i * 0.05, duration: 0.4 }} whileHover={{ y: -4, transition: { duration: 0.2 } }} className="group flex flex-col items-center gap-3 p-5 rounded-2xl bg-white border border-slate-200 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.12)] hover:shadow-[0_8px_32px_-4px_rgba(0,0,0,0.18)] hover:border-slate-300 transition-all duration-200 cursor-default">
+              <motion.div key={tech.name} initial={{ opacity: 0, scale: 0.9 }} animate={inView ? { opacity: 1, scale: 1 } : {}} transition={{ delay: i * 0.05, duration: 0.4 }} whileHover={{ y: -4, transition: { duration: 0.2 } }} className="group flex flex-col items-center gap-3 p-5 rounded-2xl bg-white border border-slate-200 shadow-[0_12px_40px_-6px_rgba(0,0,0,0.22)] hover:shadow-[0_20px_50px_-6px_rgba(0,0,0,0.28)] hover:border-slate-300 transition-all duration-200 cursor-default">
                 <div className="w-full h-16 rounded-xl overflow-hidden flex items-center justify-center bg-slate-50 group-hover:bg-slate-100 transition-colors shrink-0">
                   {techWithImage.image ? (
                     <Image src={techWithImage.image as string} alt={tech.name} width={64} height={64} className="w-full h-full object-contain p-2" />
