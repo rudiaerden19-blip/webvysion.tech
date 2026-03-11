@@ -36,7 +36,7 @@ export default function About() {
           >
             <div
               className="relative w-[90%] aspect-[4/3] rounded-2xl overflow-hidden"
-              style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.40)' }}
+              style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.70)' }}
             >
               <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
             </div>
