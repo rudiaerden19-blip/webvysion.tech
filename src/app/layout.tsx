@@ -30,12 +30,12 @@ const jsonLd = {
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer service',
-        email: 'info@webvysion.tech',
+        email: 'rudiaerden19@gmail.com',
         availableLanguage: ['Dutch', 'French', 'English', 'German'],
       },
       sameAs: [
         'https://www.facebook.com/profile.php?id=61586754135685',
-        'https://www.linkedin.com/company/webvysion',
+        'https://www.linkedin.com/in/vysion-it-7a158b3b2/',
       ],
     },
     {
@@ -98,9 +98,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/logo.png',
-        width: 489,
-        height: 494,
+        url: '/og-image.png',
+        width: 1376,
+        height: 768,
         alt: 'WebVysion — Full-Stack Development Team',
       },
     ],
