@@ -22,10 +22,10 @@ export default function TechSection() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           topCards.forEach((card, i) => {
-            setTimeout(() => card.classList.add('tc-show'), i * 180)
+            setTimeout(() => card.classList.add('tc-show'), i * 300)
           })
           ;[...bottomCards].reverse().forEach((card, i) => {
-            setTimeout(() => card.classList.add('tc-show'), i * 180)
+            setTimeout(() => card.classList.add('tc-show'), i * 300)
           })
           observer.disconnect()
         }
@@ -41,7 +41,7 @@ export default function TechSection() {
       <style>{`
         .tc-card {
           opacity: 0;
-          transition: opacity 0.8s cubic-bezier(.22,1,.36,1), transform 0.8s cubic-bezier(.22,1,.36,1);
+          transition: opacity 1.4s cubic-bezier(.22,1,.36,1), transform 1.4s cubic-bezier(.22,1,.36,1);
         }
         .tc-top  { transform: translateX(-80px); }
         .tc-bottom { transform: translateX(80px); }
