@@ -31,6 +31,7 @@ export const projects = [
       'Realtime bestellingen',
       'Uitgebreide rapportage',
       'Restaurant workflow beheer',
+      'Gebouwd in 9 talen',
     ],
     tech: ['Realtime Database', 'Cloud Backend', 'Dashboard', 'Restaurant Software'],
     color: '#7C6EF0',

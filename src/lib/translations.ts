@@ -47,7 +47,7 @@ export const t = {
         name: 'Restaurant POS System',
         tagline: 'Compleet horeca kassasysteem',
         description: 'Een uitgebreid horeca kassasysteem met realtime bestellingen en uitgebreide rapportage. Ontwikkeld voor restaurants die een complete digitale oplossing nodig hebben voor hun dagelijkse werking.',
-        features: ['Volledig kassasysteem','Keuken display systeem','Realtime bestellingen','Uitgebreide rapportage','Restaurant workflow beheer'],
+        features: ['Volledig kassasysteem','Keuken display systeem','Realtime bestellingen','Uitgebreide rapportage','Restaurant workflow beheer','Gebouwd in 9 talen'],
       },
       {
         name: 'Online Restaurant Ordering',
@@ -157,7 +157,7 @@ export const t = {
         name: 'Restaurant POS System',
         tagline: 'Système de caisse horeca complet',
         description: "Un système de caisse horeca complet avec commandes en temps réel et rapports détaillés. Développé pour les restaurants qui ont besoin d'une solution numérique complète pour leur fonctionnement quotidien.",
-        features: ["Système de caisse complet","Système d'affichage cuisine","Commandes en temps réel","Rapports détaillés","Gestion du flux restaurant"],
+        features: ["Système de caisse complet","Système d'affichage cuisine","Commandes en temps réel","Rapports détaillés","Gestion du flux restaurant","Disponible en 9 langues"],
       },
       {
         name: 'Online Restaurant Ordering',
@@ -267,7 +267,7 @@ export const t = {
         name: 'Restaurant POS System',
         tagline: 'Vollständiges Gastronomie-Kassensystem',
         description: 'Ein umfassendes Gastronomie-Kassensystem mit Echtzeit-Bestellungen und detaillierter Berichterstattung. Entwickelt für Restaurants, die eine vollständige digitale Lösung für ihren täglichen Betrieb benötigen.',
-        features: ['Vollständiges Kassensystem','Küchendisplaysystem','Echtzeit-Bestellungen','Detaillierte Berichte','Restaurant-Workflow-Management'],
+        features: ['Vollständiges Kassensystem','Küchendisplaysystem','Echtzeit-Bestellungen','Detaillierte Berichte','Restaurant-Workflow-Management','In 9 Sprachen verfügbar'],
       },
       {
         name: 'Online Restaurant Ordering',
@@ -377,7 +377,7 @@ export const t = {
         name: 'Restaurant POS System',
         tagline: 'Complete Hospitality POS System',
         description: 'A comprehensive hospitality POS system with real-time orders and detailed reporting. Developed for restaurants that need a complete digital solution for their daily operations.',
-        features: ['Complete POS system','Kitchen display system','Real-time orders','Detailed reporting','Restaurant workflow management'],
+        features: ['Complete POS system','Kitchen display system','Real-time orders','Detailed reporting','Restaurant workflow management','Built in 9 languages'],
       },
       {
         name: 'Online Restaurant Ordering',
