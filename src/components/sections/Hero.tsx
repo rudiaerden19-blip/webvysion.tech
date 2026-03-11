@@ -43,49 +43,49 @@ export default function Hero() {
       <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.4) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <motion.div custom={0} variants={fadeUp} initial="hidden" animate="show" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-xs text-blue-700 font-medium mb-8">
+        <motion.div custom={0} variants={fadeUp} initial="hidden" animate="show" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-50 border border-blue-100 text-sm text-blue-700 font-medium mb-10">
           <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
           {tr.badge}
         </motion.div>
 
-        <motion.h1 custom={1} variants={fadeUp} initial="hidden" animate="show" className="text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 text-slate-900">
+        <motion.h1 custom={1} variants={fadeUp} initial="hidden" animate="show" className="text-7xl sm:text-8xl lg:text-9xl font-extrabold tracking-tight mb-8 text-slate-900">
           Web<span className="text-[#2563EB]">Vysion</span>
         </motion.h1>
 
-        <motion.p custom={2} variants={fadeUp} initial="hidden" animate="show" className="text-lg sm:text-xl text-slate-500 font-medium mb-4 tracking-wide">
+        <motion.p custom={2} variants={fadeUp} initial="hidden" animate="show" className="text-xl sm:text-2xl text-slate-500 font-medium mb-6 tracking-wide">
           {tr.tagline}
-          <span className="text-slate-300 mx-2">·</span>
+          <span className="text-slate-300 mx-3">·</span>
           <span className="text-slate-700 font-semibold">SaaS Platforms</span>
-          <span className="text-slate-300 mx-2">·</span>
+          <span className="text-slate-300 mx-3">·</span>
           <span className="text-slate-700 font-semibold">Apps</span>
-          <span className="text-slate-300 mx-2">·</span>
+          <span className="text-slate-300 mx-3">·</span>
           <span className="text-slate-700 font-semibold">Custom Websites</span>
         </motion.p>
 
-        <motion.p custom={3} variants={fadeUp} initial="hidden" animate="show" className="text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10">
+        <motion.p custom={3} variants={fadeUp} initial="hidden" animate="show" className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-14">
           {tr.description}
         </motion.p>
 
-        <motion.div custom={4} variants={fadeUp} initial="hidden" animate="show" className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/projecten" className="group flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#2563EB] text-white font-semibold text-sm hover:bg-[#1D4ED8] transition-colors shadow-sm shadow-blue-200">
-            {tr.cta1}<ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+        <motion.div custom={4} variants={fadeUp} initial="hidden" animate="show" className="flex flex-col sm:flex-row items-center justify-center gap-5">
+          <Link href="/projecten" className="group flex items-center gap-2 px-8 py-4 rounded-xl bg-[#2563EB] text-white font-semibold text-base hover:bg-[#1D4ED8] transition-colors shadow-sm shadow-blue-200">
+            {tr.cta1}<ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </Link>
-          <Link href="/contact" className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-sm hover:border-slate-300 hover:bg-slate-50 transition-all">
+          <Link href="/contact" className="flex items-center gap-2 px-8 py-4 rounded-xl bg-white border border-slate-200 text-slate-700 font-semibold text-base hover:border-slate-300 hover:bg-slate-50 transition-all">
             {tr.cta2}
           </Link>
         </motion.div>
 
-        <motion.div custom={5} variants={fadeUp} initial="hidden" animate="show" className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto">
+        <motion.div custom={5} variants={fadeUp} initial="hidden" animate="show" className="mt-24 grid grid-cols-3 gap-10 max-w-xl mx-auto">
           {[
             { target: 13, suffix: '+', label: tr.stat1 },
             { target: 324, suffix: '+', label: tr.stat2 },
             { target: 100, suffix: '%', label: tr.stat3 },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-2xl font-extrabold text-slate-900 mb-1">
+              <div className="text-4xl font-extrabold text-slate-900 mb-2">
                 <CountUp target={stat.target} suffix={stat.suffix} duration={1200} />
               </div>
-              <div className="text-xs text-slate-400">{stat.label}</div>
+              <div className="text-sm text-slate-400">{stat.label}</div>
             </div>
           ))}
         </motion.div>
