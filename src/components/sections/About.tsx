@@ -16,45 +16,36 @@ const slides = [
 
 function FlipCarousel() {
   const [current, setCurrent] = useState(0)
-  const [next, setNext] = useState(1)
-  const [flipping, setFlipping] = useState(false)
+  const [rotation, setRotation] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFlipping(true)
+      // Swap image at 180° (halfway) — card faces away, swap is invisible
       setTimeout(() => {
         setCurrent((c) => (c + 1) % slides.length)
-        setNext((n) => (n + 1) % slides.length)
-        setFlipping(false)
-      }, 400)
+      }, 1000)
+      // Full 360° rotation
+      setRotation((r) => r + 360)
     }, 2000)
     return () => clearInterval(interval)
   }, [])
 
   return (
-    <div
-      style={{
-        perspective: '1200px',
-        width: '100%',
-        aspectRatio: '4/3',
-      }}
-    >
+    <div style={{ perspective: '1200px', width: '100%', aspectRatio: '4/3' }}>
       <div
         style={{
           position: 'relative',
           width: '100%',
           height: '100%',
-          transformStyle: 'preserve-3d',
-          transition: 'transform 0.4s ease-in-out',
-          transform: flipping ? 'rotateY(90deg)' : 'rotateY(0deg)',
+          transition: 'transform 2s linear',
+          transform: `rotateY(${rotation}deg)`,
           borderRadius: '16px',
           overflow: 'hidden',
           boxShadow: '0 0 40px 15px rgba(0,0,0,0.30)',
-          animation: 'breatheShadow 3s ease-in-out infinite',
         }}
       >
         <Image
-          src={flipping ? slides[next] : slides[current]}
+          src={slides[current]}
           alt="WebVysion portfolio"
           fill
           className="object-cover"
