@@ -15,7 +15,7 @@ export default function About() {
   return (
     <section id="over-ons" className="py-32 px-6 bg-slate-50" ref={ref}>
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-stretch">
 
           <motion.div initial={{ opacity: 0, x: -30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, ease: "easeOut" }}>
             <p className="text-sm font-semibold text-[#2563EB] uppercase tracking-widest mb-6">{tr.label}</p>
@@ -32,9 +32,10 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+            className="h-full"
           >
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.40)]">
-              <Image src="/about-saas.png" alt="SaaS development" width={720} height={480} className="w-full h-auto object-cover" />
+            <div className="relative w-full h-full min-h-[420px] rounded-2xl overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.60)]">
+              <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
             </div>
           </motion.div>
 
