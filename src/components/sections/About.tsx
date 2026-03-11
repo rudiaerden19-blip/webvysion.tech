@@ -16,38 +16,48 @@ const slides = [
 
 function FlipCarousel() {
   const [current, setCurrent] = useState(0)
-  const [rotation, setRotation] = useState(0)
-  const [spinning, setSpinning] = useState(false)
+  const cardRef = useRef<HTMLDivElement>(null)
+  const indexRef = useRef(0)
 
   useEffect(() => {
-    // Wait 3s → spin 1 full rotation in 1.5s → wait 3s → spin again
-    const interval = setInterval(() => {
-      setSpinning(true)
-      setRotation((r) => r + 360)
+    const el = cardRef.current
+    if (!el) return
 
-      // Swap image at halfway (0.75s)
-      setTimeout(() => {
-        setCurrent((c) => (c + 1) % slides.length)
+    let timer: ReturnType<typeof setTimeout>
+
+    const spin = () => {
+      // 1. Start rotating 0→360
+      el.style.transition = 'transform 1.5s ease-in-out'
+      el.style.transform = 'rotateY(360deg)'
+
+      // 2. At 180° midpoint: swap image (invisible to viewer)
+      timer = setTimeout(() => {
+        indexRef.current = (indexRef.current + 1) % slides.length
+        setCurrent(indexRef.current)
       }, 750)
 
-      // Stop spinning after 1.5s
-      setTimeout(() => {
-        setSpinning(false)
+      // 3. After full rotation: reset instantly to 0° (no animation)
+      timer = setTimeout(() => {
+        el.style.transition = 'none'
+        el.style.transform = 'rotateY(0deg)'
+        // 4. Wait 3s then spin again
+        timer = setTimeout(spin, 3000)
       }, 1500)
-    }, 4500) // 3s pause + 1.5s spin
+    }
 
-    return () => clearInterval(interval)
+    // First spin after 3s
+    timer = setTimeout(spin, 3000)
+    return () => clearTimeout(timer)
   }, [])
 
   return (
     <div style={{ perspective: '1200px', width: '100%', aspectRatio: '4/3' }}>
       <div
+        ref={cardRef}
         style={{
           position: 'relative',
           width: '100%',
           height: '100%',
-          transition: spinning ? 'transform 1.5s ease-in-out' : 'none',
-          transform: `rotateY(${rotation}deg)`,
           borderRadius: '16px',
           overflow: 'hidden',
           boxShadow: '0 0 40px 15px rgba(0,0,0,0.30)',
