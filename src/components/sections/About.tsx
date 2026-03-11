@@ -34,21 +34,23 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
             className="flex items-center justify-center py-16 px-8 bg-slate-100 rounded-3xl"
           >
-            <motion.div
-              animate={{ y: [0, -14, 0] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-              className="relative w-full"
-            >
-              <div className="relative w-full rounded-2xl overflow-hidden shadow-[0_40px_80px_-8px_rgba(0,0,0,0.45)]">
+            <div className="relative w-full">
+              {/* bewegende schaduw achter het vlak */}
+              <motion.div
+                animate={{
+                  opacity: [0.45, 0.22, 0.45],
+                  scaleX: [1, 0.78, 1],
+                  scaleY: [1, 0.7, 1],
+                  y: [0, 12, 0],
+                }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute inset-x-6 -bottom-6 h-16 rounded-full bg-slate-500 blur-2xl"
+              />
+              {/* stilstaand vlak */}
+              <div className="relative w-full rounded-2xl overflow-hidden">
                 <Image src="/about-saas.png" alt="SaaS development" width={720} height={480} className="w-full h-auto object-cover" />
               </div>
-              {/* bewegende schaduw op de vloer */}
-              <motion.div
-                animate={{ scaleX: [1, 0.82, 1], opacity: [0.35, 0.18, 0.35] }}
-                transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-4/5 h-6 rounded-full bg-slate-400 blur-xl"
-              />
-            </motion.div>
+            </div>
           </motion.div>
 
         </div>
