@@ -35,16 +35,14 @@ export default function About() {
             className="flex items-center justify-center py-16 px-8 bg-slate-100 rounded-3xl"
           >
             <div className="relative w-full">
-              {/* bewegende schaduw achter het vlak */}
+              {/* grote zachte schaduw die pulseert achter het vlak */}
               <motion.div
                 animate={{
-                  opacity: [0.45, 0.22, 0.45],
-                  scaleX: [1, 0.78, 1],
-                  scaleY: [1, 0.7, 1],
-                  y: [0, 12, 0],
+                  opacity: [0.55, 0.25, 0.55],
+                  scale: [1, 0.88, 1],
                 }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute inset-x-6 -bottom-6 h-16 rounded-full bg-slate-500 blur-2xl"
+                className="absolute -inset-6 rounded-3xl bg-slate-400 blur-3xl -z-10"
               />
               {/* stilstaand vlak */}
               <div className="relative w-full rounded-2xl overflow-hidden">
