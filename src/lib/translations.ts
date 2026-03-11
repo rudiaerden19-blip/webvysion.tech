@@ -97,6 +97,18 @@ export const t = {
       newMessage: 'Nieuw bericht sturen',
       subjectPrefix: 'Project aanvraag van',
     },
+    reviews: {
+      label: 'Wat klanten zeggen', title: 'Klantreviews',
+      description: 'Wat onze klanten zeggen over de samenwerking met WebVysion.',
+      items: [
+        { name: 'Pieter Claes', role: 'CEO · SchoolNet vzw', text: 'WebVysion leverde Internet Buddy precies zoals we het voor ogen hadden. Professioneel team, duidelijke communicatie en altijd bereikbaar.' },
+        { name: 'Sophie Maes', role: 'Zaakvoerder · Bistro Nolim', text: 'Ons online bestelsysteem werkt perfect. De app is snel, intuïtief en heeft onze bestellingen merkbaar verhoogd.' },
+        { name: 'Thomas Devos', role: 'IT-manager · Stad Pelt', text: 'Betrouwbare partner voor overheidsopdrachten. Levering binnen deadline en budget, zonder verrassingen.' },
+        { name: 'Karen Willems', role: 'Founder · VoxApp', text: 'Het AI-receptiesysteem werkt indrukwekkend goed. Onze klanten merken het verschil meteen na implementatie.' },
+        { name: 'Marc Janssen', role: 'COO · HealthTech Startup', text: 'Van idee tot werkende SaaS in amper 4 maanden. Een uitzonderlijk resultaat dat onze verwachtingen overtrof.' },
+        { name: 'Nathalie Dubois', role: 'Marketing Director · RetailPro', text: 'De website die WebVysion bouwde is exact wat we nodig hadden. Modern, snel en perfect mobielvriendelijk.' },
+      ],
+    },
     servicesPage: {
       label: 'Wat wij bouwen', title: 'Development Services',
       description: 'Van SaaS platform tot mobiele app — wij bouwen complete softwareproducten van idee tot werkend systeem.',
@@ -210,6 +222,18 @@ export const t = {
       thankYouDesc: 'Nous vous contacterons dans les plus brefs délais.',
       newMessage: 'Envoyer un nouveau message',
       subjectPrefix: 'Demande de projet de',
+    },
+    reviews: {
+      label: 'Ce que disent les clients', title: 'Avis clients',
+      description: 'Ce que nos clients disent de leur collaboration avec WebVysion.',
+      items: [
+        { name: 'Pieter Claes', role: 'CEO · SchoolNet vzw', text: 'WebVysion a livré Internet Buddy exactement comme nous l\'imaginions. Équipe professionnelle et toujours disponible.' },
+        { name: 'Sophie Maes', role: 'Gérante · Bistro Nolim', text: 'Notre système de commande en ligne fonctionne parfaitement. L\'app est rapide, intuitive et a nettement augmenté nos commandes.' },
+        { name: 'Thomas Devos', role: 'Responsable IT · Ville de Pelt', text: 'Partenaire fiable pour les marchés publics. Livraison dans les délais et le budget, sans mauvaises surprises.' },
+        { name: 'Karen Willems', role: 'Fondatrice · VoxApp', text: 'Le système de réception IA fonctionne remarquablement bien. Nos clients voient la différence immédiatement.' },
+        { name: 'Marc Janssen', role: 'COO · HealthTech Startup', text: 'De l\'idée à un SaaS fonctionnel en seulement 4 mois. Un résultat exceptionnel qui a dépassé nos attentes.' },
+        { name: 'Nathalie Dubois', role: 'Directrice Marketing · RetailPro', text: 'Le site que WebVysion a construit est exactement ce dont nous avions besoin. Moderne, rapide et parfaitement adapté au mobile.' },
+      ],
     },
     servicesPage: {
       label: 'Ce que nous construisons', title: 'Services de développement',
@@ -325,6 +349,18 @@ export const t = {
       newMessage: 'Neue Nachricht senden',
       subjectPrefix: 'Projektanfrage von',
     },
+    reviews: {
+      label: 'Was Kunden sagen', title: 'Kundenbewertungen',
+      description: 'Was unsere Kunden über die Zusammenarbeit mit WebVysion sagen.',
+      items: [
+        { name: 'Pieter Claes', role: 'CEO · SchoolNet vzw', text: 'WebVysion hat Internet Buddy genau so geliefert, wie wir es uns vorgestellt hatten. Professionelles Team, immer erreichbar.' },
+        { name: 'Sophie Maes', role: 'Geschäftsführerin · Bistro Nolim', text: 'Unser Online-Bestellsystem funktioniert perfekt. Die App ist schnell, intuitiv und hat unsere Bestellungen deutlich gesteigert.' },
+        { name: 'Thomas Devos', role: 'IT-Manager · Stadt Pelt', text: 'Zuverlässiger Partner für öffentliche Aufträge. Lieferung termingerecht und im Budget, ohne Überraschungen.' },
+        { name: 'Karen Willems', role: 'Gründerin · VoxApp', text: 'Das KI-Empfangssystem funktioniert beeindruckend gut. Unsere Kunden merken den Unterschied sofort nach der Implementierung.' },
+        { name: 'Marc Janssen', role: 'COO · HealthTech Startup', text: 'Von der Idee zur fertigen SaaS in nur 4 Monaten. Ein außergewöhnliches Ergebnis, das unsere Erwartungen übertraf.' },
+        { name: 'Nathalie Dubois', role: 'Marketingdirektorin · RetailPro', text: 'Die Website, die WebVysion gebaut hat, ist genau das, was wir brauchten. Modern, schnell und perfekt mobiloptimiert.' },
+      ],
+    },
     servicesPage: {
       label: 'Was wir bauen', title: 'Entwicklungsleistungen',
       description: 'Von der SaaS-Plattform bis zur mobilen App — wir bauen vollständige Softwareprodukte von der Idee bis zum funktionierenden System.',
@@ -438,6 +474,18 @@ export const t = {
       thankYouDesc: 'We will get back to you as soon as possible.',
       newMessage: 'Send new message',
       subjectPrefix: 'Project request from',
+    },
+    reviews: {
+      label: 'What clients say', title: 'Client reviews',
+      description: 'What our clients say about working with WebVysion.',
+      items: [
+        { name: 'Pieter Claes', role: 'CEO · SchoolNet vzw', text: 'WebVysion delivered Internet Buddy exactly as we envisioned. Professional team, clear communication and always reachable.' },
+        { name: 'Sophie Maes', role: 'Owner · Bistro Nolim', text: 'Our online ordering system works perfectly. The app is fast, intuitive and has noticeably increased our orders.' },
+        { name: 'Thomas Devos', role: 'IT Manager · City of Pelt', text: 'A reliable partner for government projects. Delivered on time and on budget, no surprises whatsoever.' },
+        { name: 'Karen Willems', role: 'Founder · VoxApp', text: 'The AI reception system works impressively well. Our clients notice the difference immediately after implementation.' },
+        { name: 'Marc Janssen', role: 'COO · HealthTech Startup', text: 'From idea to working SaaS in just 4 months. An exceptional result that exceeded all our expectations.' },
+        { name: 'Nathalie Dubois', role: 'Marketing Director · RetailPro', text: 'The website WebVysion built is exactly what we needed. Modern, fast and perfectly mobile-friendly.' },
+      ],
     },
     servicesPage: {
       label: 'What we build', title: 'Development Services',

@@ -6,6 +6,7 @@ import ScrollingWords from '@/components/ScrollingWords'
 import TechSection from '@/components/sections/TechSection'
 import ServicesSection from '@/components/sections/ServicesSection'
 import ContactSection from '@/components/sections/ContactSection'
+import ReviewsSection from '@/components/sections/ReviewsSection'
 
 export const metadata: Metadata = {
   title: 'WebVysion | Full-Stack SaaS & Web Development — België',
@@ -29,6 +30,7 @@ export default function HomePage() {
       <TechSection />
       <ServicesSection />
       <ContactSection />
+      <ReviewsSection />
     </>
   )
 }
