@@ -47,7 +47,7 @@ export default function ServicesSection() {
             </motion.div>
           ))}
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.5, duration: 0.5 }} className="bg-blue-50 rounded-2xl border border-blue-100 overflow-hidden flex flex-col justify-between">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.5, duration: 0.5 }} className="bg-white rounded-2xl border border-slate-100 shadow-[0_12px_60px_rgba(0,0,0,0.40)] overflow-hidden flex flex-col justify-between">
             <div className="w-full h-48 overflow-hidden border-b border-blue-100">
               <Image src="/services/cta.png" alt="Start een project" width={600} height={192} className="w-full h-full object-cover" />
             </div>

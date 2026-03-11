@@ -11,7 +11,7 @@ export default function TechnologiePage() {
   const tr = t[lang].tech
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-24 pb-20 px-6">
+    <div className="min-h-screen pt-24 pb-20 px-6" style={{ backgroundColor: '#e3e3e3' }}>
       <div className="max-w-7xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-center mb-16">
           <p className="text-xs font-semibold text-[#2563EB] uppercase tracking-widest mb-4">{tr.label}</p>
@@ -40,7 +40,7 @@ export default function TechnologiePage() {
           })}
         </div>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }} className="bg-blue-50 rounded-2xl border border-blue-100 p-10 text-center">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }} className="bg-white rounded-2xl border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] p-10 text-center">
           <h2 className="text-2xl font-bold text-slate-900 mb-3">{tr.whyTitle}</h2>
           <p className="text-slate-500 max-w-2xl mx-auto leading-relaxed">{tr.whyDesc}</p>
         </motion.div>

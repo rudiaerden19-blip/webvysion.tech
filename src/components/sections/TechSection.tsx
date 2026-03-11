@@ -37,7 +37,7 @@ export default function TechSection() {
   }, [])
 
   return (
-    <section id="technologie" className="py-24 px-6 bg-slate-50">
+    <section id="technologie" className="py-24 px-6" style={{ backgroundColor: '#e3e3e3' }}>
       <style>{`
         .tc-card {
           opacity: 0;
