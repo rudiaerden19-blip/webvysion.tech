@@ -44,9 +44,9 @@ body {
 }
 
 @keyframes breatheShadow {
-  0%   { box-shadow: 0 0 40px 15px rgba(0,0,0,0.50); }
-  50%  { box-shadow: 0 0 70px 30px rgba(0,0,0,0.60); }
-  100% { box-shadow: 0 0 40px 15px rgba(0,0,0,0.50); }
+  0%   { box-shadow: 0 0 40px 15px rgba(0,0,0,0.30); }
+  50%  { box-shadow: 0 0 70px 30px rgba(0,0,0,0.40); }
+  100% { box-shadow: 0 0 40px 15px rgba(0,0,0,0.30); }
 }
 
 .shadow-breathe {
