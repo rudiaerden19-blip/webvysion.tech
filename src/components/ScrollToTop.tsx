@@ -1,32 +1,32 @@
 'use client'
 
 import { useEffect } from 'react'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 export default function ScrollToTop() {
   const pathname = usePathname()
+  const router = useRouter()
 
-  // Disable browser scroll restoration globally
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual'
-      }
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual'
     }
-  }, [])
 
-  // Scroll to top on every route change AND on first mount
-  useEffect(() => {
-    const scrollToTop = () => {
-      document.documentElement.scrollTop = 0
-      document.body.scrollTop = 0
+    // Detect page refresh — if so, redirect to home
+    const nav = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined
+    const isReload = nav?.type === 'reload'
+
+    if (isReload && pathname !== '/') {
+      router.replace('/')
+    } else {
       window.scrollTo(0, 0)
     }
-    // Run immediately
-    scrollToTop()
-    // Also run after a short delay to catch any async rendering
-    const t = setTimeout(scrollToTop, 50)
-    return () => clearTimeout(t)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0)
   }, [pathname])
 
   return null
