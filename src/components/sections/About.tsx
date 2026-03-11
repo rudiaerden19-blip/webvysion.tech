@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import Image from 'next/image'
 import { CheckCircle } from 'lucide-react'
 import { useLang } from '@/context/LanguageContext'
 import t from '@/lib/translations'
@@ -28,7 +29,11 @@ export default function About() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}>
-            <div className="relative bg-white rounded-2xl border border-slate-200 shadow-[0_8px_40px_-8px_rgba(0,0,0,0.18)] p-8 overflow-hidden">
+            <div className="relative bg-white rounded-2xl border border-slate-200 shadow-[0_32px_80px_-8px_rgba(0,0,0,0.40)] overflow-hidden">
+              <div className="relative w-full h-56 overflow-hidden">
+                <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
+              </div>
+              <div className="p-8 relative">
               <motion.div
                 className="pointer-events-none absolute inset-0 rounded-2xl"
                 style={{
@@ -58,6 +63,7 @@ export default function About() {
                     <div className="text-xs text-slate-400 mt-1">{s.l}</div>
                   </div>
                 ))}
+              </div>
               </div>
             </div>
           </motion.div>
