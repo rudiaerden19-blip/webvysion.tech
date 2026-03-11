@@ -15,7 +15,7 @@ export default function About() {
   return (
     <section id="over-ons" className="py-32 px-6 bg-slate-50" ref={ref}>
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
 
           <motion.div initial={{ opacity: 0, x: -30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, ease: "easeOut" }}>
             <p className="text-sm font-semibold text-[#2563EB] uppercase tracking-widest mb-6">{tr.label}</p>
@@ -32,11 +32,11 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-            className="flex items-center justify-center"
+            className="flex items-start justify-center"
           >
             {/* tablet-rand: dunne opstaande rand met licht/schaduw */}
             <div
-              className="relative w-full aspect-[4/3] rounded-2xl p-[6px]"
+              className="relative w-[90%] aspect-[4/3] rounded-2xl p-[6px]"
               style={{
                 background: 'linear-gradient(160deg, #c8d0da 0%, #a0aab8 40%, #7a8494 70%, #5a6275 100%)',
                 boxShadow: '0 30px 80px rgba(0,0,0,0.45), 0 8px 20px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.5)',
