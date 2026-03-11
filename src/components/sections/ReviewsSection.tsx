@@ -47,7 +47,7 @@ export default function ReviewsSection() {
               className="bg-white rounded-2xl border border-slate-100 shadow-[0_12px_60px_rgba(0,0,0,0.40)] p-7 flex flex-col"
             >
               <StarRating />
-              <p className="text-sm text-slate-600 leading-relaxed flex-1 mb-6">"{review.text}"</p>
+              <p className="text-sm text-slate-600 leading-relaxed flex-1 mb-6">&ldquo;{review.text}&rdquo;</p>
               <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
                 <div className="w-9 h-9 rounded-full bg-[#2563EB] flex items-center justify-center text-white text-sm font-bold shrink-0">
                   {review.name.charAt(0)}
