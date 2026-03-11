@@ -32,7 +32,7 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-            className="flex items-start justify-center pt-[52px]"
+            className="flex items-start justify-center pt-[90px]"
           >
             <div className="shadow-breathe relative w-[90%] aspect-[4/3] rounded-2xl overflow-hidden">
               <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
