@@ -2,7 +2,7 @@
 
 import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Mail, Github, Linkedin, ArrowRight, CheckCircle } from 'lucide-react'
+import { Mail, Facebook, Linkedin, ArrowRight, CheckCircle } from 'lucide-react'
 import { useLang } from '@/context/LanguageContext'
 import t from '@/lib/translations'
 
@@ -47,13 +47,13 @@ export default function ContactSection() {
                     <p className="text-sm font-medium">rudiaerden19@gmail.com</p>
                   </div>
                 </a>
-                <a href="https://github.com/rudiaerden19-blip" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-slate-500 hover:text-slate-900 transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61586754135" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-slate-500 hover:text-slate-900 transition-colors">
                   <div className="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-blue-50 group-hover:border-blue-200 transition-colors">
-                    <Github size={16} className="text-[#2563EB]" />
+                    <Facebook size={16} className="text-[#2563EB]" />
                   </div>
                   <div>
-                    <p className="text-xs text-slate-400">GitHub</p>
-                    <p className="text-sm font-medium">github.com/rudiaerden19-blip</p>
+                    <p className="text-xs text-slate-400">Facebook</p>
+                    <p className="text-sm font-medium">facebook.com/WebVysion</p>
                   </div>
                 </a>
                 <a href="https://www.linkedin.com/in/vysion-it-7a158b3b2/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-slate-500 hover:text-slate-900 transition-colors">
