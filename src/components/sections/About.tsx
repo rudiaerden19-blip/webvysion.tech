@@ -17,16 +17,25 @@ const slides = [
 function FlipCarousel() {
   const [current, setCurrent] = useState(0)
   const [rotation, setRotation] = useState(0)
+  const [spinning, setSpinning] = useState(false)
 
   useEffect(() => {
+    // Wait 3s → spin 1 full rotation in 1.5s → wait 3s → spin again
     const interval = setInterval(() => {
-      // Swap image at 180° (halfway) — card faces away, swap is invisible
+      setSpinning(true)
+      setRotation((r) => r + 360)
+
+      // Swap image at halfway (0.75s)
       setTimeout(() => {
         setCurrent((c) => (c + 1) % slides.length)
-      }, 1000)
-      // Full 360° rotation
-      setRotation((r) => r + 360)
-    }, 2000)
+      }, 750)
+
+      // Stop spinning after 1.5s
+      setTimeout(() => {
+        setSpinning(false)
+      }, 1500)
+    }, 4500) // 3s pause + 1.5s spin
+
     return () => clearInterval(interval)
   }, [])
 
@@ -37,7 +46,7 @@ function FlipCarousel() {
           position: 'relative',
           width: '100%',
           height: '100%',
-          transition: 'transform 2s linear',
+          transition: spinning ? 'transform 1.5s ease-in-out' : 'none',
           transform: `rotateY(${rotation}deg)`,
           borderRadius: '16px',
           overflow: 'hidden',
