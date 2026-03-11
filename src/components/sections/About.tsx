@@ -23,31 +23,36 @@ function FlipCarousel() {
     const el = cardRef.current
     if (!el) return
 
-    let timer: ReturnType<typeof setTimeout>
+    let cancelled = false
 
     const spin = () => {
-      // 1. Start rotating 0→360
+      if (cancelled) return
+
       el.style.transition = 'transform 1.5s ease-in-out'
       el.style.transform = 'rotateY(360deg)'
 
-      // 2. At 180° midpoint: swap image (invisible to viewer)
-      timer = setTimeout(() => {
+      setTimeout(() => {
+        if (cancelled) return
         indexRef.current = (indexRef.current + 1) % slides.length
         setCurrent(indexRef.current)
       }, 750)
 
-      // 3. After full rotation: reset instantly to 0° (no animation)
-      timer = setTimeout(() => {
+      setTimeout(() => {
+        if (cancelled) return
         el.style.transition = 'none'
         el.style.transform = 'rotateY(0deg)'
-        // 4. Wait 3s then spin again
-        timer = setTimeout(spin, 3000)
+        setTimeout(() => {
+          if (!cancelled) spin()
+        }, 3000)
       }, 1500)
     }
 
-    // First spin after 3s
-    timer = setTimeout(spin, 3000)
-    return () => clearTimeout(timer)
+    const initial = setTimeout(spin, 3000)
+
+    return () => {
+      cancelled = true
+      clearTimeout(initial)
+    }
   }, [])
 
   return (
