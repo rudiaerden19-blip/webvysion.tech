@@ -10,11 +10,13 @@
 
 html {
   max-width: 100%;
+  overflow-x: clip;
 }
 
 body {
   max-width: 100%;
   overflow-x: hidden;
+  touch-action: pan-y;
 }
 
 body {
