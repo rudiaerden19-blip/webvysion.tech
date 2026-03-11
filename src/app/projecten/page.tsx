@@ -17,7 +17,7 @@ export default function ProjectenPage() {
           max-width: 1100px;
           margin: auto;
           padding-top: 140px;
-          padding-bottom: 200vh;
+          padding-bottom: 60px;
           padding-left: 24px;
           padding-right: 24px;
         }
