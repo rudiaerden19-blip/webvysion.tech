@@ -28,7 +28,16 @@ export default function About() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}>
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8">
+            <div className="relative bg-white rounded-2xl border border-slate-200 shadow-sm p-8 overflow-hidden">
+              <motion.div
+                className="pointer-events-none absolute inset-0 rounded-2xl"
+                style={{
+                  background: 'linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.85) 50%, transparent 70%)',
+                  backgroundSize: '200% 100%',
+                }}
+                animate={{ backgroundPosition: ['-100% 0', '200% 0'] }}
+                transition={{ duration: 2.2, repeat: Infinity, repeatDelay: 2.5, ease: 'easeInOut' }}
+              />
               <p className="text-sm font-semibold text-slate-900 mb-6">{tr.expertiseTitle}</p>
               <div className="grid grid-cols-1 gap-3">
                 {tr.expertise.map((item: string, i: number) => (
