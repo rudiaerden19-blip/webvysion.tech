@@ -42,3 +42,13 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
 }
+
+@keyframes breatheShadow {
+  0%   { opacity: 0.70; }
+  50%  { opacity: 0.95; }
+  100% { opacity: 0.70; }
+}
+
+.shadow-breathe {
+  animation: breatheShadow 3s ease-in-out infinite;
+}

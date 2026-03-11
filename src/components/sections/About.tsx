@@ -35,12 +35,8 @@ export default function About() {
             className="flex items-start justify-center pt-[52px]"
           >
             <div className="relative w-[90%] aspect-[4/3]">
-              {/* ademende schaduw rondom — boven onder links rechts */}
-              <motion.div
-                className="absolute -inset-10 rounded-3xl blur-2xl -z-10 bg-black"
-                animate={{ opacity: [0.80, 1, 0.80] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-              />
+              {/* ademende schaduw rondom — CSS keyframe zodat het echt oneindig loopt */}
+              <div className="shadow-breathe absolute -inset-10 rounded-3xl blur-2xl -z-10 bg-black" />
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
               </div>
