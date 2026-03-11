@@ -65,9 +65,9 @@ export const metadata: Metadata = {
   },
   description: 'WebVysion is een onafhankelijk development team uit België met 13+ jaar ervaring. Wij bouwen SaaS platforms, mobiele apps, maatwerk websites en MVP producten voor bedrijven en startups.',
   keywords: [
-    'SaaS development België', 'web development freelance Belgium', 'mobile app development',
+    'SaaS development België', 'web development Belgium', 'mobile app development',
     'Next.js developer Belgium', 'React Native developer', 'maatwerk software België',
-    'freelance developer Belgie', 'MVP startup development', 'website laten maken',
+    'software developer Belgie', 'MVP startup development', 'website laten maken',
     'WebVysion', 'software development team Belgium',
   ],
   authors: [{ name: 'WebVysion', url: 'https://webvysion.tech' }],
