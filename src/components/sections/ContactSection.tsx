@@ -43,8 +43,8 @@ export default function ContactSection() {
             <style>{`
               @keyframes spiralPulse {
                 0%   { transform: scale(0.15) rotate(0deg);   opacity: 0; }
-                15%  { opacity: 0.35; }
-                85%  { opacity: 0.35; }
+                15%  { opacity: 0.12; }
+                85%  { opacity: 0.12; }
                 100% { transform: scale(1.6) rotate(60deg);   opacity: 0; }
               }
             `}</style>
