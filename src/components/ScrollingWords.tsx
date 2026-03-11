@@ -12,7 +12,7 @@ export default function ScrollingWords() {
   const doubled = [...items, ...items]
 
   return (
-    <div style={{ overflow: 'hidden', height: '160px', display: 'flex', alignItems: 'center' }}>
+    <div style={{ overflow: 'hidden', height: 'clamp(70px, 12vw, 160px)', display: 'flex', alignItems: 'center' }}>
       <div
         style={{
           display: 'flex',
@@ -25,7 +25,7 @@ export default function ScrollingWords() {
           <span
             key={i}
             style={{
-              fontSize: '130px',
+              fontSize: 'clamp(48px, 10vw, 130px)',
               fontWeight: 700,
               color: 'rgba(0,0,0,0.18)',
               userSelect: 'none',

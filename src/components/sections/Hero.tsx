@@ -52,13 +52,13 @@ export default function Hero() {
           Web<span className="text-[#2563EB]">Vysion</span>
         </motion.h1>
 
-        <motion.p custom={2} variants={fadeUp} initial="hidden" animate="show" className="text-xl sm:text-2xl text-slate-500 font-medium mb-6 tracking-wide">
-          {tr.tagline}
-          <span className="text-slate-300 mx-3">·</span>
+        <motion.p custom={2} variants={fadeUp} initial="hidden" animate="show" className="text-lg sm:text-2xl text-slate-500 font-medium mb-6 tracking-wide flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+          <span>{tr.tagline}</span>
+          <span className="text-slate-300 hidden sm:inline">·</span>
           <span className="text-slate-700 font-semibold">SaaS Platforms</span>
-          <span className="text-slate-300 mx-3">·</span>
+          <span className="text-slate-300 hidden sm:inline">·</span>
           <span className="text-slate-700 font-semibold">Apps</span>
-          <span className="text-slate-300 mx-3">·</span>
+          <span className="text-slate-300 hidden sm:inline">·</span>
           <span className="text-slate-700 font-semibold">Custom Websites</span>
         </motion.p>
 

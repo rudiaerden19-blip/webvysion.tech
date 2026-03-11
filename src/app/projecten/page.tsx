@@ -16,10 +16,11 @@ export default function ProjectenPage() {
         .stack-wrapper {
           max-width: 1100px;
           margin: auto;
-          padding-top: 140px;
+          padding-top: 100px;
           padding-bottom: 60px;
-          padding-left: 24px;
-          padding-right: 24px;
+          padding-left: 16px;
+          padding-right: 16px;
+          box-sizing: border-box;
         }
         .stack-header {
           text-align: center;
@@ -30,7 +31,7 @@ export default function ProjectenPage() {
           top: 120px;
           background: #fff;
           border-radius: 20px;
-          padding: 48px;
+          padding: clamp(20px, 4vw, 48px);
           margin-bottom: 140px;
           box-shadow: 0 25px 60px rgba(0,0,0,0.15);
         }
