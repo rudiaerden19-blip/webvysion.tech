@@ -28,7 +28,7 @@ export default function About() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}>
-            <div className="relative bg-white rounded-2xl border border-slate-200 shadow-sm p-8 overflow-hidden">
+            <div className="relative bg-white rounded-2xl border border-slate-200 shadow-[0_8px_40px_-8px_rgba(0,0,0,0.18)] p-8 overflow-hidden">
               <motion.div
                 className="pointer-events-none absolute inset-0 rounded-2xl"
                 style={{
