@@ -34,8 +34,12 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
             className="flex items-center justify-center"
           >
-            <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_40px_100px_rgba(0,0,0,0.55)]">
-              <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
+            {/* buitenste frame / kraag */}
+            <div className="relative w-full aspect-[4/3] rounded-3xl shadow-[0_40px_100px_rgba(0,0,0,0.55)] bg-slate-200 p-3">
+              {/* binnenste foto */}
+              <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
+              </div>
             </div>
           </motion.div>
 
