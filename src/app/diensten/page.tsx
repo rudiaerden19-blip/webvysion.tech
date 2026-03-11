@@ -24,7 +24,7 @@ export default function DienstenPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {services.map((service, i) => (
-            <motion.div key={service.id} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1, duration: 0.6 }} className="group bg-white rounded-2xl border border-slate-200 shadow-[0_8px_40px_rgba(0,0,0,0.13)] hover:shadow-[0_40px_90px_-8px_rgba(0,0,0,0.48)] hover:border-slate-300 transition-all overflow-hidden">
+            <motion.div key={service.id} initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1, duration: 0.6 }} className="group bg-white rounded-2xl border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] hover:shadow-[0_24px_80px_rgba(0,0,0,0.40)] hover:border-slate-300 transition-all overflow-hidden">
               {'image' in service && service.image && (
                 <div className="w-full h-48 overflow-hidden border-b border-slate-100">
                   <Image src={service.image as string} alt={service.title} width={600} height={192} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />

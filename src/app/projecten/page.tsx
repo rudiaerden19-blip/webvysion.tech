@@ -24,7 +24,7 @@ export default function ProjectenPage() {
           {projects.map((project, i) => {
             const pd = t[lang].projectData[i]
             return (
-            <motion.div key={project.id} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1, duration: 0.6, ease: "easeOut" }} className="group bg-white rounded-2xl border border-slate-200 shadow-[0_8px_40px_rgba(0,0,0,0.13)] hover:shadow-[0_40px_90px_-8px_rgba(0,0,0,0.48)] hover:border-slate-300 p-8 transition-all duration-300">
+            <motion.div key={project.id} initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1, duration: 0.6, ease: "easeOut" }} className="group bg-white rounded-2xl border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] hover:shadow-[0_24px_80px_rgba(0,0,0,0.40)] hover:border-slate-300 p-8 transition-all duration-300">
               <div className="flex flex-col lg:flex-row lg:items-start gap-8">
                 <div className="flex-1">
                   <div className="flex items-center gap-4 mb-4">
