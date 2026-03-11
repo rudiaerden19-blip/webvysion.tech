@@ -35,12 +35,12 @@ export default function About() {
             className="flex items-start justify-center pt-[52px]"
           >
             <div className="relative w-[90%]">
-              {/* schaduw ACHTER het hele vlak — pulseert */}
+              {/* vaste schaduw — altijd zichtbaar, ademt groter/kleiner */}
               <motion.div
-                animate={{ opacity: [0.65, 0.15, 0.65] }}
-                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -inset-8 rounded-3xl blur-3xl -z-10"
-                style={{ background: 'rgba(0,0,0,0.70)' }}
+                animate={{ scale: [1, 1.12, 1] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute -inset-8 rounded-3xl blur-2xl -z-10"
+                style={{ background: 'rgba(0,0,0,0.50)' }}
               />
               {/* tablet-rand */}
               <div
