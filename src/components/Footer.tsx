@@ -1,4 +1,5 @@
 import FooterClient from './FooterClient'
+import BackToTopButton from './BackToTopButton'
 
 export default function Footer() {
   return (
@@ -30,7 +31,10 @@ export default function Footer() {
 
         <div className="mt-6 pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-slate-400">© {new Date().getFullYear()} WebVysion. All rights reserved.</p>
-          <p className="text-xs text-slate-400">webvysion.tech</p>
+          <div className="flex items-center gap-4">
+            <p className="text-xs text-slate-400">webvysion.tech</p>
+            <BackToTopButton />
+          </div>
         </div>
       </div>
     </footer>
