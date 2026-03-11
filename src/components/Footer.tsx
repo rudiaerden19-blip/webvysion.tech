@@ -18,21 +18,13 @@ export default function Footer() {
               <span className="font-medium">ISO 9001:2015</span>
             </div>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             {/* IAF */}
-            <div className="flex flex-col items-center justify-center w-10 h-10 rounded-full border border-slate-300 text-slate-500">
-              <span className="text-[8px] font-bold leading-none">IAF</span>
-              <span className="text-[5px] leading-none tracking-tight">MEMBER</span>
-            </div>
+            <img src="/logo-iaf.svg" alt="IAF International Accreditation Forum" className="h-12 w-12 object-contain" />
             {/* CERTiS */}
-            <div className="flex flex-col items-center justify-center w-10 h-10 rounded-full border border-slate-300 text-slate-500">
-              <span className="text-[6px] font-bold leading-none">CERT</span>
-              <span className="text-[6px] font-bold leading-none text-blue-400">iS</span>
-            </div>
+            <img src="/logo-certis.svg" alt="CERTiS Certification Institute" className="h-10 object-contain" />
             {/* ESQ */}
-            <div className="flex flex-col items-center justify-center w-10 h-10 rounded-full border border-slate-300 text-slate-500">
-              <span className="text-[9px] font-bold leading-none">ESQ</span>
-            </div>
+            <img src="/logo-esq.svg" alt="ESQ Your Certification Partner" className="h-10 object-contain" />
           </div>
         </div>
 
