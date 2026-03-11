@@ -28,10 +28,27 @@ export default function About() {
             <p className="text-lg text-slate-500 leading-relaxed">{tr.p3}</p>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }} className="flex items-center justify-center">
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-[0_32px_80px_-8px_rgba(0,0,0,0.40)]">
-              <Image src="/about-saas.png" alt="SaaS development" width={720} height={480} className="w-full h-auto object-cover" />
-            </div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+            className="flex items-center justify-center py-16 px-8 bg-slate-100 rounded-3xl"
+          >
+            <motion.div
+              animate={{ y: [0, -14, 0] }}
+              transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+              className="relative w-full"
+            >
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-[0_40px_80px_-8px_rgba(0,0,0,0.45)]">
+                <Image src="/about-saas.png" alt="SaaS development" width={720} height={480} className="w-full h-auto object-cover" />
+              </div>
+              {/* bewegende schaduw op de vloer */}
+              <motion.div
+                animate={{ scaleX: [1, 0.82, 1], opacity: [0.35, 0.18, 0.35] }}
+                transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-4/5 h-6 rounded-full bg-slate-400 blur-xl"
+              />
+            </motion.div>
           </motion.div>
 
         </div>
