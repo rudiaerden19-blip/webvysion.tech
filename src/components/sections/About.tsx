@@ -87,7 +87,7 @@ export default function About() {
   const tr = t[lang].about
 
   return (
-    <section id="over-ons" className="py-32 px-6 bg-slate-50" ref={ref}>
+    <section id="over-ons" className="py-32 px-6" style={{ backgroundColor: '#e3e3e3' }} ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
 

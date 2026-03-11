@@ -3,7 +3,7 @@ import BackToTopButton from './BackToTopButton'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-50">
+    <footer className="border-t border-slate-200" style={{ backgroundColor: '#e3e3e3' }}>
       <div className="max-w-7xl mx-auto px-6 py-12">
         <FooterClient />
         {/* Certifications bar */}

@@ -16,7 +16,7 @@ export default function ServicesSection() {
   const tr = t[lang].services
 
   return (
-    <section id="diensten" className="py-24 px-6 bg-white" ref={ref}>
+    <section id="diensten" className="py-24 px-6" style={{ backgroundColor: '#e3e3e3' }} ref={ref}>
       <div className="max-w-7xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="text-center mb-16">
           <p className="text-xs font-semibold text-[#2563EB] uppercase tracking-widest mb-4">{tr.label}</p>
