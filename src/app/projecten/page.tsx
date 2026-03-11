@@ -33,7 +33,7 @@ export default function ProjectenPage() {
           border-radius: 20px;
           padding: clamp(20px, 4vw, 48px);
           margin-bottom: 140px;
-          box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+          box-shadow: 0 25px 80px rgba(0,0,0,0.40);
         }
         .project-card:nth-child(2){z-index:1;}
         .project-card:nth-child(3){z-index:2;}
