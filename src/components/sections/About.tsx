@@ -1,10 +1,69 @@
 'use client'
 
 import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useLang } from '@/context/LanguageContext'
 import t from '@/lib/translations'
+
+const slides = [
+  '/about-saas.png',
+  '/about-slide1.png',
+  '/about-slide2.png',
+  '/about-slide3.png',
+  '/about-slide4.png',
+]
+
+function FlipCarousel() {
+  const [current, setCurrent] = useState(0)
+  const [next, setNext] = useState(1)
+  const [flipping, setFlipping] = useState(false)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFlipping(true)
+      setTimeout(() => {
+        setCurrent((c) => (c + 1) % slides.length)
+        setNext((n) => (n + 1) % slides.length)
+        setFlipping(false)
+      }, 400)
+    }, 2000)
+    return () => clearInterval(interval)
+  }, [])
+
+  return (
+    <div
+      style={{
+        perspective: '1200px',
+        width: '100%',
+        aspectRatio: '4/3',
+      }}
+    >
+      <div
+        style={{
+          position: 'relative',
+          width: '100%',
+          height: '100%',
+          transformStyle: 'preserve-3d',
+          transition: 'transform 0.4s ease-in-out',
+          transform: flipping ? 'rotateY(90deg)' : 'rotateY(0deg)',
+          borderRadius: '16px',
+          overflow: 'hidden',
+          boxShadow: '0 0 40px 15px rgba(0,0,0,0.30)',
+          animation: 'breatheShadow 3s ease-in-out infinite',
+        }}
+      >
+        <Image
+          src={flipping ? slides[next] : slides[current]}
+          alt="WebVysion portfolio"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+    </div>
+  )
+}
 
 export default function About() {
   const ref = useRef(null)
@@ -32,10 +91,10 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-            className="flex items-start justify-center pt-0 lg:pt-[90px]"
+            className="flex items-start justify-center pt-0 lg:pt-[90px] w-full"
           >
-            <div className="shadow-breathe relative w-[90%] aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
+            <div className="w-[90%]">
+              <FlipCarousel />
             </div>
           </motion.div>
 
