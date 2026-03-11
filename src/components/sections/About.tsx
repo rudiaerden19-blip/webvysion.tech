@@ -34,26 +34,17 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
             className="flex items-center justify-center"
           >
-            {/* 3D frame — licht vanuit linksboven, schaduw rechtsonder */}
+            {/* tablet-rand: dunne opstaande rand met licht/schaduw */}
             <div
-              className="relative w-full aspect-[4/3] rounded-3xl p-[14px]"
+              className="relative w-full aspect-[4/3] rounded-2xl p-[6px]"
               style={{
-                background: 'linear-gradient(145deg, #e2e8f0 0%, #cbd5e1 30%, #94a3b8 60%, #64748b 100%)',
-                boxShadow: '0 40px 100px rgba(0,0,0,0.50), inset 0 2px 3px rgba(255,255,255,0.6), inset 0 -2px 3px rgba(0,0,0,0.25)',
+                background: 'linear-gradient(160deg, #c8d0da 0%, #a0aab8 40%, #7a8494 70%, #5a6275 100%)',
+                boxShadow: '0 30px 80px rgba(0,0,0,0.45), 0 8px 20px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.5)',
               }}
             >
-              {/* binnenste rand — donkerder voor diepte */}
-              <div
-                className="relative w-full h-full rounded-2xl p-[3px]"
-                style={{
-                  background: 'linear-gradient(145deg, #475569 0%, #1e293b 100%)',
-                  boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.5)',
-                }}
-              >
-                {/* foto */}
-                <div className="relative w-full h-full rounded-xl overflow-hidden">
-                  <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
-                </div>
+              {/* foto vlak */}
+              <div className="relative w-full h-full rounded-xl overflow-hidden">
+                <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
               </div>
             </div>
           </motion.div>
