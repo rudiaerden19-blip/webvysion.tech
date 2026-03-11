@@ -40,15 +40,15 @@ export default function TechSection() {
             // Top row: left to right (0,1,2,3,4,5 → delay 0,120,240...)
             // Bottom row: right to left reversed (5,4,3,2,1,0 → delay 0,120,240...)
             const staggerIndex = isTopRow ? posInRow : (COLS - 1 - posInRow)
-            const delay = staggerIndex * 0.12
-            const startX = isTopRow ? -60 : 60
+            const delay = staggerIndex * 0.18
+            const startX = isTopRow ? -80 : 80
 
             return (
               <motion.div
                 key={tech.name}
                 initial={{ opacity: 0, x: startX }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay, duration: 0.7, ease: 'easeOut' }}
+                transition={{ delay, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
                 className="group flex flex-col items-center gap-3 p-5 rounded-2xl bg-white border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] hover:shadow-[0_24px_80px_rgba(0,0,0,0.40)] hover:border-slate-300 transition-all duration-200 cursor-default"
               >
