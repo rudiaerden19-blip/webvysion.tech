@@ -26,37 +26,52 @@ export default function ContactSection() {
     <section id="contact" className="py-24 px-6 bg-slate-50 relative overflow-hidden" ref={ref}>
 
       {/* Spiral background */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ zIndex: 0 }}>
-        <style>{`
-          @keyframes spinConstant {
-            from { transform: rotate(0deg); }
-            to   { transform: rotate(360deg); }
-          }
-        `}</style>
-        <svg
-          viewBox="0 0 600 600"
-          style={{
-            width: '90%',
-            maxWidth: '700px',
-            opacity: 0.18,
-            animation: 'spinConstant 20s linear infinite',
-            transformOrigin: 'center',
-          }}
-        >
-          {[40,70,100,130,160,190,220,250,280,310].map((r, i) => (
-            <circle
-              key={i}
-              cx="300"
-              cy="300"
-              r={r}
-              fill="none"
-              stroke="#2563EB"
-              strokeWidth="1.5"
-              strokeDasharray={`${r * 0.5} ${r * 0.25}`}
-            />
-          ))}
-        </svg>
-      </div>
+      {(() => {
+        // Build Archimedean spiral path: 5 turns, max radius 270
+        const cx = 300, cy = 300, turns = 5, maxR = 270, steps = turns * 80
+        const pts: string[] = []
+        for (let i = 0; i <= steps; i++) {
+          const t = (i / steps) * turns * 2 * Math.PI
+          const r = (i / steps) * maxR
+          const x = cx + r * Math.cos(t - Math.PI / 2)
+          const y = cy + r * Math.sin(t - Math.PI / 2)
+          pts.push(`${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`)
+        }
+        const spiralPath = pts.join(' ')
+        return (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ zIndex: 0 }}>
+            <style>{`
+              @keyframes spiralPulse {
+                0%   { transform: scale(0.15) rotate(0deg);   opacity: 0; }
+                15%  { opacity: 0.35; }
+                85%  { opacity: 0.35; }
+                100% { transform: scale(1.6) rotate(60deg);   opacity: 0; }
+              }
+            `}</style>
+            {[0, 2, 4].map((delay) => (
+              <svg
+                key={delay}
+                viewBox="0 0 600 600"
+                style={{
+                  position: 'absolute',
+                  width: '100%',
+                  maxWidth: '800px',
+                  animation: `spiralPulse 6s ease-in-out ${delay}s infinite`,
+                  transformOrigin: 'center',
+                }}
+              >
+                <path
+                  d={spiralPath}
+                  fill="none"
+                  stroke="#1e3a8a"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            ))}
+          </div>
+        )
+      })()}
 
       <div className="max-w-7xl mx-auto" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="text-center mb-16">
