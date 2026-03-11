@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
+import CookieBanner from '@/components/CookieBanner'
 import { LanguageProvider } from '@/context/LanguageContext'
 
 const inter = Inter({
@@ -127,6 +128,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.className} bg-white text-slate-900 antialiased overflow-x-hidden`}>
         <LanguageProvider>
           <ScrollToTop />
+          <CookieBanner />
           <Navbar />
           <main>{children}</main>
           <Footer />
