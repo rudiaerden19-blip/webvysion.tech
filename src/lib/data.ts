@@ -68,9 +68,9 @@ export const projects = [
     description:
       'VoxApp is een AI-gestuurde receptioniste voor alle bedrijven. Het platform verwerkt inkomende gesprekken automatisch en geeft klanten direct het juiste antwoord — 24/7, zonder menselijke tussenkomst.',
     features: [
-      'AI voice agents via Vapi',
-      'Spraakherkenning met Deepgram',
-      'Text-to-speech via ElevenLabs',
+      'AI receptioniste',
+      'Spraakherkenning 9 talen',
+      'Text-to-speech',
       'Realtime gespreksverwerking',
       'Enterprise logging & monitoring',
       'Multi-tenant architectuur',

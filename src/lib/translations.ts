@@ -59,7 +59,7 @@ export const t = {
         name: 'VoxApp',
         tagline: 'AI Voice Agent Platform',
         description: 'VoxApp is een AI-gestuurde receptioniste voor alle bedrijven. Het platform verwerkt inkomende gesprekken automatisch en geeft klanten direct het juiste antwoord — 24/7, zonder menselijke tussenkomst.',
-        features: ['AI voice agents via Vapi','Spraakherkenning met Deepgram','Text-to-speech via ElevenLabs','Realtime gespreksverwerking','Enterprise logging & monitoring','Multi-tenant architectuur'],
+        features: ['AI receptioniste','Spraakherkenning 9 talen','Text-to-speech','Realtime gespreksverwerking','Enterprise logging & monitoring','Multi-tenant architectuur'],
       },
       {
         name: 'SafeLink',
@@ -169,7 +169,7 @@ export const t = {
         name: 'VoxApp',
         tagline: "Plateforme d'agents vocaux IA",
         description: "VoxApp est une réceptionniste pilotée par IA pour toutes les entreprises. La plateforme traite automatiquement les appels entrants et répond directement aux clients — 24h/24, sans intervention humaine.",
-        features: ["Agents vocaux IA via Vapi","Reconnaissance vocale avec Deepgram","Synthèse vocale via ElevenLabs","Traitement des conversations en temps réel","Journalisation & surveillance entreprise","Architecture multi-tenant"],
+        features: ["Réceptionniste IA","Reconnaissance vocale 9 langues","Text-to-speech","Traitement des conversations en temps réel","Journalisation & surveillance entreprise","Architecture multi-tenant"],
       },
       {
         name: 'SafeLink',
@@ -279,7 +279,7 @@ export const t = {
         name: 'VoxApp',
         tagline: 'KI-Sprachagenten-Plattform',
         description: 'VoxApp ist eine KI-gesteuerte Rezeptionistin für alle Unternehmen. Die Plattform verarbeitet eingehende Anrufe automatisch und gibt Kunden sofort die richtige Antwort — 24/7, ohne menschliches Eingreifen.',
-        features: ['KI-Sprachagenten via Vapi','Spracherkennung mit Deepgram','Text-to-Speech via ElevenLabs','Echtzeit-Gesprächsverarbeitung','Enterprise-Logging & Monitoring','Multi-Tenant-Architektur'],
+        features: ['KI-Rezeptionistin','Spracherkennung 9 Sprachen','Text-to-Speech','Echtzeit-Gesprächsverarbeitung','Enterprise-Logging & Monitoring','Multi-Tenant-Architektur'],
       },
       {
         name: 'SafeLink',
@@ -389,7 +389,7 @@ export const t = {
         name: 'VoxApp',
         tagline: 'AI Voice Agent Platform',
         description: 'VoxApp is an AI-powered receptionist for every business. The platform automatically handles incoming calls and gives customers the right answer immediately — 24/7, without human intervention.',
-        features: ['AI voice agents via Vapi','Speech recognition with Deepgram','Text-to-speech via ElevenLabs','Real-time conversation processing','Enterprise logging & monitoring','Multi-tenant architecture'],
+        features: ['AI receptionist','Speech recognition 9 languages','Text-to-speech','Real-time conversation processing','Enterprise logging & monitoring','Multi-tenant architecture'],
       },
       {
         name: 'SafeLink',
