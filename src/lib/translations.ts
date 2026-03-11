@@ -72,6 +72,9 @@ export const t = {
       label: 'Portfolio', title: 'Onze projecten',
       description: 'Echte softwareproducten gebouwd voor echte klanten — van mobile apps tot complete SaaS platforms.',
       viewAll: 'Alle projecten bekijken', visit: 'Bezoek project', code: 'Bekijk code', more: 'meer', features: 'Functies',
+      ctaTitle: 'Jouw project bouwen?',
+      ctaItems: ['Wil je een professionele website?', 'Wil je een app laten maken (iOS of Android)?', 'Wil je een project op maat laten maken?'],
+      ctaButton: 'Contacteer ons',
     },
     tech: {
       label: 'Stack', title: 'Technologie',
@@ -182,6 +185,9 @@ export const t = {
       label: 'Portfolio', title: 'Nos projets',
       description: 'De vrais produits logiciels construits pour de vrais clients — des applications mobiles aux plateformes SaaS complètes.',
       viewAll: 'Voir tous les projets', visit: 'Visiter le projet', code: 'Voir le code', more: 'plus', features: 'Fonctionnalités',
+      ctaTitle: 'Construire votre projet?',
+      ctaItems: ['Vous voulez un site web professionnel?', 'Vous voulez une app (iOS ou Android)?', 'Vous voulez un projet sur mesure?'],
+      ctaButton: 'Contactez-nous',
     },
     tech: {
       label: 'Stack', title: 'Technologie',
@@ -292,6 +298,9 @@ export const t = {
       label: 'Portfolio', title: 'Unsere Projekte',
       description: 'Echte Softwareprodukte für echte Kunden — von mobilen Apps bis zu vollständigen SaaS-Plattformen.',
       viewAll: 'Alle Projekte ansehen', visit: 'Projekt besuchen', code: 'Code ansehen', more: 'mehr', features: 'Funktionen',
+      ctaTitle: 'Ihr Projekt realisieren?',
+      ctaItems: ['Möchten Sie eine professionelle Website?', 'Möchten Sie eine App (iOS oder Android)?', 'Möchten Sie ein maßgeschneidertes Projekt?'],
+      ctaButton: 'Kontaktieren Sie uns',
     },
     tech: {
       label: 'Stack', title: 'Technologie',
@@ -402,6 +411,9 @@ export const t = {
       label: 'Portfolio', title: 'Our projects',
       description: 'Real software products built for real clients — from mobile apps to complete SaaS platforms.',
       viewAll: 'View all projects', visit: 'Visit project', code: 'View code', more: 'more', features: 'Features',
+      ctaTitle: 'Build your project?',
+      ctaItems: ['Do you want a professional website?', 'Do you want an app (iOS or Android)?', 'Do you want a custom project?'],
+      ctaButton: 'Contact us',
     },
     tech: {
       label: 'Stack', title: 'Technology',

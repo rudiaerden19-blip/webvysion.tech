@@ -107,13 +107,9 @@ export default function ProjectsSection() {
               <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-6">
                 <span className="text-2xl">✦</span>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-6">Jouw project bouwen?</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-6">{tr.ctaTitle}</h3>
               <ul className="space-y-4 mb-8">
-                {[
-                  'Wil je een professionele website?',
-                  'Wil je een app laten maken (iOS of Android)?',
-                  'Wil je een project op maat laten maken?',
-                ].map((item) => (
+                {tr.ctaItems.map((item: string) => (
                   <li key={item} className="flex items-start gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#2563EB] mt-1.5 shrink-0" />
                     <span className="text-sm text-slate-600 leading-relaxed">{item}</span>
@@ -125,7 +121,7 @@ export default function ProjectsSection() {
               href="/contact"
               className="group inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl bg-[#2563EB] text-white text-sm font-semibold hover:bg-[#1D4ED8] transition-colors"
             >
-              Contacteer ons <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+              {tr.ctaButton} <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
         </div>
