@@ -1,11 +1,6 @@
 'use client'
 
-const words = [
-  'SaaS Development',
-  'Web Applications',
-  'Mobile Applications',
-  'Custom Websites',
-  'Startup MVP Development',
+const items = [
   'SaaS Development',
   'Web Applications',
   'Mobile Applications',
@@ -14,24 +9,30 @@ const words = [
 ]
 
 export default function ScrollingWords() {
+  const doubled = [...items, ...items]
+
   return (
-    <div className="relative overflow-hidden py-8" style={{ height: '160px' }}>
+    <div style={{ overflow: 'hidden', height: '160px', display: 'flex', alignItems: 'center' }}>
       <div
-        className="flex gap-[120px] whitespace-nowrap"
         style={{
-          animation: 'scrollWords 8s linear infinite',
+          display: 'flex',
+          flexShrink: 0,
+          animation: 'scrollWords 18s linear infinite',
           willChange: 'transform',
         }}
       >
-        {words.map((word, i) => (
+        {doubled.map((word, i) => (
           <span
             key={i}
             style={{
-              fontSize: '140px',
+              fontSize: '130px',
               fontWeight: 700,
               color: 'rgba(0,0,0,0.18)',
               userSelect: 'none',
               lineHeight: 1,
+              whiteSpace: 'nowrap',
+              flexShrink: 0,
+              paddingRight: '120px',
             }}
           >
             {word}
