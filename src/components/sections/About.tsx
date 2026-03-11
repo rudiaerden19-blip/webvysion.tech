@@ -32,22 +32,9 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-            className="flex items-center justify-center py-16 px-8 bg-slate-100 rounded-3xl"
           >
-            <div className="relative w-full">
-              {/* grote zachte schaduw die pulseert achter het vlak */}
-              <motion.div
-                animate={{
-                  opacity: [0.55, 0.25, 0.55],
-                  scale: [1, 0.88, 1],
-                }}
-                transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -inset-6 rounded-3xl bg-slate-400 blur-3xl -z-10"
-              />
-              {/* stilstaand vlak */}
-              <div className="relative w-full rounded-2xl overflow-hidden">
-                <Image src="/about-saas.png" alt="SaaS development" width={720} height={480} className="w-full h-auto object-cover" />
-              </div>
+            <div className="relative w-full rounded-2xl overflow-hidden shadow-[0_24px_60px_rgba(0,0,0,0.40)]">
+              <Image src="/about-saas.png" alt="SaaS development" width={720} height={480} className="w-full h-auto object-cover" />
             </div>
           </motion.div>
 
