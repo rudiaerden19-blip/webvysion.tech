@@ -152,13 +152,16 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <button
-          onClick={() => setOpen(!open)}
-          aria-label={open ? 'Menu sluiten' : 'Menu openen'}
-          className="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
-        >
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <LanguageSwitcher />
+          <button
+            onClick={() => setOpen(!open)}
+            aria-label={open ? 'Menu sluiten' : 'Menu openen'}
+            className="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
