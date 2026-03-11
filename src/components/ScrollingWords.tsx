@@ -19,7 +19,8 @@ export default function ScrollingWords() {
       <div
         className="flex gap-[120px] whitespace-nowrap"
         style={{
-          animation: 'scrollWords 12s linear infinite',
+          animation: 'scrollWords 8s linear infinite',
+          willChange: 'transform',
         }}
       >
         {words.map((word, i) => (
