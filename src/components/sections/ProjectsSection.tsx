@@ -96,6 +96,38 @@ export default function ProjectsSection() {
               </motion.div>
             )
           })}
+          {/* CTA card next to last project */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: projects.length * 0.1, duration: 0.6 }}
+            className="bg-white rounded-2xl border border-slate-100 shadow-[0_12px_60px_rgba(0,0,0,0.40)] p-8 flex flex-col justify-between"
+          >
+            <div>
+              <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-6">
+                <span className="text-2xl">✦</span>
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Jouw project bouwen?</h3>
+              <ul className="space-y-4 mb-8">
+                {[
+                  'Wil je een professionele website?',
+                  'Wil je een app laten maken (iOS of Android)?',
+                  'Wil je een project op maat laten maken?',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#2563EB] mt-1.5 shrink-0" />
+                    <span className="text-sm text-slate-600 leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <Link
+              href="/contact"
+              className="group inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl bg-[#2563EB] text-white text-sm font-semibold hover:bg-[#1D4ED8] transition-colors"
+            >
+              Contacteer ons <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
         </div>
 
         <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.5, duration: 0.5 }} className="text-center mt-10">
