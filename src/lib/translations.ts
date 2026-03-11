@@ -40,7 +40,7 @@ export const t = {
       {
         name: 'Internet Buddy',
         tagline: 'Slim internetbeheer voor scholen & ouders',
-        description: 'Internet Buddy is een applicatie ontwikkeld in opdracht van een Belgische overkoepelende schoolgemeenschap. Het systeem geeft ouders en scholen volledige controle over het internetgebruik van leerlingen via geofence-technologie en agenda-planning.',
+        description: 'Internet Buddy is een applicatie ontwikkeld in opdracht van de Belgische overkoepelende schoolgemeenschap. Het systeem geeft ouders en scholen volledige controle over het internetgebruik van leerlingen via geofence-technologie en agenda-planning.',
         features: ['Internet op afstand aan/uitzetten','Agenda-planning voor internetgebruik','Geofence technologie','Automatisch uitschakelen nabij school','Remote beheer voor ouders & scholen','Centraal cloud dashboard'],
       },
       {

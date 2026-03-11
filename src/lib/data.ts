@@ -4,7 +4,7 @@ export const projects = [
     name: 'Internet Buddy',
     tagline: 'Smart Internet Control for Schools & Parents',
     description:
-      'Internet Buddy is een applicatie ontwikkeld in opdracht van een Belgische overkoepelende schoolgemeenschap. Het systeem geeft ouders en scholen volledige controle over het internetgebruik van leerlingen via geofence-technologie en agenda-planning.',
+      'Internet Buddy is een applicatie ontwikkeld in opdracht van de Belgische overkoepelende schoolgemeenschap. Het systeem geeft ouders en scholen volledige controle over het internetgebruik van leerlingen via geofence-technologie en agenda-planning.',
     features: [
       'Internet op afstand aan/uitzetten',
       'Agenda-planning voor internetgebruik',
