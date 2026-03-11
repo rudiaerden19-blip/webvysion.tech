@@ -47,7 +47,7 @@ export default function ContactSection() {
                     <p className="text-sm font-medium">rudiaerden19@gmail.com</p>
                   </div>
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=61586754135" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-slate-500 hover:text-slate-900 transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61586754135685" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-slate-500 hover:text-slate-900 transition-colors">
                   <div className="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-blue-50 group-hover:border-blue-200 transition-colors">
                     <Facebook size={16} className="text-[#2563EB]" />
                   </div>
