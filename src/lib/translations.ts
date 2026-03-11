@@ -123,7 +123,7 @@ export const t = {
     },
     footer: {
       tagline: 'Onafhankelijk development team uit België. Wij bouwen complete softwareproducten van idee tot werkend systeem.',
-      nav: 'Navigatie', services: 'Diensten', platforms: 'Onze platforms',
+      nav: 'Navigatie', services: 'Diensten', platforms: 'Onze platforms', privacy: 'Privacybeleid', cookiePolicy: 'Cookiebeleid',
       rights: 'Alle rechten voorbehouden.',
     },
   },
@@ -249,7 +249,7 @@ export const t = {
     },
     footer: {
       tagline: 'Équipe de développement indépendante de Belgique. Nous construisons des produits logiciels complets de l\'idée au système fonctionnel.',
-      nav: 'Navigation', services: 'Services', platforms: 'Nos plateformes',
+      nav: 'Navigation', services: 'Services', platforms: 'Nos plateformes', privacy: 'Politique de confidentialité', cookiePolicy: 'Politique de cookies',
       rights: 'Tous droits réservés.',
     },
   },
@@ -375,7 +375,7 @@ export const t = {
     },
     footer: {
       tagline: 'Unabhängiges Entwicklungsteam aus Belgien. Wir bauen vollständige Softwareprodukte von der Idee bis zum funktionierenden System.',
-      nav: 'Navigation', services: 'Leistungen', platforms: 'Unsere Plattformen',
+      nav: 'Navigation', services: 'Leistungen', platforms: 'Unsere Plattformen', privacy: 'Datenschutzerklärung', cookiePolicy: 'Cookie-Richtlinie',
       rights: 'Alle Rechte vorbehalten.',
     },
   },
@@ -501,7 +501,7 @@ export const t = {
     },
     footer: {
       tagline: 'Independent development team from Belgium. We build complete software products from idea to working system.',
-      nav: 'Navigation', services: 'Services', platforms: 'Our platforms',
+      nav: 'Navigation', services: 'Services', platforms: 'Our platforms', privacy: 'Privacy Policy', cookiePolicy: 'Cookie Policy',
       rights: 'All rights reserved.',
     },
   },
