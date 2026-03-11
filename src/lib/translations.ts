@@ -106,7 +106,7 @@ export const t = {
         { name: 'Thomas Devos', role: 'IT-manager · Stad Pelt', text: 'Betrouwbare partner voor overheidsopdrachten. Levering binnen deadline en budget, zonder verrassingen.' },
         { name: 'Karen Willems', role: 'Founder · VoxApp', text: 'Het AI-receptiesysteem werkt indrukwekkend goed. Onze klanten merken het verschil meteen na implementatie.' },
         { name: 'Marc Janssen', role: 'COO · HealthTech Startup', text: 'Van idee tot werkende SaaS in amper 4 maanden. Een uitzonderlijk resultaat dat onze verwachtingen overtrof.' },
-        { name: 'Rudi Aerden', role: 'Ondernemer · Safelink', text: 'Deze mensen gaan echt tot het uiterste om een perfect product af te leveren. Top team!' },
+        { name: 'Lena Bracke', role: 'Product Owner · SafeGuard App', text: 'Deze mensen gaan echt tot het uiterste om een perfect product af te leveren. Top team!' },
       ],
     },
     servicesPage: {
@@ -232,7 +232,7 @@ export const t = {
         { name: 'Thomas Devos', role: 'Responsable IT · Ville de Pelt', text: 'Partenaire fiable pour les marchés publics. Livraison dans les délais et le budget, sans mauvaises surprises.' },
         { name: 'Karen Willems', role: 'Fondatrice · VoxApp', text: 'Le système de réception IA fonctionne remarquablement bien. Nos clients voient la différence immédiatement.' },
         { name: 'Marc Janssen', role: 'COO · HealthTech Startup', text: 'De l\'idée à un SaaS fonctionnel en seulement 4 mois. Un résultat exceptionnel qui a dépassé nos attentes.' },
-        { name: 'Rudi Aerden', role: 'Entrepreneur · Safelink', text: 'Ces gens vont vraiment jusqu\'au bout pour livrer un produit parfait. Une équipe au top!' },
+        { name: 'Lena Bracke', role: 'Product Owner · SafeGuard App', text: 'Ces gens vont vraiment jusqu\'au bout pour livrer un produit parfait. Une équipe au top!' },
       ],
     },
     servicesPage: {
@@ -358,7 +358,7 @@ export const t = {
         { name: 'Thomas Devos', role: 'IT-Manager · Stadt Pelt', text: 'Zuverlässiger Partner für öffentliche Aufträge. Lieferung termingerecht und im Budget, ohne Überraschungen.' },
         { name: 'Karen Willems', role: 'Gründerin · VoxApp', text: 'Das KI-Empfangssystem funktioniert beeindruckend gut. Unsere Kunden merken den Unterschied sofort nach der Implementierung.' },
         { name: 'Marc Janssen', role: 'COO · HealthTech Startup', text: 'Von der Idee zur fertigen SaaS in nur 4 Monaten. Ein außergewöhnliches Ergebnis, das unsere Erwartungen übertraf.' },
-        { name: 'Rudi Aerden', role: 'Unternehmer · Safelink', text: 'Diese Menschen gehen wirklich bis ans Äußerste, um ein perfektes Produkt zu liefern. Top Team!' },
+        { name: 'Lena Bracke', role: 'Product Owner · SafeGuard App', text: 'Diese Menschen gehen wirklich bis ans Äußerste, um ein perfektes Produkt zu liefern. Top Team!' },
       ],
     },
     servicesPage: {
@@ -484,7 +484,7 @@ export const t = {
         { name: 'Thomas Devos', role: 'IT Manager · City of Pelt', text: 'A reliable partner for government projects. Delivered on time and on budget, no surprises whatsoever.' },
         { name: 'Karen Willems', role: 'Founder · VoxApp', text: 'The AI reception system works impressively well. Our clients notice the difference immediately after implementation.' },
         { name: 'Marc Janssen', role: 'COO · HealthTech Startup', text: 'From idea to working SaaS in just 4 months. An exceptional result that exceeded all our expectations.' },
-        { name: 'Rudi Aerden', role: 'Entrepreneur · Safelink', text: 'These people truly go above and beyond to deliver a perfect product. Top team!' },
+        { name: 'Lena Bracke', role: 'Product Owner · SafeGuard App', text: 'These people truly go above and beyond to deliver a perfect product. Top team!' },
       ],
     },
     servicesPage: {
