@@ -8,7 +8,7 @@ import t from '@/lib/translations'
 
 export default function ContactSection() {
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
+  const inView = useInView(ref, { once: true, amount: 0.5 })
   const [sent, setSent] = useState(false)
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const { lang } = useLang()
@@ -31,9 +31,9 @@ export default function ContactSection() {
           <p className="text-slate-500 max-w-lg mx-auto">{tr.description}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.1 }} className="lg:col-span-2 space-y-5">
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] p-6">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-5xl mx-auto" style={{ perspective: '1200px' }}>
+          <div className="lg:col-span-2 space-y-5">
+            <motion.div initial={{ opacity: 0, rotateY: -90 }} animate={inView ? { opacity: 1, rotateY: 0 } : {}} transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }} style={{ transformStyle: 'preserve-3d' }} className="bg-white rounded-2xl border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] p-6">
               <p className="text-sm font-semibold text-slate-900 mb-5">{tr.directContact}</p>
               <div className="space-y-4">
                 <a href="mailto:rudiaerden19@gmail.com" className="group flex items-center gap-3 text-slate-500 hover:text-slate-900 transition-colors">
@@ -64,8 +64,8 @@ export default function ContactSection() {
                   </div>
                 </a>
               </div>
-            </div>
-            <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] p-6">
+            </motion.div>
+            <motion.div initial={{ opacity: 0, rotateY: -90 }} animate={inView ? { opacity: 1, rotateY: 0 } : {}} transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }} style={{ transformStyle: 'preserve-3d' }} className="bg-white rounded-2xl border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] p-6">
               <p className="text-sm font-semibold text-slate-900 mb-3">{tr.locationTitle}</p>
               <p className="text-xs text-slate-500 leading-relaxed mb-4">{tr.locationDesc}</p>
               <div className="space-y-1.5 text-xs text-slate-500">
@@ -76,10 +76,10 @@ export default function ContactSection() {
                   <span>📞</span><span>+32 492 12 93 83</span>
                 </a>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
 
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.15 }} className="lg:col-span-3">
+          <motion.div initial={{ opacity: 0, rotateY: 90 }} animate={inView ? { opacity: 1, rotateY: 0 } : {}} transition={{ duration: 0.9, delay: 0.6, ease: [0.22, 1, 0.36, 1] }} style={{ transformStyle: 'preserve-3d' }} className="lg:col-span-3">
             <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] p-7">
               {sent ? (
                 <div className="flex flex-col items-center justify-center py-10 text-center">
