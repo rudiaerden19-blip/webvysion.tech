@@ -23,55 +23,8 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 px-6 bg-slate-50 relative overflow-hidden" ref={ref}>
+    <section id="contact" className="py-24 px-6 bg-slate-50" ref={ref}>
 
-      {/* Spiral background */}
-      {(() => {
-        // Build Archimedean spiral path: 5 turns, max radius 270
-        const cx = 300, cy = 300, turns = 5, maxR = 270, steps = turns * 80
-        const pts: string[] = []
-        for (let i = 0; i <= steps; i++) {
-          const t = (i / steps) * turns * 2 * Math.PI
-          const r = (i / steps) * maxR
-          const x = cx + r * Math.cos(t - Math.PI / 2)
-          const y = cy + r * Math.sin(t - Math.PI / 2)
-          pts.push(`${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`)
-        }
-        const spiralPath = pts.join(' ')
-        return (
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ zIndex: 0 }}>
-            <style>{`
-              @keyframes spiralPulse {
-                0%   { transform: scale(0.15) rotate(0deg);   opacity: 0; }
-                15%  { opacity: 0.12; }
-                85%  { opacity: 0.12; }
-                100% { transform: scale(1.6) rotate(60deg);   opacity: 0; }
-              }
-            `}</style>
-            {[0, 2, 4].map((delay) => (
-              <svg
-                key={delay}
-                viewBox="0 0 600 600"
-                style={{
-                  position: 'absolute',
-                  width: '100%',
-                  maxWidth: '800px',
-                  animation: `spiralPulse 6s ease-in-out ${delay}s infinite`,
-                  transformOrigin: 'center',
-                }}
-              >
-                <path
-                  d={spiralPath}
-                  fill="none"
-                  stroke="#1e3a8a"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ))}
-          </div>
-        )
-      })()}
 
       <div className="max-w-7xl mx-auto" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="text-center mb-16">
