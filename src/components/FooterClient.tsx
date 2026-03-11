@@ -26,40 +26,46 @@ export default function FooterClient() {
           <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
             <Image src="/logo.png" alt="WebVysion" width={32} height={32} className="w-full h-full object-contain" />
           </div>
-          <span className="font-bold text-[#E8EDF5] text-lg">WebVysion</span>
+          <span className="font-bold text-slate-900 text-lg">WebVysion</span>
         </div>
-        <p className="text-[#8899B0] text-sm leading-relaxed max-w-xs">{tr.tagline}</p>
+        <p className="text-slate-500 text-sm leading-relaxed max-w-xs">{tr.tagline}</p>
         <div className="flex items-center gap-3 mt-5">
-          <a href="mailto:rudiaerden19@gmail.com" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all"><Mail size={17} /></a>
-          <a href="https://www.facebook.com/profile.php?id=61586754135685" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all"><Facebook size={17} /></a>
-          <a href="https://www.linkedin.com/in/vysion-it-7a158b3b2/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-[#141D2B] text-[#8899B0] hover:text-[#4F8EF7] hover:bg-[#1A2332] transition-all"><Linkedin size={17} /></a>
+          <a href="mailto:rudiaerden19@gmail.com" className="p-2 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-[#2563EB] hover:border-blue-200 transition-all">
+            <Mail size={17} />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61586754135685" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-[#2563EB] hover:border-blue-200 transition-all">
+            <Facebook size={17} />
+          </a>
+          <a href="https://www.linkedin.com/in/vysion-it-7a158b3b2/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-[#2563EB] hover:border-blue-200 transition-all">
+            <Linkedin size={17} />
+          </a>
         </div>
       </div>
 
       <div>
-        <p className="text-xs font-semibold text-[#4A5E78] uppercase tracking-widest mb-4">{tr.nav}</p>
+        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">{tr.nav}</p>
         <ul className="space-y-2">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} className="text-sm text-[#8899B0] hover:text-[#E8EDF5] transition-colors">{link.label}</Link>
+              <Link href={link.href} className="text-sm text-slate-500 hover:text-slate-900 transition-colors">{link.label}</Link>
             </li>
           ))}
         </ul>
       </div>
 
       <div>
-        <p className="text-xs font-semibold text-[#4A5E78] uppercase tracking-widest mb-4">{tr.services}</p>
+        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">{tr.services}</p>
         <ul className="space-y-2">
           {t[lang].services.items.map((s: { title: string }) => (
             <li key={s.title}>
-              <Link href="/diensten" className="text-sm text-[#8899B0] hover:text-[#E8EDF5] transition-colors">{s.title}</Link>
+              <Link href="/diensten" className="text-sm text-slate-500 hover:text-slate-900 transition-colors">{s.title}</Link>
             </li>
           ))}
         </ul>
       </div>
 
       <div>
-        <p className="text-xs font-semibold text-[#4A5E78] uppercase tracking-widest mb-4">{tr.platforms}</p>
+        <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">{tr.platforms}</p>
         <ul className="space-y-2">
           {[
             { label: 'vysionhoreca.com', url: 'https://www.vysionhoreca.com' },
@@ -69,7 +75,7 @@ export default function FooterClient() {
             { label: 'appvysion.com', url: 'https://www.appvysion.com' },
           ].map((site) => (
             <li key={site.label}>
-              <a href={site.url} target="_blank" rel="noopener noreferrer" className="text-sm font-medium bg-gradient-to-r from-[#4F8EF7] to-[#7C6EF0] bg-clip-text text-transparent hover:opacity-80 transition-opacity">{site.label}</a>
+              <a href={site.url} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-[#2563EB] hover:text-[#1D4ED8] transition-colors">{site.label}</a>
             </li>
           ))}
         </ul>

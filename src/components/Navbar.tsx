@@ -34,11 +34,11 @@ function LanguageSwitcher() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-[#1A2332] bg-[#0F1623] hover:border-[#243447] hover:bg-[#141D2B] transition-all text-sm text-[#E8EDF5]"
+        className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50 transition-all text-sm text-slate-700"
       >
         <span>{active.flag}</span>
         <span className="font-medium text-xs">{active.label}</span>
-        <ChevronDown size={12} className={`text-[#4A5E78] transition-transform ${open ? 'rotate-180' : ''}`} />
+        <ChevronDown size={12} className={`text-slate-400 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
       <AnimatePresence>
         {open && (
@@ -47,14 +47,14 @@ function LanguageSwitcher() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -6, scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="absolute right-0 top-full mt-2 w-36 bg-[#0F1623] border border-[#1A2332] rounded-xl overflow-hidden shadow-xl shadow-black/40 z-50"
+            className="absolute right-0 top-full mt-2 w-36 bg-white border border-slate-200 rounded-xl overflow-hidden shadow-lg shadow-slate-200/60 z-50"
           >
             {languages.map((l) => (
               <button
                 key={l.code}
                 onClick={() => { setLang(l.code); setOpen(false) }}
                 className={`w-full flex items-center gap-2.5 px-3.5 py-2.5 text-sm transition-colors ${
-                  lang === l.code ? 'bg-[#1A2332] text-[#E8EDF5]' : 'text-[#8899B0] hover:bg-[#141D2B] hover:text-[#E8EDF5]'
+                  lang === l.code ? 'bg-slate-50 text-slate-900 font-medium' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                 }`}
               >
                 <span className="text-base">{l.flag}</span>
@@ -77,7 +77,7 @@ function MobileLangPicker() {
           key={l.code}
           onClick={() => setLang(l.code)}
           className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium border transition-all ${
-            lang === l.code ? 'bg-[#1A2332] border-[#4F8EF7] text-[#E8EDF5]' : 'bg-[#0F1623] border-[#1A2332] text-[#8899B0]'
+            lang === l.code ? 'bg-blue-50 border-blue-200 text-blue-700' : 'bg-white border-slate-200 text-slate-600'
           }`}
         >
           <span>{l.flag}</span>
@@ -115,15 +115,15 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[#080C14]/90 backdrop-blur-xl border-b border-[#1A2332]' : 'bg-transparent'
+        scrolled ? 'bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm' : 'bg-white/80 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center shadow-lg shadow-blue-500/20">
+          <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
             <Image src="/logo.png" alt="WebVysion" width={32} height={32} className="w-full h-full object-contain" />
           </div>
-          <span className="font-bold text-[#E8EDF5] text-lg tracking-tight">WebVysion</span>
+          <span className="font-bold text-slate-900 text-lg tracking-tight">WebVysion</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
@@ -132,7 +132,9 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                pathname === link.href ? 'text-[#E8EDF5] bg-[#1A2332]' : 'text-[#8899B0] hover:text-[#E8EDF5] hover:bg-[#0F1623]'
+                pathname === link.href
+                  ? 'text-slate-900 bg-slate-100'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
               }`}
             >
               {link.label}
@@ -144,7 +146,7 @@ export default function Navbar() {
           <LanguageSwitcher />
           <Link
             href="/contact"
-            className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#4F8EF7] to-[#7C6EF0] text-white text-sm font-semibold hover:opacity-90 transition-opacity shadow-lg shadow-blue-500/20"
+            className="px-4 py-2 rounded-lg bg-[#2563EB] text-white text-sm font-semibold hover:bg-[#1D4ED8] transition-colors shadow-sm"
           >
             {tr.startProject}
           </Link>
@@ -153,7 +155,7 @@ export default function Navbar() {
         <button
           onClick={() => setOpen(!open)}
           aria-label={open ? 'Menu sluiten' : 'Menu openen'}
-          className="md:hidden p-2 rounded-lg text-[#8899B0] hover:text-[#E8EDF5] hover:bg-[#0F1623] transition-colors"
+          className="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
         >
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -165,7 +167,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#0D1117] border-b border-[#1A2332] overflow-hidden"
+            className="md:hidden bg-white border-b border-slate-200 overflow-hidden"
           >
             <div className="px-6 py-4 flex flex-col gap-1">
               {links.map((link) => (
@@ -174,7 +176,7 @@ export default function Navbar() {
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                    pathname === link.href ? 'text-[#E8EDF5] bg-[#1A2332]' : 'text-[#8899B0] hover:text-[#E8EDF5]'
+                    pathname === link.href ? 'text-slate-900 bg-slate-100' : 'text-slate-600 hover:text-slate-900'
                   }`}
                 >
                   {link.label}
@@ -183,12 +185,12 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="mt-2 px-4 py-3 rounded-lg bg-gradient-to-r from-[#4F8EF7] to-[#7C6EF0] text-white text-sm font-semibold text-center"
+                className="mt-2 px-4 py-3 rounded-lg bg-[#2563EB] text-white text-sm font-semibold text-center hover:bg-[#1D4ED8] transition-colors"
               >
                 {tr.startProject}
               </Link>
-              <div className="mt-3 pt-3 border-t border-[#1A2332]">
-                <p className="text-xs text-[#4A5E78] mb-2 px-1">Taal / Language</p>
+              <div className="mt-3 pt-3 border-t border-slate-100">
+                <p className="text-xs text-slate-400 mb-2 px-1">Taal / Language</p>
                 <MobileLangPicker />
               </div>
             </div>
