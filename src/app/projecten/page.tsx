@@ -1,46 +1,28 @@
 'use client'
 
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { ExternalLink } from 'lucide-react'
 import { projects } from '@/lib/data'
 import { useLang } from '@/context/LanguageContext'
 import t from '@/lib/translations'
 
-function StackCard({ project, i, total, pd, tr }: {
+function StackCard({ project, i, pd, tr }: {
   project: typeof projects[0]
   i: number
-  total: number
   pd: { name: string; tagline: string; description: string; features: string[] } | undefined
   tr: { label: string; title: string; description: string; visit: string; code: string; features: string }
 }) {
-  const ref = useRef<HTMLDivElement>(null)
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  })
-
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.90])
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.55])
-
-  const isLast = i === total - 1
-
   return (
     <div
-      ref={ref}
       style={{
         position: 'sticky',
-        top: `${100 + i * 22}px`,
+        top: `${100 + i * 20}px`,
         zIndex: i + 1,
         paddingBottom: '24px',
       }}
     >
-      <motion.div
-        style={isLast ? {} : { scale, opacity }}
-        className="bg-white rounded-2xl border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] hover:shadow-[0_24px_80px_rgba(0,0,0,0.40)] hover:border-slate-300 p-8 transition-shadow duration-300"
-      >
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] hover:shadow-[0_24px_80px_rgba(0,0,0,0.40)] hover:border-slate-300 p-8 transition-shadow duration-300">
         <div className="flex flex-col lg:flex-row lg:items-start gap-8">
           <div className="flex-1">
             <div className="flex items-center gap-4 mb-4">
@@ -88,7 +70,7 @@ function StackCard({ project, i, total, pd, tr }: {
             </ul>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }
@@ -114,7 +96,6 @@ export default function ProjectenPage() {
                 key={project.id}
                 project={project}
                 i={i}
-                total={projects.length}
                 pd={pd}
                 tr={tr}
               />
