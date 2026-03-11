@@ -8,7 +8,7 @@ import t from '@/lib/translations'
 
 export default function ContactSection() {
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, amount: 0.5 })
+  const inView = useInView(ref, { once: true, amount: 0.1 })
   const [sent, setSent] = useState(false)
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const { lang } = useLang()

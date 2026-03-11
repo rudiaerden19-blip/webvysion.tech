@@ -48,11 +48,11 @@ export default function Hero() {
           {tr.badge}
         </motion.div>
 
-        <motion.h1 custom={1} variants={fadeUp} initial="hidden" animate="show" className="text-7xl sm:text-8xl lg:text-9xl font-extrabold tracking-tight mb-8 text-slate-900">
+        <motion.h1 custom={1} variants={fadeUp} initial="hidden" animate="show" className="text-5xl sm:text-7xl lg:text-9xl font-extrabold tracking-tight mb-8 text-slate-900">
           Web<span className="text-[#2563EB]">Vysion</span>
         </motion.h1>
 
-        <motion.p custom={2} variants={fadeUp} initial="hidden" animate="show" className="text-lg sm:text-2xl text-slate-500 font-medium mb-6 tracking-wide flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+        <motion.p custom={2} variants={fadeUp} initial="hidden" animate="show" className="text-sm sm:text-2xl text-slate-500 font-medium mb-6 tracking-wide flex flex-wrap items-center justify-center gap-x-2 gap-y-1 px-4">
           <span>{tr.tagline}</span>
           <span className="text-slate-300 hidden sm:inline">·</span>
           <span className="text-slate-700 font-semibold">SaaS Platforms</span>
@@ -62,7 +62,7 @@ export default function Hero() {
           <span className="text-slate-700 font-semibold">Custom Websites</span>
         </motion.p>
 
-        <motion.p custom={3} variants={fadeUp} initial="hidden" animate="show" className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-14">
+        <motion.p custom={3} variants={fadeUp} initial="hidden" animate="show" className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed mb-14 px-4">
           {tr.description}
         </motion.p>
 
