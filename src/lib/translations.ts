@@ -58,7 +58,7 @@ export const t = {
       {
         name: 'VoxApp',
         tagline: 'AI Voice Agent Platform',
-        description: 'VoxApp is een AI-gestuurd voice agent platform gebouwd met Vapi, Deepgram en ElevenLabs. Het platform verwerkt inkomende gesprekken automatisch via een intelligente spraak-pipeline met enterprise-grade infrastructuur.',
+        description: 'VoxApp is een AI-gestuurde receptioniste voor alle bedrijven. Het platform verwerkt inkomende gesprekken automatisch en geeft klanten direct het juiste antwoord — 24/7, zonder menselijke tussenkomst.',
         features: ['AI voice agents via Vapi','Spraakherkenning met Deepgram','Text-to-speech via ElevenLabs','Realtime gespreksverwerking','Enterprise logging & monitoring','Multi-tenant architectuur'],
       },
       {
@@ -168,7 +168,7 @@ export const t = {
       {
         name: 'VoxApp',
         tagline: "Plateforme d'agents vocaux IA",
-        description: "VoxApp est une plateforme d'agents vocaux pilotée par IA, construite avec Vapi, Deepgram et ElevenLabs. La plateforme traite automatiquement les appels entrants via un pipeline vocal intelligent avec une infrastructure de niveau entreprise.",
+        description: "VoxApp est une réceptionniste pilotée par IA pour toutes les entreprises. La plateforme traite automatiquement les appels entrants et répond directement aux clients — 24h/24, sans intervention humaine.",
         features: ["Agents vocaux IA via Vapi","Reconnaissance vocale avec Deepgram","Synthèse vocale via ElevenLabs","Traitement des conversations en temps réel","Journalisation & surveillance entreprise","Architecture multi-tenant"],
       },
       {
@@ -278,7 +278,7 @@ export const t = {
       {
         name: 'VoxApp',
         tagline: 'KI-Sprachagenten-Plattform',
-        description: 'VoxApp ist eine KI-gesteuerte Sprachagenten-Plattform, die mit Vapi, Deepgram und ElevenLabs entwickelt wurde. Die Plattform verarbeitet eingehende Anrufe automatisch über eine intelligente Sprach-Pipeline mit Enterprise-Infrastruktur.',
+        description: 'VoxApp ist eine KI-gesteuerte Rezeptionistin für alle Unternehmen. Die Plattform verarbeitet eingehende Anrufe automatisch und gibt Kunden sofort die richtige Antwort — 24/7, ohne menschliches Eingreifen.',
         features: ['KI-Sprachagenten via Vapi','Spracherkennung mit Deepgram','Text-to-Speech via ElevenLabs','Echtzeit-Gesprächsverarbeitung','Enterprise-Logging & Monitoring','Multi-Tenant-Architektur'],
       },
       {
@@ -388,7 +388,7 @@ export const t = {
       {
         name: 'VoxApp',
         tagline: 'AI Voice Agent Platform',
-        description: 'VoxApp is an AI-driven voice agent platform built with Vapi, Deepgram and ElevenLabs. The platform automatically processes incoming calls via an intelligent voice pipeline with enterprise-grade infrastructure.',
+        description: 'VoxApp is an AI-powered receptionist for every business. The platform automatically handles incoming calls and gives customers the right answer immediately — 24/7, without human intervention.',
         features: ['AI voice agents via Vapi','Speech recognition with Deepgram','Text-to-speech via ElevenLabs','Real-time conversation processing','Enterprise logging & monitoring','Multi-tenant architecture'],
       },
       {

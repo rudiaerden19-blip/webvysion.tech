@@ -66,7 +66,7 @@ export const projects = [
     name: 'VoxApp',
     tagline: 'AI Voice Agent Platform',
     description:
-      'VoxApp is een AI-gestuurd voice agent platform gebouwd met Vapi, Deepgram en ElevenLabs. Het platform verwerkt inkomende gesprekken automatisch via een intelligente spraak-pipeline met enterprise-grade infrastructuur.',
+      'VoxApp is een AI-gestuurde receptioniste voor alle bedrijven. Het platform verwerkt inkomende gesprekken automatisch en geeft klanten direct het juiste antwoord — 24/7, zonder menselijke tussenkomst.',
     features: [
       'AI voice agents via Vapi',
       'Spraakherkenning met Deepgram',
