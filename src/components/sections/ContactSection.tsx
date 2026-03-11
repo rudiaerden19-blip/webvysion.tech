@@ -23,8 +23,42 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 px-6 bg-slate-50" ref={ref}>
-      <div className="max-w-7xl mx-auto">
+    <section id="contact" className="py-24 px-6 bg-slate-50 relative overflow-hidden" ref={ref}>
+
+      {/* Spiral background */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ zIndex: 0 }}>
+        <svg
+          viewBox="0 0 600 600"
+          style={{
+            width: '90%',
+            maxWidth: '700px',
+            opacity: 0.06,
+            animation: 'spiralGrow 8s ease-in-out infinite',
+          }}
+        >
+          <style>{`
+            @keyframes spiralGrow {
+              0%   { transform: scale(0.3) rotate(0deg);   opacity: 0; }
+              30%  { opacity: 0.06; }
+              100% { transform: scale(1.4) rotate(360deg); opacity: 0; }
+            }
+          `}</style>
+          {[40,70,100,130,160,190,220,250,280,310].map((r, i) => (
+            <circle
+              key={i}
+              cx="300"
+              cy="300"
+              r={r}
+              fill="none"
+              stroke="#2563EB"
+              strokeWidth="1.5"
+              strokeDasharray={`${r * 0.4} ${r * 0.3}`}
+            />
+          ))}
+        </svg>
+      </div>
+
+      <div className="max-w-7xl mx-auto" style={{ position: 'relative', zIndex: 1 }}>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="text-center mb-16">
           <p className="text-xs font-semibold text-[#2563EB] uppercase tracking-widest mb-4">{tr.label}</p>
           <h2 className="text-4xl font-extrabold text-slate-900 mb-4">{tr.title}</h2>
