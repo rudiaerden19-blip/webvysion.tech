@@ -14,14 +14,14 @@ function StackCard({ project, i, pd, tr }: {
   tr: { label: string; title: string; description: string; visit: string; code: string; features: string }
 }) {
   return (
-    <div
-      style={{
-        position: 'sticky',
-        top: `${100 + i * 20}px`,
-        zIndex: i + 1,
-        paddingBottom: '24px',
-      }}
-    >
+    <div style={{ height: '480px' }}>
+      <div
+        style={{
+          position: 'sticky',
+          top: `${110 + i * 18}px`,
+          zIndex: i + 1,
+        }}
+      >
       <div className="bg-white rounded-2xl border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] hover:shadow-[0_24px_80px_rgba(0,0,0,0.40)] hover:border-slate-300 p-8 transition-shadow duration-300">
         <div className="flex flex-col lg:flex-row lg:items-start gap-8">
           <div className="flex-1">
@@ -70,6 +70,7 @@ function StackCard({ project, i, pd, tr }: {
             </ul>
           </div>
         </div>
+      </div>
       </div>
     </div>
   )
