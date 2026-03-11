@@ -34,26 +34,11 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
             className="flex items-start justify-center pt-[52px]"
           >
-            <div className="relative w-[90%]">
-              {/* vaste schaduw — altijd zichtbaar, ademt groter/kleiner */}
-              <motion.div
-                animate={{ scale: [1, 1.12, 1] }}
-                transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -inset-8 rounded-3xl blur-2xl -z-10"
-                style={{ background: 'rgba(0,0,0,0.50)' }}
-              />
-              {/* tablet-rand */}
-              <div
-                className="relative w-full aspect-[4/3] rounded-2xl p-[6px]"
-                style={{
-                  background: 'linear-gradient(160deg, #c8d0da 0%, #a0aab8 40%, #7a8494 70%, #5a6275 100%)',
-                  boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.5)',
-                }}
-              >
-                <div className="relative w-full h-full rounded-xl overflow-hidden">
-                  <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
-                </div>
-              </div>
+            <div
+              className="relative w-[90%] aspect-[4/3] rounded-2xl overflow-hidden"
+              style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.40)' }}
+            >
+              <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
             </div>
           </motion.div>
 
