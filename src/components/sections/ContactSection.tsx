@@ -27,22 +27,22 @@ export default function ContactSection() {
 
       {/* Spiral background */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ zIndex: 0 }}>
+        <style>{`
+          @keyframes spinConstant {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+          }
+        `}</style>
         <svg
           viewBox="0 0 600 600"
           style={{
             width: '90%',
             maxWidth: '700px',
-            opacity: 0.06,
-            animation: 'spiralGrow 8s ease-in-out infinite',
+            opacity: 0.18,
+            animation: 'spinConstant 20s linear infinite',
+            transformOrigin: 'center',
           }}
         >
-          <style>{`
-            @keyframes spiralGrow {
-              0%   { transform: scale(0.3) rotate(0deg);   opacity: 0; }
-              30%  { opacity: 0.06; }
-              100% { transform: scale(1.4) rotate(360deg); opacity: 0; }
-            }
-          `}</style>
           {[40,70,100,130,160,190,220,250,280,310].map((r, i) => (
             <circle
               key={i}
@@ -52,7 +52,7 @@ export default function ContactSection() {
               fill="none"
               stroke="#2563EB"
               strokeWidth="1.5"
-              strokeDasharray={`${r * 0.4} ${r * 0.3}`}
+              strokeDasharray={`${r * 0.5} ${r * 0.25}`}
             />
           ))}
         </svg>
