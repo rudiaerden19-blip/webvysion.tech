@@ -32,7 +32,7 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-            className="flex items-start justify-center"
+            className="flex items-start justify-center pt-[52px]"
           >
             {/* tablet-rand: dunne opstaande rand met licht/schaduw */}
             <div
