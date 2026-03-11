@@ -32,7 +32,7 @@ function AutoPlayVideo({ src }: { src: string }) {
 
 export default function ProjectsSection() {
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, amount: 0.4 })
+  const inView = useInView(ref, { once: true, margin: '-80px' })
   const { lang } = useLang()
   const tr = t[lang].projects
 

@@ -30,7 +30,7 @@ export default function TechSection() {
           observer.disconnect()
         }
       })
-    }, { threshold: 0.4 })
+    }, { threshold: 0.3 })
 
     observer.observe(grid)
     return () => observer.disconnect()

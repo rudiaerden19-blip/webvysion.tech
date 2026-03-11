@@ -19,7 +19,7 @@ function StarRating() {
 
 export default function ReviewsSection() {
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, amount: 0.4 })
+  const inView = useInView(ref, { once: true, amount: 0.2 })
   const { lang } = useLang()
   const tr = t[lang].reviews
 

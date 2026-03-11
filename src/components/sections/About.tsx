@@ -82,7 +82,7 @@ function FlipCarousel() {
 
 export default function About() {
   const ref = useRef(null)
-  const inView = useInView(ref, { once: true, amount: 0.4 })
+  const inView = useInView(ref, { once: true, margin: '-100px' })
   const { lang } = useLang()
   const tr = t[lang].about
 
