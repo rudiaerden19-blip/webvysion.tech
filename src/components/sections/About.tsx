@@ -35,25 +35,25 @@ export default function About() {
             className="flex items-start justify-center pt-[52px]"
           >
             <div className="relative w-[90%]">
+              {/* schaduw ACHTER het hele vlak — pulseert */}
+              <motion.div
+                animate={{ opacity: [0.65, 0.15, 0.65] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute -inset-8 rounded-3xl blur-3xl -z-10"
+                style={{ background: 'rgba(0,0,0,0.70)' }}
+              />
               {/* tablet-rand */}
               <div
                 className="relative w-full aspect-[4/3] rounded-2xl p-[6px]"
                 style={{
                   background: 'linear-gradient(160deg, #c8d0da 0%, #a0aab8 40%, #7a8494 70%, #5a6275 100%)',
-                  boxShadow: '0 8px 20px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.5)',
+                  boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.5)',
                 }}
               >
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
                   <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
                 </div>
               </div>
-              {/* pulserende schaduw onder het vlak */}
-              <motion.div
-                animate={{ opacity: [0.7, 0.2, 0.7], scaleX: [1, 0.75, 1] }}
-                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -bottom-5 left-1/2 -translate-x-1/2 w-4/5 h-10 rounded-full blur-2xl"
-                style={{ background: 'rgba(0,0,0,0.55)' }}
-              />
             </div>
           </motion.div>
 
