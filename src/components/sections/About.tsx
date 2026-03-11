@@ -34,12 +34,19 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
             className="flex items-start justify-center pt-[52px]"
           >
-            <div
+            <motion.div
               className="relative w-[90%] aspect-[4/3] rounded-2xl overflow-hidden"
-              style={{ boxShadow: '0 20px 60px rgba(0,0,0,0.70)' }}
+              animate={{
+                boxShadow: [
+                  '0 20px 60px rgba(0,0,0,0.70)',
+                  '0 20px 60px rgba(0,0,0,0.90)',
+                  '0 20px 60px rgba(0,0,0,0.70)',
+                ]
+              }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
             >
               <Image src="/about-saas.png" alt="SaaS development" fill className="object-cover" />
-            </div>
+            </motion.div>
           </motion.div>
 
         </div>
