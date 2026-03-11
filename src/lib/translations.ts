@@ -50,10 +50,10 @@ export const t = {
         features: ['Volledig kassasysteem','Keuken display systeem','Realtime bestellingen','Uitgebreide rapportage','Restaurant workflow beheer','Gebouwd in 9 talen'],
       },
       {
-        name: 'Online Restaurant Ordering',
+        name: 'Horeca Online Bestelplatform',
         tagline: 'Bestellen via WhatsApp & Web',
         description: 'Een online bestelplatform voor restaurants waarbij klanten rechtstreeks kunnen bestellen via WhatsApp. Het platform biedt restaurants een eenvoudige manier om online bestellingen te beheren met realtime updates.',
-        features: ['Bestellen via WhatsApp','Realtime order tracking','Keuken scherm integratie','Online betalingen','Realtime updates & notificaties'],
+        features: ['Bestellen via WhatsApp','iOS en Android app','Realtime order tracking','Keuken scherm integratie','Online betalingen','Realtime updates & notificaties'],
       },
       {
         name: 'VoxApp',
@@ -160,10 +160,10 @@ export const t = {
         features: ["Système de caisse complet","Système d'affichage cuisine","Commandes en temps réel","Rapports détaillés","Gestion du flux restaurant","Disponible en 9 langues"],
       },
       {
-        name: 'Online Restaurant Ordering',
+        name: 'Plateforme de Commande Horeca',
         tagline: 'Commander via WhatsApp & Web',
         description: "Une plateforme de commande en ligne pour restaurants permettant aux clients de commander directement via WhatsApp. La plateforme offre aux restaurants un moyen simple de gérer les commandes en ligne avec des mises à jour en temps réel.",
-        features: ["Commander via WhatsApp","Suivi des commandes en temps réel","Intégration écran cuisine","Paiements en ligne","Mises à jour & notifications en temps réel"],
+        features: ["Commander via WhatsApp","App iOS et Android","Suivi des commandes en temps réel","Intégration écran cuisine","Paiements en ligne","Mises à jour & notifications en temps réel"],
       },
       {
         name: 'VoxApp',
@@ -270,10 +270,10 @@ export const t = {
         features: ['Vollständiges Kassensystem','Küchendisplaysystem','Echtzeit-Bestellungen','Detaillierte Berichte','Restaurant-Workflow-Management','In 9 Sprachen verfügbar'],
       },
       {
-        name: 'Online Restaurant Ordering',
+        name: 'Horeca Online-Bestellplattform',
         tagline: 'Bestellen via WhatsApp & Web',
         description: 'Eine Online-Bestellplattform für Restaurants, bei der Kunden direkt über WhatsApp bestellen können. Die Plattform bietet Restaurants eine einfache Möglichkeit, Online-Bestellungen mit Echtzeit-Updates zu verwalten.',
-        features: ['Bestellen via WhatsApp','Echtzeit-Bestellverfolgung','Küchenbildschirm-Integration','Online-Zahlungen','Echtzeit-Updates & Benachrichtigungen'],
+        features: ['Bestellen via WhatsApp','iOS und Android App','Echtzeit-Bestellverfolgung','Küchenbildschirm-Integration','Online-Zahlungen','Echtzeit-Updates & Benachrichtigungen'],
       },
       {
         name: 'VoxApp',
@@ -380,10 +380,10 @@ export const t = {
         features: ['Complete POS system','Kitchen display system','Real-time orders','Detailed reporting','Restaurant workflow management','Built in 9 languages'],
       },
       {
-        name: 'Online Restaurant Ordering',
+        name: 'Horeca Online Ordering Platform',
         tagline: 'Order via WhatsApp & Web',
         description: 'An online ordering platform for restaurants where customers can order directly via WhatsApp. The platform provides restaurants with a simple way to manage online orders with real-time updates.',
-        features: ['Order via WhatsApp','Real-time order tracking','Kitchen screen integration','Online payments','Real-time updates & notifications'],
+        features: ['Order via WhatsApp','iOS & Android app','Real-time order tracking','Kitchen screen integration','Online payments','Real-time updates & notifications'],
       },
       {
         name: 'VoxApp',

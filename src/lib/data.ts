@@ -42,12 +42,13 @@ export const projects = [
   },
   {
     id: 'restaurant-ordering',
-    name: 'Online Restaurant Ordering',
+    name: 'Horeca Online Bestelplatform',
     tagline: 'Bestellen via WhatsApp & Web',
     description:
       'Een online bestelplatform voor restaurants waarbij klanten rechtstreeks kunnen bestellen via WhatsApp. Het platform biedt restaurants een eenvoudige manier om online bestellingen te beheren met realtime updates.',
     features: [
       'Bestellen via WhatsApp',
+      'iOS en Android app',
       'Realtime order tracking',
       'Keuken scherm integratie',
       'Online betalingen',
