@@ -74,6 +74,7 @@ export const t = {
       viewAll: 'Alle projecten bekijken', visit: 'Bezoek project', code: 'Bekijk code', more: 'meer', features: 'Functies',
       ctaTitle: 'Jouw project bouwen?',
       ctaItems: ['Wil je een professionele website?', 'Wil je een app laten maken (iOS of Android)?', 'Wil je een project op maat laten maken?'],
+      ctaNote: 'Wij werken voor KMO alsook voor de overheid.',
       ctaButton: 'Contacteer ons',
     },
     tech: {
@@ -187,6 +188,7 @@ export const t = {
       viewAll: 'Voir tous les projets', visit: 'Visiter le projet', code: 'Voir le code', more: 'plus', features: 'Fonctionnalités',
       ctaTitle: 'Construire votre projet?',
       ctaItems: ['Vous voulez un site web professionnel?', 'Vous voulez une app (iOS ou Android)?', 'Vous voulez un projet sur mesure?'],
+      ctaNote: 'Nous travaillons pour les PME ainsi que pour les administrations publiques.',
       ctaButton: 'Contactez-nous',
     },
     tech: {
@@ -300,6 +302,7 @@ export const t = {
       viewAll: 'Alle Projekte ansehen', visit: 'Projekt besuchen', code: 'Code ansehen', more: 'mehr', features: 'Funktionen',
       ctaTitle: 'Ihr Projekt realisieren?',
       ctaItems: ['Möchten Sie eine professionelle Website?', 'Möchten Sie eine App (iOS oder Android)?', 'Möchten Sie ein maßgeschneidertes Projekt?'],
+      ctaNote: 'Wir arbeiten für KMUs sowie für öffentliche Behörden.',
       ctaButton: 'Kontaktieren Sie uns',
     },
     tech: {
@@ -413,6 +416,7 @@ export const t = {
       viewAll: 'View all projects', visit: 'Visit project', code: 'View code', more: 'more', features: 'Features',
       ctaTitle: 'Build your project?',
       ctaItems: ['Do you want a professional website?', 'Do you want an app (iOS or Android)?', 'Do you want a custom project?'],
+      ctaNote: 'We work for SMEs as well as for government institutions.',
       ctaButton: 'Contact us',
     },
     tech: {

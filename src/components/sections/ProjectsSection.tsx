@@ -116,6 +116,7 @@ export default function ProjectsSection() {
                   </li>
                 ))}
               </ul>
+              <p className="text-xs text-slate-400 italic">{tr.ctaNote}</p>
             </div>
             <Link
               href="/contact"
