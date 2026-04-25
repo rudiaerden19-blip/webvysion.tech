@@ -30,7 +30,7 @@ export default function FooterClient() {
         </div>
         <p className="text-slate-500 text-sm leading-relaxed max-w-xs">{tr.tagline}</p>
         <div className="flex items-center gap-3 mt-5">
-          <a href="mailto:rudiaerden19@gmail.com" className="p-2 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-[#2563EB] hover:border-blue-200 transition-all">
+          <a href="mailto:info@webvysion.tech" className="p-2 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-[#2563EB] hover:border-blue-200 transition-all">
             <Mail size={17} />
           </a>
           <a href="https://www.facebook.com/profile.php?id=61586754135685" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white border border-slate-200 text-slate-500 hover:text-[#2563EB] hover:border-blue-200 transition-all">

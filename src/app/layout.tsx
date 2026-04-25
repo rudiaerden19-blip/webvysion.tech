@@ -30,7 +30,7 @@ const jsonLd = {
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: 'customer service',
-        email: 'rudiaerden19@gmail.com',
+        email: 'info@webvysion.tech',
         availableLanguage: ['Dutch', 'French', 'English', 'German'],
       },
       sameAs: [

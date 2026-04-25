@@ -18,7 +18,7 @@ export default function ContactSection() {
     e.preventDefault()
     const subject = encodeURIComponent(`${tr.subjectPrefix} ${form.name}`)
     const body = encodeURIComponent(`Naam: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)
-    window.location.href = `mailto:rudiaerden19@gmail.com?subject=${subject}&body=${body}`
+    window.location.href = `mailto:info@webvysion.tech?subject=${subject}&body=${body}`
     setSent(true)
   }
 
@@ -38,13 +38,13 @@ export default function ContactSection() {
             <motion.div initial={{ opacity: 0, rotateY: -90 }} animate={inView ? { opacity: 1, rotateY: 0 } : { opacity: 0, rotateY: -90 }} transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }} style={{ transformStyle: 'preserve-3d' }} className="bg-white rounded-2xl border border-slate-200 shadow-[0_12px_60px_rgba(0,0,0,0.40)] p-6">
               <p className="text-sm font-semibold text-slate-900 mb-5">{tr.directContact}</p>
               <div className="space-y-4">
-                <a href="mailto:rudiaerden19@gmail.com" className="group flex items-center gap-3 text-slate-500 hover:text-slate-900 transition-colors">
+                <a href="mailto:info@webvysion.tech" className="group flex items-center gap-3 text-slate-500 hover:text-slate-900 transition-colors">
                   <div className="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center group-hover:bg-blue-50 group-hover:border-blue-200 transition-colors">
                     <Mail size={16} className="text-[#2563EB]" />
                   </div>
                   <div>
                     <p className="text-xs text-slate-400">Email</p>
-                    <p className="text-sm font-medium">rudiaerden19@gmail.com</p>
+                    <p className="text-sm font-medium">info@webvysion.tech</p>
                   </div>
                 </a>
                 <a href="https://www.facebook.com/profile.php?id=61586754135685" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-3 text-slate-500 hover:text-slate-900 transition-colors">

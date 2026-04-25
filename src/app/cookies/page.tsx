@@ -11,7 +11,7 @@ const content = {
       { heading: '2. Welke cookies gebruiken wij?', body: 'Wij gebruiken:\n• Functionele cookies: noodzakelijk voor het correct functioneren van de website (bijv. taalvoorkeur, cookietoestemming).\n• Analytische cookies: via Vercel Analytics om anoniem websiteverkeer te meten. Er worden geen persoonlijke gegevens gedeeld met derden.' },
       { heading: '3. Hoe lang blijven cookies actief?', body: 'Functionele cookies blijven actief tot u ze verwijdert of tot het einde van uw browsersessie. Analytische cookies worden maximaal 12 maanden bewaard.' },
       { heading: '4. Cookies beheren of weigeren', body: 'U kunt cookies weigeren via de cookiebanner op onze website, of via de instellingen van uw browser. Houd er rekening mee dat het uitschakelen van cookies de werking van de website kan beïnvloeden.' },
-      { heading: '5. Meer informatie', body: 'Voor vragen over ons cookiebeleid kunt u contact opnemen via rudiaerden19@gmail.com. Voor meer informatie over uw rechten, raadpleeg ons privacybeleid.' },
+      { heading: '5. Meer informatie', body: 'Voor vragen over ons cookiebeleid kunt u contact opnemen via info@webvysion.tech. Voor meer informatie over uw rechten, raadpleeg ons privacybeleid.' },
     ],
   },
   fr: {
@@ -22,7 +22,7 @@ const content = {
       { heading: '2. Quels cookies utilisons-nous?', body: 'Nous utilisons:\n• Cookies fonctionnels: nécessaires au bon fonctionnement du site (ex. préférence de langue, consentement aux cookies).\n• Cookies analytiques: via Vercel Analytics pour mesurer le trafic de façon anonyme. Aucune donnée personnelle n\'est partagée avec des tiers.' },
       { heading: '3. Combien de temps les cookies sont-ils actifs?', body: 'Les cookies fonctionnels restent actifs jusqu\'à leur suppression ou la fin de votre session. Les cookies analytiques sont conservés maximum 12 mois.' },
       { heading: '4. Gérer ou refuser les cookies', body: 'Vous pouvez refuser les cookies via la bannière de cookies ou via les paramètres de votre navigateur. Notez que la désactivation peut affecter le fonctionnement du site.' },
-      { heading: '5. Plus d\'informations', body: 'Pour toute question, contactez-nous à rudiaerden19@gmail.com. Pour vos droits, consultez notre politique de confidentialité.' },
+      { heading: '5. Plus d\'informations', body: 'Pour toute question, contactez-nous à info@webvysion.tech. Pour vos droits, consultez notre politique de confidentialité.' },
     ],
   },
   de: {
@@ -33,7 +33,7 @@ const content = {
       { heading: '2. Welche Cookies verwenden wir?', body: 'Wir verwenden:\n• Funktionale Cookies: notwendig für die korrekte Funktion der Website (z.B. Spracheinstellung, Cookie-Zustimmung).\n• Analytische Cookies: über Vercel Analytics zur anonymen Messung des Website-Traffics. Es werden keine persönlichen Daten an Dritte weitergegeben.' },
       { heading: '3. Wie lange sind Cookies aktiv?', body: 'Funktionale Cookies bleiben aktiv, bis Sie sie löschen oder Ihre Browser-Sitzung beenden. Analytische Cookies werden maximal 12 Monate aufbewahrt.' },
       { heading: '4. Cookies verwalten oder ablehnen', body: 'Sie können Cookies über das Cookie-Banner oder die Einstellungen Ihres Browsers ablehnen. Bitte beachten Sie, dass das Deaktivieren von Cookies die Funktionalität beeinträchtigen kann.' },
-      { heading: '5. Weitere Informationen', body: 'Bei Fragen kontaktieren Sie uns unter rudiaerden19@gmail.com. Für Ihre Rechte lesen Sie unsere Datenschutzerklärung.' },
+      { heading: '5. Weitere Informationen', body: 'Bei Fragen kontaktieren Sie uns unter info@webvysion.tech. Für Ihre Rechte lesen Sie unsere Datenschutzerklärung.' },
     ],
   },
   en: {
@@ -44,7 +44,7 @@ const content = {
       { heading: '2. Which cookies do we use?', body: 'We use:\n• Functional cookies: necessary for the website to work correctly (e.g. language preference, cookie consent).\n• Analytical cookies: via Vercel Analytics to measure website traffic anonymously. No personal data is shared with third parties.' },
       { heading: '3. How long are cookies active?', body: 'Functional cookies remain active until you delete them or end your browser session. Analytical cookies are kept for a maximum of 12 months.' },
       { heading: '4. Managing or declining cookies', body: 'You can decline cookies via the cookie banner on our website, or via your browser settings. Please note that disabling cookies may affect the functionality of the website.' },
-      { heading: '5. More information', body: 'For questions about our cookie policy, contact us at rudiaerden19@gmail.com. For more information about your rights, please consult our privacy policy.' },
+      { heading: '5. More information', body: 'For questions about our cookie policy, contact us at info@webvysion.tech. For more information about your rights, please consult our privacy policy.' },
     ],
   },
 }

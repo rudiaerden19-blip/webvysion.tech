@@ -16,7 +16,7 @@ export default function SafeLinkPrivacy() {
           Address: Siberiëstraat 24, 3900 Pelt (Limburg), Belgium<br />
           VAT number: BE 1003.226.953<br />
           Phone: +32 492 12 93 83<br />
-          Email: info@vysion.com<br />
+          Email: info@webvysion.tech<br />
           Website: www.vysion.com<br /><br />
           The app is intended for anyone who finds themselves in an unsafe or difficult situation and needs quick access to help or information.
         </p>
@@ -65,7 +65,7 @@ export default function SafeLinkPrivacy() {
         <p className="leading-relaxed">
           • You have the right to view, modify or delete your data.<br />
           • Delete data by clearing the app settings or deleting the app.<br />
-          • Questions? Send an email to info@vysion.com.
+          • Questions? Send an email to info@webvysion.tech.
         </p>
       </section>
 
@@ -83,7 +83,7 @@ export default function SafeLinkPrivacy() {
         </p>
       </section>
 
-      <p className="text-sm text-gray-400 mt-12">Vysion © 2026 — info@vysion.com</p>
+      <p className="text-sm text-gray-400 mt-12">Vysion © 2026 — info@webvysion.tech</p>
     </main>
   )
 }
