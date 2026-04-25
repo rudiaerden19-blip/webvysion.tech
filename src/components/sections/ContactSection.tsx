@@ -10,16 +10,38 @@ export default function ContactSection() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: true, amount: 0.4 })
   const [sent, setSent] = useState(false)
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
+  const [form, setForm] = useState({ name: '', email: '', message: '', hp: '' })
   const { lang } = useLang()
   const tr = t[lang].contact
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    const subject = encodeURIComponent(`${tr.subjectPrefix} ${form.name}`)
-    const body = encodeURIComponent(`Naam: ${form.name}\nEmail: ${form.email}\n\n${form.message}`)
-    window.location.href = `mailto:info@webvysion.tech?subject=${subject}&body=${body}`
-    setSent(true)
+    setSubmitError(null)
+    setSubmitting(true)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          hp: form.hp,
+        }),
+      })
+      if (!res.ok) {
+        setSubmitError(tr.errorGeneric)
+        return
+      }
+      setSent(true)
+      setForm({ name: '', email: '', message: '', hp: '' })
+    } catch {
+      setSubmitError(tr.errorGeneric)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -91,7 +113,17 @@ export default function ContactSection() {
                   <button onClick={() => setSent(false)} className="mt-6 text-sm text-[#2563EB] hover:underline">{tr.newMessage}</button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <form onSubmit={handleSubmit} className="relative space-y-5">
+                  <input
+                    type="text"
+                    name="bedrijf"
+                    autoComplete="off"
+                    tabIndex={-1}
+                    aria-hidden
+                    value={form.hp}
+                    onChange={(e) => setForm({ ...form, hp: e.target.value })}
+                    className="absolute left-[-9999px] h-0 w-0 overflow-hidden opacity-0"
+                  />
                   <div>
                     <label className="block text-xs font-medium text-slate-600 mb-2">{tr.nameLabel}</label>
                     <input type="text" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder={tr.namePlaceholder} className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors" />
@@ -104,8 +136,18 @@ export default function ContactSection() {
                     <label className="block text-xs font-medium text-slate-600 mb-2">{tr.projectLabel}</label>
                     <textarea required rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder={tr.projectPlaceholder} className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors resize-none" />
                   </div>
-                  <button type="submit" className="group w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#2563EB] text-white font-semibold text-sm hover:bg-[#1D4ED8] transition-colors shadow-sm">
-                    {tr.submit}<ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  {submitError && (
+                    <p className="text-sm text-red-600" role="alert">
+                      {submitError}
+                    </p>
+                  )}
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="group w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#2563EB] text-white font-semibold text-sm hover:bg-[#1D4ED8] transition-colors shadow-sm disabled:opacity-60 disabled:pointer-events-none"
+                  >
+                    {submitting ? tr.sending : tr.submit}
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </button>
                 </form>
               )}
