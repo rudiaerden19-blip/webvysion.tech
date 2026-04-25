@@ -96,8 +96,6 @@ export const t = {
       thankYouDesc: 'Wij nemen zo snel mogelijk contact op.',
       newMessage: 'Nieuw bericht sturen',
       subjectPrefix: 'Project aanvraag van',
-      sending: 'Verzenden…',
-      errorGeneric: 'Er ging iets mis. Probeer het later opnieuw of mail rechtstreeks naar info@webvysion.tech.',
     },
     reviews: {
       label: 'Wat klanten zeggen', title: 'Klantreviews',
@@ -224,8 +222,6 @@ export const t = {
       thankYouDesc: 'Nous vous contacterons dans les plus brefs délais.',
       newMessage: 'Envoyer un nouveau message',
       subjectPrefix: 'Demande de projet de',
-      sending: 'Envoi en cours…',
-      errorGeneric: 'Une erreur s\'est produite. Réessayez plus tard ou écrivez à info@webvysion.tech.',
     },
     reviews: {
       label: 'Ce que disent les clients', title: 'Avis clients',
@@ -352,8 +348,6 @@ export const t = {
       thankYouDesc: 'Wir werden uns so schnell wie möglich bei Ihnen melden.',
       newMessage: 'Neue Nachricht senden',
       subjectPrefix: 'Projektanfrage von',
-      sending: 'Wird gesendet…',
-      errorGeneric: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut oder schreiben Sie an info@webvysion.tech.',
     },
     reviews: {
       label: 'Was Kunden sagen', title: 'Kundenbewertungen',
@@ -480,8 +474,6 @@ export const t = {
       thankYouDesc: 'We will get back to you as soon as possible.',
       newMessage: 'Send new message',
       subjectPrefix: 'Project request from',
-      sending: 'Sending…',
-      errorGeneric: 'Something went wrong. Please try again later or email info@webvysion.tech directly.',
     },
     reviews: {
       label: 'What clients say', title: 'Client reviews',
